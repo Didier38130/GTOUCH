@@ -2,9 +2,19 @@
 require_once('../model/gtouchDAO.class.php');
 $BDD = new freshCoolingDAO();
 $nbErr = 0;
+
 $mail = $_POST['e-mail'];
-$pass = md5($_POST['mdp']);
-$confirm = md5($_POST['mdpConfirm']);
+$login = $_POST['login'];
+$id = $_POST['id'];
+$mdp = md5($_POST['mdp']);
+$mdpConfirm = md5($_POST['mdpConfirm']);
+$nom=$_POST['nom'];
+$prenom=$_POST['prenom'];
+$sexe = $_POST['sexe'];
+$telephone=$_POST['telephone'];
+$adresse=$_POST['adresse'];
+
+
 $listErr = array();
 
 //Vérification du mail
@@ -28,9 +38,9 @@ if (empty($pseudo))
 }
 //Vérification du mdp
 
-if ($pass != $confirm || empty($confirm) || empty($pass))
+if ($mdp != $mdpConfirm || empty($mdpConfirm) || empty($mdp))
 {
-    array_push($listErr, "Votre mot de passe et votre confirmation diffèrent, ou sont vides");
+    array_push($listErr, "Votre mot de mdpe et votre mdpConfirmation diffèrent, ou sont vides");
     $nbErr++;
 }
 if ($nbErr==0)
