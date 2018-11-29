@@ -32,6 +32,7 @@
           <input type="password" name="mdp" placeholder="Mot de passe" required>
           <input class="connexion" type="submit" name="connexion" value="Connexion">
         </form>
+        <a href="../vue/Inscription.vue.php">Créer un compte gratuitement</a>
 
 
       </body>

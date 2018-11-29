@@ -5,7 +5,7 @@ $nbErr = 0;
 
 $mail = $_POST['e-mail'];
 $login = $_POST['login'];
-$id = $_POST['id'];
+//$id = $_POST['id'];
 $mdp = md5($_POST['mdp']);
 $mdpConfirm = md5($_POST['mdpConfirm']);
 $nom=$_POST['nom'];
@@ -40,7 +40,7 @@ if (empty($pseudo))
 
 if ($mdp != $mdpConfirm || empty($mdpConfirm) || empty($mdp))
 {
-    array_push($listErr, "Votre mot de mdpe et votre mdpConfirmation diffèrent, ou sont vides");
+    array_push($listErr, "Votre mot de Mot de passe est différent du mot de passe de confirmation");
     $nbErr++;
 }
 if ($nbErr==0)
