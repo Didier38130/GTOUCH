@@ -1,10 +1,9 @@
 <?php
-require_once('../model/article.class.php');
-require_once('../model/membres.class.php');
+require_once('../model/membre.class.php');
 session_start();
-if (isset ($_COOKIE['pseudo']))
+if (isset ($_COOKIE['login']))
 {
-setcookie('pseudo', '', -1);
+setcookie('login', '', -1);
 }
 
 session_destroy();
