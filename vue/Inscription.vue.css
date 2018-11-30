@@ -35,6 +35,9 @@ nav a:hover{
 .checkbox{
   display: flex;
 }
+.checkbox input{
+  margin-right: 20px;
+}
 .checkbox p{
-  margin-left: 10px;
+  margin:0;
 }

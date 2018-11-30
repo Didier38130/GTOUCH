@@ -10,7 +10,7 @@
     <h2>Bienvenue sur Gtouch</h2>
     <nav>
       <a href="page_accueil.vue.php"><p>Accueil</p></a>
-      <a href="devis.vue.php"><p>Demander un devis</p></a>
+      <a href="devis.vue.php"><p>Retoucher une photo</p></a>
       <a href="mode_emploi.vue.php"><p>Mode d'emploi</p></a>
       <?php
     if(isset($_SESSION['mail'])){

@@ -53,11 +53,11 @@
     <p>Sexe :</p>
   <div class="checkbox">
         <p>Homme</p>
-        <input type="checkbox" name="homme" required>
+        <input type="radio"  name="sexe" required>
         <p>Femme</p>
-        <input type="checkbox" name="femme" required>
+        <input type="radio" name="sexe" required>
         <p>Autre</p>
-        <input type="checkbox" name="autre" required>
+        <input type="radio" name="sexe" required>
   </div>
 </div>
 <div class="item">
