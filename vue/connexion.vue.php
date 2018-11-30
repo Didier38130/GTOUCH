@@ -25,6 +25,7 @@
       }
         ?>
       </nav>
+      <div class="formulaire">
         <form class="" action="../controler/page_acceuil.controler.php?id=1" method="post">
           <p>E-mail</p>
           <input type="text" name="mail" placeholder="E-mail" >
@@ -32,8 +33,8 @@
           <input type="password" name="mdp" placeholder="Mot de passe" required>
           <input class="connexion" type="submit" name="connexion" value="Connexion">
         </form>
-        <a href="../vue/Inscription.vue.php">Créer un compte gratuitement</a>
-
+        <a href="../vue/inscription.vue.php">Créer un compte</a>
+      </div>
 
       </body>
     </html>

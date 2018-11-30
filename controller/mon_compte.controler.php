@@ -6,6 +6,7 @@ $BDD = new gtouchDAO();
 if(isset($_SESSION['mail'])){
   include("../vue/mon_compte.vue.php");
 }
+
 else{
   include("../vue/connexion.vue.php");
 }

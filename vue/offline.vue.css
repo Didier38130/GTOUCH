@@ -28,15 +28,3 @@ nav a:hover{
   border: solid 2px black;
   border-radius: 10px;
 }
-.formulaire{
-  display:flex;
-  justify-content: flex-start;
-  width: 50%;
-  flex-wrap: wrap;
-}
-.formulaire p,input{
-margin-bottom: 5px;
-}
-.connexion{
-  height: 32px;
-}
