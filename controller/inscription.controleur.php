@@ -1,11 +1,11 @@
 <?php
 require_once('../model/gtouchDAO.class.php');
-$BDD = new freshCoolingDAO();
+$BDD = new gtouchDAO();
 $nbErr = 0;
 
 $mail = $_POST['e-mail'];
 $login = $_POST['login'];
-//$id = $_POST['id'];
+for($i)
 $mdp = md5($_POST['mdp']);
 $mdpConfirm = md5($_POST['mdpConfirm']);
 $nom=$_POST['nom'];
