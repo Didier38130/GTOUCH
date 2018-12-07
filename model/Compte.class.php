@@ -77,7 +77,7 @@ class CompteUtilisateur{
 
 }
 
-class CompteAdministrateur extends utilisateur {}
+class CompteAdministrateur extends CompteUtilisateur {}
 
   class CompteGraphiste extends utilisateur {
     private $nbComEnCours;
