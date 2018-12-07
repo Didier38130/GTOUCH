@@ -25,7 +25,6 @@
     }
       ?>
 </nav>
-    <a href="connexion.php">Il faut d'abord vous connecter</a>
     <p>Ici vous pouvez télécharger vos photos afin d'avoir l'aide d'un graphiste,
        pour ce faire nous avons besoin de quelques informations à votre sujet
         ainsi que la photo et une description des modifications que le graphiste

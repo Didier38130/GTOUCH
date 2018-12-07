@@ -9,7 +9,7 @@
       <h1>Gtouch</h1>
       <nav>
         <a href="page_accueil.vue.php"><p>Accueil</p></a>
-        <a href="devis.vue.php"><p>Demander un devis</p></a>
+        <a href="devis.vue.php"><p>Retoucher une photo</p></a>
         <a href="mode_emploi.vue.php"><p>Mode d'emploi</p></a>
         <?php
       if(isset($_SESSION['mail'])){
@@ -25,6 +25,7 @@
       }
         ?>
       </nav>
+      <div class="formulaire">
         <form class="" action="../controler/page_acceuil.controler.php?id=1" method="post">
           <p>E-mail</p>
           <input type="text" name="mail" placeholder="E-mail" >
@@ -32,7 +33,8 @@
           <input type="password" name="mdp" placeholder="Mot de passe" required>
           <input class="connexion" type="submit" name="connexion" value="Connexion">
         </form>
-
+        <a href="../vue/inscription.vue.php">Créer un compte</a>
+      </div>
 
       </body>
     </html>
