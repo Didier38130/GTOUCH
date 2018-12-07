@@ -1,5 +1,7 @@
 <?php
-class ProduitRetouche {
+require_once('../model/Produit.class.php');
+
+class ProduitRetouche extends Produit{
   private $idProduitRetouche;
   private $lienImage;
 
