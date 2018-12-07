@@ -8,7 +8,7 @@ require_once('../model/Commande.class.php');
 require_once('../model/Facture.class.php');
 
 
-class CompteUtilisateur{
+class CompteUtilisateur {
   private $idUtil;
   private $loginUtil;
   private $mdpUtil;
@@ -79,7 +79,7 @@ class CompteUtilisateur{
 
 class CompteAdministrateur extends CompteUtilisateur {}
 
-  class CompteGraphiste extends utilisateur {
+  class CompteGraphiste extends CompteUtilisateur {
     private $nbComEnCours;
     private $portfolio;
     private $conflitsG;
@@ -108,7 +108,7 @@ class CompteAdministrateur extends CompteUtilisateur {}
 
   }
 
-  class CompteClient extends utilisateur{
+  class CompteClient extends CompteUtilisateur{
     private $nbComEnCours;
     private $produitsRetouches;
     private $conflitsC;
