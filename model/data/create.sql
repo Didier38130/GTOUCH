@@ -9,3 +9,16 @@ CREATE TABLE compte (
   telephone INTEGER,
   adresse STRING
 );
+
+CREATE TABLE requetesclient (
+  idrequete INTEGER,
+  idclient INTEGER,
+  listeid STRING,
+  descriprequete STRING
+)
+
+CREATE TABLE servicesdispo (
+  idservice INTEGER,
+  nomservice STRING,
+  descripservice STRING
+)
