@@ -5,7 +5,7 @@ $nbErr = 0;
 
 $mail = $_POST['e-mail'];
 $login = $_POST['login'];
-for($i)
+
 $mdp = md5($_POST['mdp']);
 $mdpConfirm = md5($_POST['mdpConfirm']);
 $nom=$_POST['nom'];
@@ -17,7 +17,7 @@ $adresse=$_POST['adresse'];
 
 $listErr = array();
 
-//Vérification du mail
+//Vérification du mail mon_compte
 
 $mail_dispo=$BDD->getInfoMembre($mail);
 

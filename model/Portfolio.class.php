@@ -1,6 +1,6 @@
 <?php
 require_once('../model/Oeuvre.class.php');
-require_once('../model/CompteGraphiste.class.php');
+require_once('../model/Compte.class.php');
 
 class Portfolio {
   private $idPortF;
@@ -10,7 +10,7 @@ class Portfolio {
   public function __construct($idPortF, CompteGraphiste $compteGraphiste) {
     $this->idPortF = $idPortF;
     $this->oeuvres = array();
-    $this->compteGraphiste = new CompteGraphiste();
+    $this->compteGraphiste = $compteGraphiste;
   }
 
   public function Add(Oeuvre $oeuvre) {
@@ -23,6 +23,10 @@ class Portfolio {
 
   public function getIdPortF() {
     return $this->idPortF;
+  }
+
+  public function getCompteGraphiste() {
+    return $this->compteGraphiste;
   }
 }
 ?>

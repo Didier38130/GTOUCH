@@ -25,7 +25,6 @@
       }
         ?>
 </nav>
-    <a href="connexion.php">Il faut d'abord vous connecter</a>
     <div class="emploi">
       <h2>Mode d'emploi</h2>
       <h3>étape 1</h3>

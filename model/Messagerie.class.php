@@ -1,10 +1,20 @@
 <?php
+require_once('../model/Compte.class.php');
+require_once('../model/Message.class.php');
+
 class Messagerie {
   private $idMessagerie;
-  private $messages = array();
+  private $messages;
+  private $utilisateur;
+
+  public function __construct($idMessagerie, CompteUtilisateur $utilisateur) {
+    $this->idMessagerie = $idMessagerie;
+    $this->messages = array();
+    $this->utilisateur = $utilisateur;
+  }
 
   public function getIdMessagerie() {
-    return $this->IdMessagerie;
+    return $this->idMessagerie;
   }
 
   public function getMessages() {
