@@ -108,7 +108,7 @@ class CompteAdministrateur extends CompteUtilisateur {}
 
   }
 
-  class CompteClient extends CompteUtilisateur{
+  class CompteClient extends CompteUtilisateur {
     private $nbComEnCours;
     private $produitsRetouches;
     private $conflitsC;

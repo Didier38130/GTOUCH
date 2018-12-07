@@ -1,4 +1,7 @@
 <?php
+require_once('../model/Compte.class.php');
+require_once('../model/Message.class.php');
+
 class Messagerie {
   private $idMessagerie;
   private $messages;
