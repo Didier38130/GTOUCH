@@ -17,7 +17,7 @@ $adresse=$_POST['adresse'];
 
 $listErr = array();
 
-//Vérification du mail
+//Vérification du mail mon_compte
 
 $mail_dispo=$BDD->getInfoMembre($mail);
 

@@ -33,6 +33,15 @@ nav a:hover{
   border: solid 2px black;
   border-radius: 10px;
 }
+
+.compte{
+  background-color: black;
+  color: white;
+  margin: 10px 0px;
+}
+.compte:hover{
+  color : lightgreen;
+}
 h2{
   width: 100%;
   text-align: center;

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-<link rel="stylesheet" href="dialogue.vue.css">
+<link rel="stylesheet" href="mon_Compte.vue.css">
   <head>
     <meta charset="utf-8">
     <title>Gtouch</title>
@@ -26,7 +26,11 @@
     }
       ?>
     </nav>
-    <h2>Projet en cours</h2>
+    <nav class="compte">
+      <a href="#">Mes informations</a>
+      <a href="#">Projet en cours</a>
+    </nav>
+
     <div class="projet">
       <p>Vous:</p>
       <p>J'aimerai des couleurs plus vive et que l'on efface les personnes sur le fond de la photo</p>
