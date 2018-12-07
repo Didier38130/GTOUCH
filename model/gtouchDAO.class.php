@@ -11,10 +11,19 @@
       }
     }
 
-    function insertMembre($mail,$mdp) {
-      $query=$this->db->prepare('INSERT INTO membres (mail,mdp) VALUES (:mail, :mdp)');
-      $query->bindValue(':mail', $mail, PDO::PARAM_STR);
-      $query->bindValue(':pass', $mdp, PDO::PARAM_STR);
+    function insertMembre($id,$login,$mdp,$prenom,$nom,$sexe,$telephone,$adresse) {
+      $query=$this->db->prepare('INSERT into compte (id,login,mdp,prenom,nom,mail,sexe,telephone,adresse)
+      values(:id,:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse);');
+      
+      $query->bindValue(':id', $id, PDO::PARAM_STR);
+      $query->bindValue(':login', $login, PDO::PARAM_STR);
+      $query->bindValue(':mdp', $mdp, PDO::PARAM_STR);
+      $query->bindValue(':prenom', $prenom, PDO::PARAM_STR);
+      $query->bindValue(':nom', $nom, PDO::PARAM_STR);
+      $query->bindValue(':mail', $sexe, PDO::PARAM_STR);
+      $query->bindValue(':telephone', $telephone, PDO::PARAM_STR);
+      $query->bindValue(':adresse', $adresse, PDO::PARAM_STR);
+
       $query->execute();
       $query->CloseCursor();
     }
