@@ -15,7 +15,7 @@ CREATE TABLE requetesclient (
   idclient INTEGER,
   listeid STRING,
   descriprequete STRING
-)
+);
 
 CREATE TABLE servicesdispo (
   idservice INTEGER,
@@ -23,4 +23,4 @@ CREATE TABLE servicesdispo (
   nomserviceparent STRING,
   nomservicegrandparent STRING,
   descripservice STRING
-)
+);
