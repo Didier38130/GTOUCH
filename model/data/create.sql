@@ -10,15 +10,17 @@ CREATE TABLE compte (
   adresse STRING
 );
 
-CREATE TABLE requetesclient (
-  idrequete INTEGER,
-  idclient INTEGER,
-  listeid STRING,
-  descriprequete STRING
-)
+CREATE TABLE requetesClient (
+  idRequete INTEGER,
+  idClient INTEGER,
+  listeId STRING,
+  descripRequete STRING
+);
 
-CREATE TABLE servicesdispo (
-  idservice INTEGER,
-  nomservice STRING,
-  descripservice STRING
-)
+CREATE TABLE servicesDispo (
+  idService INTEGER,
+  nomService STRING,
+  nomServiceParent STRING,
+  nomServiceGrandparent STRING,
+  descripService STRING
+);

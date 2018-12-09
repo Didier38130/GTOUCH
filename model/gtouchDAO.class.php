@@ -14,7 +14,7 @@
     function insertMembre($id,$login,$mdp,$prenom,$nom,$sexe,$telephone,$adresse) {
       $query=$this->db->prepare('INSERT into compte (id,login,mdp,prenom,nom,mail,sexe,telephone,adresse)
       values(:id,:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse);');
-      
+
       $query->bindValue(':id', $id, PDO::PARAM_STR);
       $query->bindValue(':login', $login, PDO::PARAM_STR);
       $query->bindValue(':mdp', $mdp, PDO::PARAM_STR);
@@ -42,6 +42,11 @@
      $dispo = ($sth->fetchColumn()==0)?1:0;
      return $dispo;
     }
-  }
 
+    function getServicesDispo() : array {
+      $sql = "SELECT * FROM servicesdispo";
+      $sth = $this->db->query($sql);
+      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'ServiceDispo');
+    }
+  }
  ?>

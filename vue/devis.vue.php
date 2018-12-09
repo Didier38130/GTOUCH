@@ -30,13 +30,7 @@
         ainsi que la photo et une description des modifications que le graphiste
          devra faire.</p>
 
-      <form class="infos" action="index.html" method="post">
-        <p>Nom</p>
-        <input type="text" class="nom" placeholder="Nom" >
-        <p>Prénom</p>
-        <input type="text" class="prenom" placeholder="Prénom">
-        <p>E-mail</p>
-        <input type="text" class="mail" placeholder="E-mail" >
+      <form class="infos" action="devis.controler.php">
         <p>Votre photo </p>
         <input type="file" class="photo">
         <p>Vous pouvez entourer les modifications et ajouter des annotations sur vos photos <a href="#">ici</a> </p>
@@ -46,14 +40,28 @@
         <div class="choix">
 
 
-        <label for="scales">Retouche beauté</label>
-        <input type="checkbox" id="scales" name="scales"checked>
-        <label for="scales">Retouche paysage</label>
-        <input type="checkbox" id="scales" name="scales"checked>
 
-        <label for="scales">Autre</label>
-        <input type="checkbox" id="scales" name="scales"checked>
-        <input class="envoi" type="submit" value="Envoyer">
+        <?php if (isset($type_retouche_1)) { ?>
+          <label for="type_retouche_1">Retouche beauté</label>
+          <input type="checkbox" id="type_retouche_1" name="type_retouche_1" value="Retouche beauté" checked>
+          <br>
+          <label for="sous_type_retouche_1">Corps</label>
+          <input type="checkbox" id="sous_type_retouche_1" name="sous_type_retouche_1" value="Corps">
+          <br>
+          <label for="sous_type_retouche_2">Visage</label>
+          <input type="checkbox" id="sous_type_retouche_2" name="sous_type_retouche_2" value="Visage">
+          <br>
+        <?php } else { ?>
+          <label for="type_retouche_1">Retouche beauté</label>
+          <input type="checkbox" id="type_retouche_1" name="type_retouche_1" value="Retouche beauté">
+          <br>
+        <?php } ?>
+        <label for="type_retouche_2">Retouche paysage</label>
+        <input type="checkbox" id="type_retouche_2" name="type_retouche_2" value="Retouche paysage">
+
+        <label for="type_retouche_3">Autre</label>
+        <input type="checkbox" id="type_retouche_3" name="type_retouche_3" value="type_retouche_3">
+        <input class="valider" type="submit" value="valider">
         </div>
       </form>
 
