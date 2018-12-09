@@ -20,5 +20,7 @@ CREATE TABLE requetesclient (
 CREATE TABLE servicesdispo (
   idservice INTEGER,
   nomservice STRING,
+  nomserviceparent STRING,
+  nomservicegrandparent STRING,
   descripservice STRING
 )
