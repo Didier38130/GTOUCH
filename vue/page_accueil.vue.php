@@ -11,8 +11,8 @@ ini_set('display_errors', 'on');
   </head>
   <body>
 
-    <img src="header.jpg" alt="Header" id="header">
     <?php include("header.view.php"); ?>
+    <img src="baniere.png" alt="Header" id="baniere">
 
 
     <div class="intro">

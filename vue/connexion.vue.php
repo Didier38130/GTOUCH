@@ -5,35 +5,23 @@
     <meta charset="utf-8">
     <title>Connexion</title>
   </head>
+
   <body>
-      <h1>Gtouch</h1>
-      <nav>
-        <a href="page_accueil.vue.php"><p>Accueil</p></a>
-        <a href="devis.vue.php"><p>Retoucher une photo</p></a>
-        <a href="mode_emploi.vue.php"><p>Mode d'emploi</p></a>
-        <?php
-      if(isset($_SESSION['mail'])){
-        echo "<a href=\"monCompte.controller.php?id=";
-        echo $_SESSION['mail'];
-        echo"<p>Bienvenue";
-        echo $_SESSION['mail'];
-        echo"</p></a>";
-        echo"<a href=\"../controler/deconnexion.controler.php\"><p>Déconnexion</p></a>";
-      }
-      else {
-        echo "<a href=\"../vue/connexion.vue.php\"><p>Se connecter</p></a>";
-      }
-        ?>
-      </nav>
+
+
       <div class="formulaire">
         <form class="" action="../controler/page_acceuil.controler.php?id=1" method="post">
-          <p>E-mail</p>
+          <label>E-mail</label>
           <input type="text" name="mail" placeholder="E-mail" >
-          <p>Mot de passe</p>
+          <label>Mot de passe</label>
           <input type="password" name="mdp" placeholder="Mot de passe" required>
-          <input class="connexion" type="submit" name="connexion" value="Connexion">
+          <button class="connexion">Connexion</button>
+
+          <footer>
+            <h3>Inscription</h3>
+            <button class="inscription"><a href="../vue/inscription.vue.php">Créer un compte</a></button>
+          </footer>
         </form>
-        <a href="../vue/inscription.vue.php">Créer un compte</a>
       </div>
 
       </body>

@@ -4,17 +4,20 @@ body {
 }
 
 nav {
-  font-family: "Lucida Console", Monaco, monospace;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-left: 0;
   padding: 0;
   width: 100%;
-  background: black;
+  background: #212F3C;
+  position: fixed;
+  top: 0px;
 }
 
 nav > ul {
   margin: 0;
   padding: 0;
 }
+
 
 nav > ul > li {
   float: left;
@@ -69,29 +72,43 @@ nav li:hover .sebmenu {
 }
 
 .accueil:hover {
-  background-color: #e44d26;
+  background-color: #E74C3C;
 }
 
-.creation:hover {
-  background-color: #e44d26;
+.annonces:hover {
+  background-color: #E74C3C;
+  height: 59px;
+}
+
+.portfolios:hover {
+  background-color: #E74C3C;
+  height: 59px;
+}
+
+.compte:hover {
+  background-color: #E74C3C;
+}
+
+.deco:hover {
+  background-color: #E74C3C;
 }
 
 .menu-inscription:hover {
-  background-color: #e44d26;
+  background-color: #E74C3C;
 }
 
 .menu-connexion:hover {
-  background-color: #e44d26;
+  background-color: #E74C3C;
 }
 
 .menu-inscription .sebmenu {
   border-top: 5px solid red;
-  background-color: #FA8072;
+  background-color: #212F3C;
 }
 
 .menu-connexion .sebmenu {
   border-top: 5px solid red;
-  background-color: #FA8072;
+  background-color: #212F3C;
 }
 
 .sebmenu li:hover a {
@@ -99,18 +116,50 @@ nav li:hover .sebmenu {
 }
 
 .menu-inscription .sebmenu li:hover {
-  background-color: #e44d26;
+  background-color: #E74C3C;
 }
 
 .menu-connexion  .sebmenu li:hover {
-  background-color: #e44d26;
+  background-color: #E74C3C;
 }
 
 .demande {
-  background-color: #e44d26;
+  background-color: #E74C3C;
+  float: right;
+  height: 59px;
+}
+
+#baniere {
+  width: 100%;
+  margin-top: 59px;
+}
+
+.accueil {
+  font-weight: bold;
+}
+
+.menu-connexion {
   float: right;
 }
 
-#header {
-  width: 100%;
+.menu-inscription {
+  float: right;
+}
+
+.compte {
+  float: right;
+}
+
+.deco {
+  float: right;
+}
+
+.demande {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.menu-inscription {
+  padding-left: 25px;
+  padding-right: 25px;
 }

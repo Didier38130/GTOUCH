@@ -9,31 +9,32 @@
     <nav>
 
       <ul>
-        <li class="accueil"><a href="#">ACCUEIL</a></li>
-        <li class="creation"><a href="#">CREATION</a></li>
+        <li class="accueil"><a href="#">GTOUCH</a></li>
+        <li class="annonces"><a href="#">Annonces</a></li>
+        <li class="portfolios"><a href="#">Portfolios</a></li>
         <?php if (isset($_SESSION['pseudo'])) { ?>
-          <li class="compte"><a href="#">MON COMPTE</a>
-          <li class="deco"><a href="#">DECONNEXION</a>
+          <li class="compte"><a href="#">Mon compte</a>
+          <li class="deco"><a href="#">Deconnexion</a>
         <?php } else { ?>
-          <li class="menu-inscription"><a href="#">INSCRIPTION &#x25bc</a>
+          <li class="menu-inscription"><a href="#">Inscription &#x25bc</a>
             <ul class = "sebmenu">
-              <li class=""><a href="#">JE SUIS CREATIF</a></li>
-              <li class=""><a href="#">JE SUIS CLIENT</a></li>
+              <li class=""><a href="inscription.vue.php">JE SUIS CREATIF</a></li>
+              <li class=""><a href="inscription.vue.php">JE SUIS CLIENT</a></li>
             </ul>
           </li>
-          <li class="menu-connexion"><a href="#">CONNEXION &#x25bc</a>
+          <li class="menu-connexion"><a href="#">Connexion &#x25bc</a>
             <ul class = "sebmenu">
-              <li class=""><a href="#">LOGIN CREATIF</a></li>
-              <li class=""><a href="#">LOGIN CLIENT</a></li>
+              <li class=""><a href="connexion.vue.php">LOGIN CREATIF</a></li>
+              <li class=""><a href="connexion.vue.php">LOGIN CLIENT</a></li>
             </ul>
           </li>
         <?php } ?>
-        <li class="demande"><a href="#">FAIRE UNE DEMANDE</a></li>
+        <li class="demande"><a href="#">Déposer une annonce</a></li>
       </ul>
 
     </nav>
 
-    
+
 
   </body>
 </html>
