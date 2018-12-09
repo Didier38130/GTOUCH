@@ -42,6 +42,15 @@
 
         <label for="type_retouche_1">Retouche beauté</label>
         <input type="checkbox" id="type_retouche_1" name="type_retouche_1" value="Retouche beauté">
+        <br>
+        <?php if (isset($type_retouche_1)) { ?>
+          <label for="sous_type_retouche_1">Corps</label>
+          <input type="checkbox" id="sous_type_retouche_1" name="sous_type_retouche_1" value="Corps">
+          <br>
+          <label for="sous_type_retouche_2">Visage</label>
+          <input type="checkbox" id="sous_type_retouche_2" name="sous_type_retouche_2" value="Visage">
+        <?php } ?>
+
         <label for="type_retouche_2">Retouche paysage</label>
         <input type="checkbox" id="type_retouche_2" name="type_retouche_2" value="Retouche paysage">
 
