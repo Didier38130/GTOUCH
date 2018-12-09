@@ -48,5 +48,5 @@
       $sth = $this->db->query($sql);
       $res = $sth->fetchAll(PDO::FETCH_CLASS, 'ServiceDispo');
     }
-
+  }
  ?>
