@@ -20,8 +20,8 @@
             <input type="text" name="e-mail" placeholder="E-mail" required>
           </div>
           <div class="item">
-            <p>Login :</p>
-            <input type="text" name="pseudo"placeholder="Pseudo" required>
+            <p>Prénom :</p>
+            <input type="text" name="prenom" placeholder="Prénom" required>
           </div>
           <div class="item">
             <p>Mot de passe :</p>
@@ -31,8 +31,8 @@
 
         <div class="cont2">
           <div class="item">
-            <p>Prénom :</p>
-            <input type="text" name="prenom" placeholder="Prénom" required>
+            <p>Login :</p>
+            <input type="text" name="pseudo"placeholder="Pseudo" required>
           </div>
           <div class="item">
             <p>Nom :</p>

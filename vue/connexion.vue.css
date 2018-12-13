@@ -50,14 +50,6 @@ form footer a {
   transition: all 0.15s ease-in-out;
 }
 
-form footer a:hover {
-  color: white;
-}
-
-.inscription:hover {
-  background-color: red;
-}
-
 form label {
   margin-left: 20px;
   display: inline-block;
