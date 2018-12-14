@@ -7,6 +7,8 @@
   </head>
   <body>
 
+  <a href="<?php echo $_SERVER["HTTP_REFERER"]; ?>"><img class="retour" src="backspace.png" alt=""></a>
+
   <div class="formulaire">
     <form class="" action="../controler/inscription.controleur.php?id=1" method="post">
       <header>

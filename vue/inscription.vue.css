@@ -145,3 +145,11 @@ p {
   display: flex;
   align-items: center;
 }
+
+img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+}

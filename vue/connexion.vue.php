@@ -8,6 +8,7 @@
 
   <body>
 
+      <a href="<?php echo $_SERVER["HTTP_REFERER"]; ?>"><img src="backspace.png" alt=""></a>
 
       <div class="formulaire">
         <form class="" action="../controler/page_acceuil.controler.php?id=1" method="post">
