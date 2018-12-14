@@ -1,4 +1,5 @@
-/*body{
+/*
+body{
 display: flex;
 justify-content: center;
 flex-wrap: wrap;
@@ -22,21 +23,30 @@ nav a{
   width: 100%;
   height: 95%;
   text-align: center;
-  vertical-align: middle;
 }
-
 nav a:hover{
   color :black;
   border: solid 2px black;
   border-radius: 10px;
 }
-
-.emploi{
-  border: solid black 2px;
-
+.descr{
+  width: 500px;
+  height: 300px;
+}
+.choix{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0;
+  margin-top: 20px;
+}
+.choix input,label{
+  margin: 10px;
 }
 */
-
+<<<<<<< HEAD:vue/css/devis.vue.css
+=======
 body {
   padding: 0;
   margin: 0;
@@ -202,3 +212,4 @@ nav li:hover .sebmenu {
   padding-left: 25px;
   padding-right: 25px;
 }
+>>>>>>> ca737979784440eb198c69604495f1ff4c05b8a1:vue/devis.vue.css
