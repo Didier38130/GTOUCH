@@ -1,7 +1,7 @@
 body {
   padding: 0;
   margin: 0;
-  background-image:url("erreur404.jpg");
+  background-image:url("data/img/erreur404.jpg");
   background-position: center;
   background-size: cover;
 }
