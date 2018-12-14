@@ -59,7 +59,47 @@ if (isset($_GET['nomService_9'])) {
 if (isset($_GET['nomService_10'])) {
   $nomService_10 = $_GET['nomService_10'];
 }
-include("../vue/devis.vue.php");
+
+//Récupération des détails de chaque service
+if (isset($_GET['details_service_1'])) {
+  $details_service_1 = $_GET['details_service_1'];
+}
+if (isset($_GET['details_service_2'])) {
+  $details_service_2 = $_GET['details_service_2'];
+}
+if (isset($_GET['details_service_3'])) {
+  $details_service_3 = $_GET['details_service_3'];
+}
+if (isset($_GET['details_service_4'])) {
+  $details_service_4 = $_GET['details_service_4'];
+}
+if (isset($_GET['details_service_5'])) {
+  $details_service_5 = $_GET['details_service_5'];
+}
+if (isset($_GET['details_service_6'])) {
+  $details_service_6 = $_GET['details_service_6'];
+}
+if (isset($_GET['details_service_7'])) {
+  $details_service_7 = $_GET['details_service_7'];
+}
+if (isset($_GET['details_service_8'])) {
+  $details_service_8 = $_GET['details_service_8'];
+}
+if (isset($_GET['details_service_9'])) {
+  $details_service_9 = $_GET['details_service_9'];
+}
+if (isset($_GET['details_service_10'])) {
+  $details_service_10 = $_GET['details_service_10'];
+}
+
+if (isset($_GET['Valider']) && (isset($nomService_1) || isset($nomService_3)
+|| isset($nomService_4) || isset($nomService_5) || isset($nomService_6)
+|| isset($nomService_7) || isset($nomService_8) || isset($nomService_9)
+|| isset($nomService_10))) {
+  include("../vue/formulaireEnvoye.vue.php");
+} else {
+  include("../vue/devis.vue.php");
+}
 
 /*
 if(isset($_SESSION['login'])){
