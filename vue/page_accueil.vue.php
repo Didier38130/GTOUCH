@@ -12,13 +12,12 @@ ini_set('display_errors', 'on');
   <body>
 
     <?php include("header.view.php"); ?>
-    <img src="baniere.png" alt="Header" id="baniere">
+    <img src="../model/data/img/baniere.png" alt="Header" id="baniere">
 
 
     <div class="intro">
       <h3>Qui sommes nous?</h3>
-      <p>Gtouch est une filliale de photoweb qui permet la retouche de
-         photos poussé à l'aide de graphistes.</p>
+      <p>Gtouch est une filliale de photoweb qui permet la retouche de photos poussé à l'aide de graphistes. </p>
     </div>
   </body>
 </html>

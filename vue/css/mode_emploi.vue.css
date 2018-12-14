@@ -1,48 +1,10 @@
-/*body{
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-}
-
-a{
-text-decoration: none;
-}
-
-nav{
-  display: flex;
-  justify-content: space-between;
-  background-color: lightgreen;
-  width: 100%;
-  height: 50px;
-  border-radius: 10px;
-}
-nav a{
-  font-weight: bold;
-  color: white;
-  width: 100%;
-  height: 95%;
-  text-align: center;
-  vertical-align: middle;
-}
-
-nav a:hover{
-  color :black;
-  border: solid 2px black;
-  border-radius: 10px;
-}
-
-.emploi{
-  border: solid black 2px;
-
-}
-*/
-
 body {
   padding: 0;
   margin: 0;
 }
 
 nav {
+  z-index: 2;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-left: 0;
   padding: 0;
@@ -201,4 +163,47 @@ nav li:hover .sebmenu {
 .menu-inscription {
   padding-left: 25px;
   padding-right: 25px;
+}
+
+.modeEmploi {
+  border: 5px inset #E74C3C;
+  box-shadow: 12px 12px 2px 1px rgba(231, 76, 60, .2);
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position:absolute;
+  left: 50%;
+  width: 80%;
+  top: 50%;
+  margin-left: -40%;
+  margin-top: -18%;
+  margin-bottom: 60px;
+  z-index: 1;
+  background-color: rgba(33,47,60, 0.8);
+  color : ghostwhite;
+}
+
+.modeEmploi a {
+  text-decoration: none;
+
+}
+
+.modeEmploi h2 {
+  text-align: center;
+}
+
+.modeEmploi h3 {
+  margin-bottom: 5px;
+}
+
+.modeEmploi p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.modeEmploi h3, p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.note {
+  font-style: italic;
 }
