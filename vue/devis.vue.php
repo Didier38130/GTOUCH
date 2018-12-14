@@ -7,11 +7,8 @@
 </head>
 <body>
   <h1>Gtouch</h1>
-  <nav>
-    <a href="page_accueil.vue.php"><p>Accueil</p></a>
-    <a href="devis.vue.php"><p>Retoucher une photo</p></a>
-    <a href="mode_emploi.vue.php"><p>Mode d'emploi</p></a>
     <?php
+    include('header.view.php');
     if(isset($_SESSION['mail'])){
       echo "<a href=\"monCompte.controller.php?id=";
       echo $_SESSION['mail'];
@@ -24,7 +21,6 @@
       echo "<a href=\"../vue/connexion.vue.php\"><p>Se connecter</p></a>";
     }
     ?>
-  </nav>
   <p>Ici vous pouvez télécharger vos photos afin d'avoir l'aide d'un graphiste,
     pour ce faire nous avons besoin de quelques informations à votre sujet
     ainsi que la photo et une description des modifications que le graphiste
