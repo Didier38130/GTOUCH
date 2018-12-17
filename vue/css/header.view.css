@@ -102,12 +102,17 @@ nav li:hover .sebmenu {
 }
 
 .menu-inscription .sebmenu {
-  border-top: 5px solid red;
+  border-top: 1px solid white;
   background-color: #212F3C;
 }
 
 .menu-connexion .sebmenu {
-  border-top: 5px solid red;
+  border-top: 1px solid white;
+  background-color: #212F3C;
+}
+
+.demande .sebmenu {
+  border-top: 1px solid white;
   background-color: #212F3C;
 }
 
@@ -122,6 +127,7 @@ nav li:hover .sebmenu {
 .menu-connexion  .sebmenu li:hover {
   background-color: #E74C3C;
 }
+
 
 .demande {
   background-color: #E74C3C;

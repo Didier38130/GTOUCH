@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-<link rel="stylesheet" href="connexion.vue.css">
+<link rel="stylesheet" href="css/connexion.vue.css">
 <head>
   <meta charset="utf-8">
   <title>Connexion</title>
 </head>
 <body>
+
+  <a href="page_accueil.vue.php"><img src="../model/data/img/backspace.png" alt=""></a>
 
   <div class="formulaire">
     <form class="" action="../controler/page_acceuil.controler.php?id=1" method="post">
@@ -21,6 +23,7 @@
       </footer>
     </form>
   </div>
+
 
 </body>
 </html>

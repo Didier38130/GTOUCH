@@ -114,8 +114,12 @@ form button:hover {
   margin-left: 0px;
 }
 
-.cont3, .cont6 {
+.cont3, .cont6, .cont7 {
   width: 100%;
+}
+
+.cont7 input {
+  width: 84%;
 }
 
 .checkbox {
@@ -144,4 +148,12 @@ p {
 .box1, .box2, .box3 {
   display: flex;
   align-items: center;
+}
+
+img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
 }
