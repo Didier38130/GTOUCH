@@ -14,20 +14,23 @@
     function insertMembre($id,$login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse) {
       $query=$this->db->prepare('INSERT INTO compte (id,login,mdp,prenom,nom,mail,sexe,telephone,adresse)
       VALUES(:id,:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse)');
-
-      $query->bindValue(':id', $id, PDO::PARAM_STR);
+      var_dump($id);
+      var_dump($query);
+      $query->bindValue(':id',$id, PDO::PARAM_INT);
+      var_dump($query);
       $query->bindValue(':login', $login, PDO::PARAM_STR);
       $query->bindValue(':mdp', $mdp, PDO::PARAM_STR);
       $query->bindValue(':prenom', $prenom, PDO::PARAM_STR);
       $query->bindValue(':nom', $nom, PDO::PARAM_STR);
       $query->bindValue(':mail', $mail, PDO::PARAM_STR);
       $query->bindValue(':sexe', $sexe, PDO::PARAM_STR);
-      $query->bindValue(':telephone', $telephone, PDO::PARAM_STR);
+      $query->bindValue(':telephone', $telephone, PDO::PARAM_INT);
       $query->bindValue(':adresse', $adresse, PDO::PARAM_STR);
 
       $query->execute();
 
       $query->CloseCursor();
+      $
       $res=$this->getSelect();
       var_dump($res);
     }

@@ -4,7 +4,7 @@ $BDD = new gtouchDAO();
 $nbErr = 0;
 
 $idmax =3; //"SELECT max(id) FROM compte";
-$id =$idmax+1;
+$id ='1';
 $login = $_POST['login'];
 $mdp = md5($_POST['mdp']);
 $mdpConfirm = md5($_POST['mdpConfirm']);
@@ -45,6 +45,7 @@ if ($mdp != $mdpConfirm || empty($mdpConfirm) || empty($mdp))
 }
 if ($nbErr==0)
 {
+  var_dump($id);
      $BDD->insertMembre($id,$login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse);
      $_SESSION['e-mail'] = $mail;
      include('../vue/inscriptionOk.vue.php');
