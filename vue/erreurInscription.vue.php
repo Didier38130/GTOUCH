@@ -10,7 +10,7 @@
         <?php
       include('header.view.php');
       if(isset($_SESSION['mail'])){
-        echo "<a href=\"monCompte.controller.php?id=";
+        echo "<a href=\"mon_Compte.controller.php?id=";
         echo $_SESSION['mail'];
         echo"<p>Bienvenue";
         echo $_SESSION['mail'];
@@ -26,6 +26,6 @@
         echo "<p>", $value, "</p>";
       }
       ?>
-      <p>Cliquez <a href="../vue/Inscription.vue.php">ici</a> pour revenir à la page d'inscription</p>
+      <p>Cliquez <a href="../vue/inscription.vue.php">ici</a> pour revenir à la page d'inscription</p>
     </body>
   </html>

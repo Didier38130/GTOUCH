@@ -3,17 +3,17 @@ require_once('../model/gtouchDAO.class.php');
 $BDD = new gtouchDAO();
 $nbErr = 0;
 
-$mail = $_POST['e-mail'];
+$idmax =3; //"SELECT max(id) FROM compte";
+$id =$idmax+1;
 $login = $_POST['login'];
-
 $mdp = md5($_POST['mdp']);
 $mdpConfirm = md5($_POST['mdpConfirm']);
 $nom=$_POST['nom'];
 $prenom=$_POST['prenom'];
+$mail = $_POST['e-mail'];
 $sexe = $_POST['sexe'];
 $telephone=$_POST['telephone'];
 $adresse=$_POST['adresse'];
-
 
 $listErr = array();
 
@@ -31,9 +31,9 @@ if(empty($mail))
     array_push($listErr, "Le champ e-mail est vide");
     $nbErr++;
 }
-if (empty($pseudo))
+if (empty($login))
  {
-    array_push($listErr, "Le champ pseudo est vide");
+    array_push($listErr, "Le champ login est vide");
      $nbErr++;
 }
 //Vérification du mdp
@@ -45,7 +45,7 @@ if ($mdp != $mdpConfirm || empty($mdpConfirm) || empty($mdp))
 }
 if ($nbErr==0)
 {
-     $BDD->insertMembre($mail,$mdp);
+     $BDD->insertMembre($id,$login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse);
      $_SESSION['e-mail'] = $mail;
      include('../vue/inscriptionOk.vue.php');
  }

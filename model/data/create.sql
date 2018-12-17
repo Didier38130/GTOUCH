@@ -6,7 +6,7 @@ CREATE TABLE compte (
   nom STRING,
   mail STRING,
   sexe STRING,
-  telephone INTEGER,
+  telephone STRING,
   adresse STRING
 );
 

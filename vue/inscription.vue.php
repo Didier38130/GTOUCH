@@ -8,7 +8,7 @@
   <body>
 
   <div class="formulaire">
-    <form class="" action="../controler/inscription.controleur.php?id=1" method="post">
+    <form class="" action="../controler/inscription.controler.php?id=1" method="post">
       <header>
         <h2>Insciption</h2>
       </header>
@@ -21,7 +21,7 @@
           </div>
           <div class="item">
             <p>Login :</p>
-            <input type="text" name="pseudo"placeholder="Pseudo" required>
+            <input type="text" name="login"placeholder="login" required>
           </div>
           <div class="item">
             <p>Mot de passe :</p>
