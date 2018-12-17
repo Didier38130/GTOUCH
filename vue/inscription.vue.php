@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang=fr dir="ltr">
   <head>
-    <link rel="stylesheet" href="css/inscription.vue.css">
+    <link rel="stylesheet" href="inscription.vue.css">
     <meta charset="utf-8">
     <title>Inscription</title>
   </head>
   <body>
 
-  <a href="page_accueil.vue.php"><img class="retour" src="../model/data/img/backspace.png" alt=""></a>
-
   <div class="formulaire">
-    <form class="" action="../controler/inscription.controleur.php?id=1" method="post">
+    <form class="" action="../controler/inscription.controler.php?id=1" method="post">
       <header>
-        <h2>Inscription</h2>
+        <h2>Insciption</h2>
       </header>
       <div class="contenair">
 
@@ -22,8 +20,8 @@
             <input type="text" name="e-mail" placeholder="E-mail" required>
           </div>
           <div class="item">
-            <p>Prénom :</p>
-            <input type="text" name="prenom" placeholder="Prénom" required>
+            <p>Login :</p>
+            <input type="text" name="login"placeholder="login" required>
           </div>
           <div class="item">
             <p>Mot de passe :</p>
@@ -33,8 +31,8 @@
 
         <div class="cont2">
           <div class="item">
-            <p>Login :</p>
-            <input type="text" name="pseudo"placeholder="Pseudo" required>
+            <p>Prénom :</p>
+            <input type="text" name="prenom" placeholder="Prénom" required>
           </div>
           <div class="item">
             <p>Nom :</p>
@@ -77,13 +75,6 @@
           <div class="item">
             <p>Adresse :</p>
             <input type="text" name="adresse" placeholder="Adresse" required>
-          </div>
-        </div>
-
-        <div class="cont7">
-          <div class="item">
-            <p>Lien portfolio :</p>
-            <input type="text" name="adresse" placeholder="Lien portfolio" required>
           </div>
         </div>
 

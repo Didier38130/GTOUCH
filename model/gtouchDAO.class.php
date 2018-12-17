@@ -26,6 +26,7 @@
       $query->bindValue(':adresse', $adresse, PDO::PARAM_STR);
 
       $query->execute();
+
       $query->CloseCursor();
       $res=$this->getSelect();
       var_dump($res);
