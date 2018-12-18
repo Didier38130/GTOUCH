@@ -17,7 +17,6 @@
       var_dump($id);
       var_dump($query);
       $query->bindValue(':id',$id, PDO::PARAM_INT);
-      var_dump($query);
       $query->bindValue(':login', $login, PDO::PARAM_STR);
       $query->bindValue(':mdp', $mdp, PDO::PARAM_STR);
       $query->bindValue(':prenom', $prenom, PDO::PARAM_STR);
@@ -28,12 +27,14 @@
       $query->bindValue(':adresse', $adresse, PDO::PARAM_STR);
 
       $query->execute();
-
+      $_SESSION['pseudo'] = $pseudo;
+      $_SESSION['id'] = $db->lastInsertId(); ;
+      $_SESSION['level'] = 2;
       $query->CloseCursor();
-      $
-      $res=$this->getSelect();
-      var_dump($res);
+
+      //$res=$this->getSelect();
     }
+
     function getSelect() : array {
       $sql = "SELECT * FROM compte";
       $sth = $this->db->query($sql);
