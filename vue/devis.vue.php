@@ -44,27 +44,27 @@
             <!----------------------------------------------------------------------------->
             <?php if (isset($nomService_1)) { ?>
               <label for="nomService_1">Formes</label>
-              <input type="checkbox" id="nomService_1" name="nomService_1" value="Formes" checked>
+              <input type="checkbox" id="nomService_1" name="nomService_1" value="6" checked>
               <br>
               <p>Des détails à ajouter ?</p>
               <input type="text" name="details_service_1" placeholder="Ecrivez vos détails ici">
               <br>
             <?php } else { ?>
               <label for="nomService_1">Formes</label>
-              <input type="checkbox" id="nomService_1" name="nomService_1" value="Formes">
+              <input type="checkbox" id="nomService_1" name="nomService_1" value="6">
               <br>
             <?php } ?>
             <!----------------------------------------------------------------------------->
-            <?php if (isset($nomService_2)) { ?>
-              <label for="nomService_2">Silhouettes</label>
-              <input type="checkbox" id="nomService_2" name="nomService_2" value="Silhouettes" checked>
+            <?php if (isset($nomService_3)) { ?>
+              <label for="nomService_3">Silhouettes</label>
+              <input type="checkbox" id="nomService_3" name="nomService_3" value="7" checked>
               <br>
               <p>Des détails à ajouter ?</p>
               <input type="text" name="details_service_2" placeholder="Ecrivez vos détails ici">
               <br>
             <?php } else { ?>
-              <label for="nomService_2">Silhouettes</label>
-              <input type="checkbox" id="nomService_2" name="nomService_2" value="Silhouettes">
+              <label for="nomService_3">Silhouettes</label>
+              <input type="checkbox" id="nomService_3" name="nomService_3" value="7">
               <br>
             <?php } ?>
             <!----------------------------------------------------------------------------->
@@ -78,43 +78,43 @@
             <input type="checkbox" id="nomServiceParent_2" name="nomServiceParent_2" value="Visage" checked>
             <br>
             <!----------------------------------------------------------------------------->
-            <?php if (isset($nomService_3)) { ?>
-              <label for="nomService_3">Regard</label>
-              <input type="checkbox" id="nomService_3" name="nomService_3" value="Regard" checked>
+            <?php if (isset($nomService_2)) { ?>
+              <label for="nomService_2">Regard</label>
+              <input type="checkbox" id="nomService_2" name="nomService_2" value="8" checked>
               <br>
               <p>Des détails à ajouter ?</p>
               <input type="text" name="details_service_3" placeholder="Ecrivez vos détails ici">
               <br>
             <?php } else { ?>
-              <label for="nomService_3">Regard</label>
-              <input type="checkbox" id="nomService_3" name="nomService_3" value="Regard">
+              <label for="nomService_2">Regard</label>
+              <input type="checkbox" id="nomService_2" name="nomService_2" value="8">
               <br>
 
             <?php } ?>
             <!----------------------------------------------------------------------------->
             <?php if (isset($nomService_4)) { ?>
               <label for="nomService_4">Peau</label>
-              <input type="checkbox" id="nomService_4" name="nomService_4" value="Peau" checked>
+              <input type="checkbox" id="nomService_4" name="nomService_4" value="9" checked>
               <br>
               <p>Des détails à ajouter ?</p>
               <input type="text" name="details_service_4" placeholder="Ecrivez vos détails ici">
               <br>
             <?php } else { ?>
               <label for="nomService_4">Peau</label>
-              <input type="checkbox" id="nomService_4" name="nomService_4" value="Peau">
+              <input type="checkbox" id="nomService_4" name="nomService_4" value="9">
               <br>
             <?php } ?>
             <!----------------------------------------------------------------------------->
             <?php if (isset($nomService_5)) { ?>
               <label for="nomService_5">Nez</label>
-              <input type="checkbox" id="nomService_5" name="nomService_5" value="Nez" checked>
+              <input type="checkbox" id="nomService_5" name="nomService_5" value="10" checked>
               <br>
               <p>Des détails à ajouter ?</p>
               <input type="text" name="details_service_5" placeholder="Ecrivez vos détails ici">
               <br>
             <?php } else { ?>
               <label for="nomService_5">Nez</label>
-              <input type="checkbox" id="nomService_5" name="nomService_5" value="Nez">
+              <input type="checkbox" id="nomService_5" name="nomService_5" value="10">
               <br>
             <?php } ?>
             <!----------------------------------------------------------------------------->
@@ -137,42 +137,42 @@
             <input type="checkbox" id="nomServiceParent_3" name="nomServiceParent_3" value="Retirer objet" checked>
             <br>
             <!----------------------------------------------------------------------------->
-            <?php if (isset($nomService_6)) { ?>
-              <label for="nomService_6">Isolation</label>
-              <input type="checkbox" id="nomService_6" name="nomService_6" value="Isolation" checked>
+            <?php if (isset($nomService_1)) { ?>
+              <label for="nomService_1">Isolation</label>
+              <input type="checkbox" id="nomService_1" name="nomService_1" value="1" checked>
               <br>
               <p>Des détails à ajouter ?</p>
               <input type="text" name="details_service_6" placeholder="Ecrivez vos détails ici">
               <br>
             <?php } else { ?>
-              <label for="nomService_6">Isolation</label>
-              <input type="checkbox" id="nomService_6" name="nomService_6" value="Isolation">
+              <label for="nomService_1">Isolation</label>
+              <input type="checkbox" id="nomService_1" name="nomService_1" value="1">
               <br>
             <?php } ?>
             <!----------------------------------------------------------------------------->
-            <?php if (isset($nomService_7)) { ?>
-              <label for="nomService_7">Défaut</label>
-              <input type="checkbox" id="nomService_7" name="nomService_7" value="Défaut" checked>
+            <?php if (isset($nomService_3)) { ?>
+              <label for="nomService_3">Défaut</label>
+              <input type="checkbox" id="nomService_3" name="nomService_3" value="3" checked>
               <br>
               <p>Des détails à ajouter ?</p>
               <input type="text" name="details_service_7" placeholder="Ecrivez vos détails ici">
               <br>
             <?php } else { ?>
-              <label for="nomService_7">Défaut</label>
-              <input type="checkbox" id="nomService_7" name="nomService_7" value="Défaut">
+              <label for="nomService_3">Défaut</label>
+              <input type="checkbox" id="nomService_3" name="nomService_3" value="3">
               <br>
             <?php } ?>
             <!----------------------------------------------------------------------------->
-            <?php if (isset($nomService_8)) { ?>
-              <label for="nomService_8">Elément</label>
-              <input type="checkbox" id="nomService_8" name="nomService_8" value="Elément" checked>
+            <?php if (isset($nomService_2)) { ?>
+              <label for="nomService_2">Elément</label>
+              <input type="checkbox" id="nomService_2" name="nomService_2" value="2" checked>
               <br>
               <p>Des détails à ajouter ?</p>
               <input type="text" name="details_service_8" placeholder="Ecrivez vos détails ici">
               <br>
             <?php } else { ?>
-              <label for="nomService_8">Elément</label>
-              <input type="checkbox" id="nomService_8" name="nomService_8" value="Elément">
+              <label for="nomService_2">Elément</label>
+              <input type="checkbox" id="nomService_2" name="nomService_2" value="2">
               <br>
             <?php } ?>
             <!----------------------------------------------------------------------------->
@@ -186,29 +186,29 @@
             <input type="checkbox" id="nomServiceParent_4" name="nomServiceParent_4" value="Ambiance" checked>
             <br>
             <!----------------------------------------------------------------------------->
-            <?php if (isset($nomService_9)) { ?>
-              <label for="nomService_9">Lumière</label>
-              <input type="checkbox" id="nomService_9" name="nomService_9" value="Lumière" checked>
+            <?php if (isset($nomService_4)) { ?>
+              <label for="nomService_4">Lumière</label>
+              <input type="checkbox" id="nomService_4" name="nomService_4" value="4" checked>
               <br>
               <p>Des détails à ajouter ?</p>
               <input type="text" name="details_service_9" placeholder="Ecrivez vos détails ici">
               <br>
             <?php } else { ?>
-              <label for="nomService_9">Lumière</label>
-              <input type="checkbox" id="nomService_9" name="nomService_9" value="Lumière">
+              <label for="nomService_4">Lumière</label>
+              <input type="checkbox" id="nomService_4" name="nomService_4" value="4">
               <br>
             <?php } ?>
             <!----------------------------------------------------------------------------->
-            <?php if (isset($nomService_10)) { ?>
-              <label for="nomService_10">Couleur</label>
-              <input type="checkbox" id="nomService_10" name="nomService_10" value="Couleur" checked>
+            <?php if (isset($nomService_5)) { ?>
+              <label for="nomService_5">Couleur</label>
+              <input type="checkbox" id="nomService_5" name="nomService_5" value="5" checked>
               <br>
               <p>Des détails à ajouter ?</p>
               <input type="text" name="details_service_10" placeholder="Ecrivez vos détails ici">
               <br>
             <?php } else { ?>
-              <label for="nomService_10">Couleur</label>
-              <input type="checkbox" id="nomService_10" name="nomService_10" value="Couleur">
+              <label for="nomService_5">Couleur</label>
+              <input type="checkbox" id="nomService_5" name="nomService_5" value="5">
               <br>
             <?php } ?>
             <!----------------------------------------------------------------------------->

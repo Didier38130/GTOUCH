@@ -96,6 +96,42 @@ if (isset($_GET['Valider']) && (isset($nomService_1) || isset($nomService_3)
 || isset($nomService_4) || isset($nomService_5) || isset($nomService_6)
 || isset($nomService_7) || isset($nomService_8) || isset($nomService_9)
 || isset($nomService_10))) {
+
+  $tableauID = array();
+
+  if (isset($nomService_1)) {
+    array_push($tableauID, $nomService_1);
+  }
+  if (isset($nomService_2)) {
+    array_push($tableauID, $nomService_2);
+  }
+  if (isset($nomService_3)) {
+    array_push($tableauID, $nomService_3);
+  }
+  if (isset($nomService_4)) {
+    array_push($tableauID, $nomService_4);
+  }
+  if (isset($nomService_5)) {
+    array_push($tableauID, $nomService_5);
+  }
+  if (isset($nomService_6)) {
+    array_push($tableauID, $nomService_6);
+  }
+  if (isset($nomService_7)) {
+    array_push($tableauID, $nomService_7);
+  }
+  if (isset($nomService_8)) {
+    array_push($tableauID, $nomService_8);
+  }
+  if (isset($nomService_9)) {
+    array_push($tableauID, $nomService_9);
+  }
+  if (isset($nomService_10)) {
+    array_push($tableauID, $nomService_10);
+  }
+
+  $listeID = implode("|", $tableauID);
+
   include("../vue/formulaireEnvoye.vue.php");
 } else {
   include("../vue/devis.vue.php");
