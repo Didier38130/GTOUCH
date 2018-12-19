@@ -132,6 +132,8 @@ if (isset($_GET['Valider']) && (isset($nomService_1) || isset($nomService_3)
 
   $listeID = implode("|", $tableauID);
 
+  
+
   include("../vue/formulaireEnvoye.vue.php");
 } else {
   include("../vue/devis.vue.php");
