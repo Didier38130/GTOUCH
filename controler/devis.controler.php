@@ -132,7 +132,11 @@ if (isset($_GET['Valider']) && (isset($nomService_1) || isset($nomService_3)
 
   $listeID = implode("|", $tableauID);
 
-  
+  $tableauDescrip = array();
+
+  if (isset($detailService_1)) {
+    array_push($tableauDescrip, '1'.$detailService_1);
+  }
 
   include("../vue/formulaireEnvoye.vue.php");
 } else {
