@@ -1,4 +1,4 @@
-<?php
+)<?php
   class gtouchDAO{
     private $db;
 
@@ -16,7 +16,6 @@
       VALUES(:id,:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse)');
       var_dump($id);
       var_dump($query);
-      $query->bindValue(':id',$id, PDO::PARAM_INT);
       $query->bindValue(':login', $login, PDO::PARAM_STR);
       $query->bindValue(':mdp', $mdp, PDO::PARAM_STR);
       $query->bindValue(':prenom', $prenom, PDO::PARAM_STR);
