@@ -222,8 +222,24 @@
           <input type="checkbox" id="nomServiceGrandparent_2" name="nomServiceGrandparent_2" value="Retouche paysage">
           <br>
         <?php } ?>
-        <label for="nomServiceGrandparent_3">Autre</label>
-        <input type="checkbox" id="nomServiceGrandparent_3" name="nomServiceGrandparent_3" value="Autre">
+        <?php if (isset($nomService_0) && (!isset($details_service_0) || $details_service_0 == null)) { ?>
+          <label for="nomService_0">Autre</label>
+          <input type="checkbox" id="nomService_0" name="nomService_0" value="0" checked>
+          <br>
+          <p>Veuillez écrire vos détails ici</p>
+          <input type="text" name="details_service_0" placeholder="Ecrivez vos détails ici (obligatoire)" required>
+          <br>
+        <?php } else if (isset($nomService_0) && (isset($details_service_0) || $details_service_0 != null)) { ?>
+        	 <label for="nomService_0">Autre</label>
+          <input type="checkbox" id="nomService_0" name="nomService_0" value="0" checked>
+          <br>
+          <p>Veuillez écrire vos détails ici</p>
+          <input type="text" name="details_service_0" placeholder="Ecrivez vos détails ici (obligatoire)">
+          <br>
+        <?php } else { ?>
+          <label for="nomService_0">Autre</label>
+          <input type="checkbox" id="nomService_0" name="nomService_0" value="0">
+        <?php } ?>
         <input name="Suivant" type="submit" value="Suivant">
         <br>
         <input name="Valider" type="submit" value="Valider">

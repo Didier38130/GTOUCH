@@ -62,6 +62,26 @@
 
     }
 
+    public function getRequeteClient() : array {
+      $sql = "SELECT * FROM requetesClient";
+      $sth = $this->db->query($sql);
+      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'RequeteClient');
+    }
+
+    public function insertRequeteClient($idRequete, $idClient, $listeId, $descripRequete, $dateRequete) {
+      $sql = "INSERT INTO requetesClient(idRequete, idClient, listeId, descripRequete, dateRequete)
+      VALUES(:idRequete, :idClient, :listeId, :descripRequete, :dateRequete)";
+      $sth = $this->db->query($sql);
+      $sth->execute([
+        ':idRequete' => $idRequete,
+        ':idClient' => $idClient,
+        ':listeId' => $listeId,
+        ':descripRequete' => $descripRequete,
+        ':dateRequete' => $dateRequete,
+      ]);
+      return $this->db->lastInsertId();
+    }
+
     function getServicesDispo() : array {
       $sql = "SELECT * FROM servicesdispo";
       $sth = $this->db->query($sql);
