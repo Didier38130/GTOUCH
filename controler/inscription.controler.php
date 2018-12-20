@@ -3,8 +3,7 @@ require_once('../model/gtouchDAO.class.php');
 $BDD = new gtouchDAO();
 $nbErr = 0;
 
-$idmax =3; //"SELECT max(id) FROM compte";
-$id =1;
+
 $login = $_POST['login'];
 $mdp = md5($_POST['mdp']);
 $mdpConfirm = md5($_POST['mdpConfirm']);
