@@ -29,7 +29,6 @@ CREATE TABLE requetesClient (
   descripRequete STRING,
   dateRequete date
 );
---remplacer liste id par des référence sur tous les services possibles ?
 
 CREATE TABLE servicesDispo (
   idService INTEGER,
