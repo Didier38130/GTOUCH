@@ -19,7 +19,7 @@
 
       <footer>
         <h3>Inscription</h3>
-        <button class="inscription"><a href="../vue/inscription.vue.php">Créer un compte</a></button>
+        <p class="inscription"><a href="../vue/quiestce.vue.php">Créer un compte</a></p>
       </footer>
     </form>
   </div>

@@ -53,4 +53,6 @@ if ($nbErr==0)
  {
   include("../vue/erreurInscription.vue.php");
  }
+
+ 
  ?>
