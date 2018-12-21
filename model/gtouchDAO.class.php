@@ -11,9 +11,9 @@
       }
     }
 
-    function insertMembre($id,$login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse) {
-      $query=$this->db->prepare('INSERT INTO compte (id,login,mdp,prenom,nom,mail,sexe,telephone,adresse)
-      VALUES(:id,:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse)');
+    function insertClient($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse) {
+      $query=$this->db->prepare('INSERT INTO compteClient (login,mdp,prenom,nom,mail,sexe,telephone,adresse)
+      VALUES(:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse)');
       var_dump($id);
       var_dump($query);
       $query->bindValue(':login', $login, PDO::PARAM_STR);
@@ -26,7 +26,7 @@
       $query->bindValue(':adresse', $adresse, PDO::PARAM_STR);
 
       $query->execute();
-      $_SESSION['pseudo'] = $pseudo;
+      $_SESSION['login'] = $login;
       $_SESSION['id'] = $db->lastInsertId(); ;
       $_SESSION['level'] = 2;
       $query->CloseCursor();

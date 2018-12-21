@@ -1,4 +1,4 @@
-CREATE TABLE compte (
+CREATE TABLE compteClient (
   id INTEGER,
   login STRING,
   mdp STRING,
