@@ -1,6 +1,6 @@
   <!DOCTYPE html>
   <html lang="fr" dir="ltr">
-  <link rel="stylesheet" href="css/mode_emploi.vue.css">
+  <link rel="stylesheet" href="./css/mode_emploi.vue.css">
     <head>
       <meta charset="utf-8">
       <title>Gtouch Mode d'emploi</title>
