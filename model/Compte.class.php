@@ -4,8 +4,8 @@ require_once('../model/Portfolio.class.php');
 require_once('../model/Conflit.class.php');
 require_once('../model/Panier.class.php');
 require_once('../model/ProduitRetouche.class.php');
-require_once('../model/Commande.class.php');
-require_once('../model/Facture.class.php');
+//require_once('../model/Commande.class.php');
+//require_once('../model/Facture.class.php');
 
 
 class CompteUtilisateur {
