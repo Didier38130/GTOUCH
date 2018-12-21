@@ -7,17 +7,6 @@
     <body>
         <?php
       include("header.view.php");
-      if(isset($_SESSION['mail'])){
-        echo "<a href=\"monCompte.controller.php?id=";
-        echo $_SESSION['mail'];
-        echo"<p>Bienvenue";
-        echo $_SESSION['mail'];
-        echo"</p></a>";
-        echo"<a href=\"../controler/deconnexion.controler.php\"><p>Déconnexion</p></a>";
-      }
-      else {
-        echo "<a href=\"../vue/connexion.vue.php\"><p>Se connecter</p></a>";
-      }
         ?>
 
       <p>

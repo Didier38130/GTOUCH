@@ -22,30 +22,27 @@
             <input type="text" name="e-mail" placeholder="E-mail" required>
           </div>
           <div class="item">
-<<<<<<< HEAD:vue/inscription.vue.php
+
             <p>Login :</p>
             <input type="text" name="login"placeholder="login" required>
-=======
-            <p>Prénom :</p>
-            <input type="text" name="prenom" placeholder="Prénom" required>
->>>>>>> 6502ea5618cf3f1ad24b3e7b26adcaa293ed8f01:vue/inscriptionClient.vue.php
-          </div>
-          <div class="item">
+
             <p>Mot de passe :</p>
             <input type="password" name="mdp" placeholder="Mot de passe" required>
+
           </div>
+
         </div>
 
         <div class="cont2">
+
+
           <div class="item">
-            <p>Login :</p>
-            <input type="text" name="pseudo"placeholder="Pseudo" required>
-          </div>
-          <div class="item">
+            <p>Prénom :</p>
+            <input type="text" name="prenom" placeholder="Prénom" required>
+
             <p>Nom :</p>
             <input type="text" name="nom" placeholder="Nom" required>
-          </div>
-          <div class="item">
+
             <p>Confirmation mot de passe :</p>
             <input type="password" name="mdpConfirm" placeholder="Confirmation" required>
           </div>

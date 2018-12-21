@@ -1,30 +1,21 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-<link rel="stylesheet" href="./css/devis.vue.css">
+<link rel="stylesheet" href="../vue/css/devis.vue.css">
 <head>
   <meta charset="utf-8">
   <title>Gtouch Devis</title>
 </head>
 <body>
-  <h1>Gtouch</h1>
-  <?php
-  include('header.vue.php');
-  if(isset($_SESSION['mail'])){
-    echo "<a href=\"monCompte.controller.php?id=";
-    echo $_SESSION['mail'];
-    echo"<p>Bienvenue";
-    echo $_SESSION['mail'];
-    echo"</p></a>";
-    echo"<a href=\"../controler/deconnexion.controler.php\"><p>Déconnexion</p></a>";
-  }
-  else {
-    echo "<a href=\"../vue/connexion.vue.php\"><p>Se connecter</p></a>";
-  }
-  ?>
-  <p>Ici vous pouvez télécharger vos photos afin d'avoir l'aide d'un graphiste,
+
+  <?php include('header.view.php'); ?>
+
+  <p class = "description">Ici vous pouvez télécharger vos photos afin d'avoir l'aide d'un graphiste,
     pour ce faire nous avons besoin de quelques informations à votre sujet
     ainsi que la photo et une description des modifications que le graphiste
     devra faire.</p>
+
+
+  <div class="contenair">
 
     <form class="infos" action="devis.controler.php">
       <p>Votre photo </p>
@@ -239,12 +230,16 @@
         <?php } else { ?>
           <label for="nomService_0">Autre</label>
           <input type="checkbox" id="nomService_0" name="nomService_0" value="0">
+          <br>
         <?php } ?>
-        <input name="Suivant" type="submit" value="Suivant">
-        <br>
-        <input name="Valider" type="submit" value="Valider">
+        <div class="bouton">
+        <input class = "suivant" name="Suivant" type="submit" value="Suivant">
+        <input class = "valider" name="Valider" type="submit" value="Valider">
+        </div>
       </div>
     </form>
 
+  </div>
   </body>
+
   </html>
