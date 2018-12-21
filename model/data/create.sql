@@ -37,3 +37,12 @@ CREATE TABLE servicesDispo (
   nomServiceGrandparent STRING,
   descripService STRING
 );
+
+CREATE TABLE messages (
+	idMessage INTEGER PRIMARY KEY AUTOINCREMENT,
+	idExpediteur INTEGER NOT NULL default '0',
+	idDestinataire INTEGER NOT NULL default '0',
+	dateMessage date NOT NULL default '0000-00-00 00:00:00',
+	objetMessage STRING NOT NULL,
+	contenuMessage STRING NOT NULL
+);

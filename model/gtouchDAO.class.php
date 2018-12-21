@@ -91,6 +91,20 @@
       return $this->db->lastInsertId();
     }
 
+    public function insertMessage($idExpediteur, $idDestinataire, $dateMessage, $objetMessage, $contenuMessage) {
+      $sql = "INSERT INTO messages(:idExpediteur, :idDestinataire, :dateMessage, :objetMessage, :contenuMessage)
+              VALUES($idExpediteur, $idDestinataire, $dateMessage, $objetMessage, $contenuMessage)";
+      $sth = $this->db->query($sql);
+      $sth->execute([
+        ':idExpediteur' => $idExpediteur,
+        ':idDestinataire' => $idDestinataire,
+        ':dateMessage' => $dateMessage,
+        ':objetMessage' => $objetMessage,
+        ':contenuMessage' => $contenuMessage,
+      ]);
+      return $this->db->lastInsertId();
+    }
+
     function getServicesDispo() : array {
       $sql = "SELECT * FROM servicesdispo";
       $sth = $this->db->query($sql);
