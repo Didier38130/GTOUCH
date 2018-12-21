@@ -1,8 +1,4 @@
 <?php
-require_once('../model/gtouchDAO.class.php');
-
-//$DAO = new gtouchDAO();
-
 date_default_timezone_set('UTC');
 
 //Récupération des services grands parents disponibles cochés
