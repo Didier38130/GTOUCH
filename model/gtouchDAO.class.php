@@ -26,7 +26,7 @@
         ':adresse'=> $adresse
       ]);
     }
-    function insertClient($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse,$portfolio) {
+    function insertGraphiste($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse,$portfolio) {
       $query=$this->db->prepare('INSERT INTO compteClient (login,mdp,prenom,nom,mail,sexe,telephone,adresse,portfolio)
       VALUES(:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse,:portfolio)');
 

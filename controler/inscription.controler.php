@@ -13,7 +13,8 @@ $mail = $_POST['e-mail'];
 $sexe = $_POST['sexe'];
 $telephone=$_POST['telephone'];
 $adresse=$_POST['adresse'];
-
+$portfolio=$_POST['portfolio'];
+var_dump($portfolio);
 $listErr = array();
 
 //Vérification du mail mon_compte
