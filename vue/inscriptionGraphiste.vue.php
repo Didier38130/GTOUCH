@@ -34,7 +34,7 @@
         <div class="cont2">
           <div class="item">
             <p>Login :</p>
-            <input type="text" name="pseudo"placeholder="Pseudo" required>
+            <input type="text" name="login"placeholder="Pseudo" required>
           </div>
           <div class="item">
             <p>Nom :</p>
