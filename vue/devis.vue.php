@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-<<<<<<< HEAD
 <link rel="stylesheet" href="../vue/css/devis.vue.css">
-=======
-<link rel="stylesheet" href="./css/devis.vue.css">
->>>>>>> a17f8055c2e9986ae76cc803a832b5df4da4f262
 <head>
   <meta charset="utf-8">
   <title>Gtouch Devis</title>
@@ -17,7 +13,7 @@
     pour ce faire nous avons besoin de quelques informations à votre sujet
     ainsi que la photo et une description des modifications que le graphiste
     devra faire.</p>
-    
+
 
   <div class="contenair">
 

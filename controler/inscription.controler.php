@@ -60,8 +60,4 @@ if ($nbErr==0){
   include("../vue/erreurInscription.vue.php");
  }
 
-<<<<<<< HEAD
- 
-=======
->>>>>>> a17f8055c2e9986ae76cc803a832b5df4da4f262
  ?>

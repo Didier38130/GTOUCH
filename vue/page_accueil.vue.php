@@ -4,11 +4,7 @@ ini_set('display_errors', 'on');
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-<<<<<<< HEAD
 <link rel="stylesheet" href="../vue/css/page_accueil.vue.css">
-=======
-<link rel="stylesheet" href="./css/page_accueil.vue.css">
->>>>>>> a17f8055c2e9986ae76cc803a832b5df4da4f262
   <head>
     <meta charset="utf-8">
     <title>Gtouch</title>
