@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-<link rel="stylesheet" href="offline.vue.css">
+<link rel="stylesheet" href="./css/offline.vue.css">
 <head>
   <meta charset="utf-8">
   <title>Gtouch Devis</title>
