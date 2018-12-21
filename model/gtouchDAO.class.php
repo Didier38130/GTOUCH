@@ -43,6 +43,16 @@
       ]);
     }
 
+    public function getCompteConnexion(string $mail, string $mdp) {
+      $sql = "SELECT * FROM compteClient WHERE mail = '$mail' AND mdp = '$mdp'";
+      $sth = $this->db->query($sql);
+      $result=$sth->fetchAll(PDO::FETCH_CLASS, 'CompteUtilisateur');
+      if ($result != NULL) {
+        return $result[0];
+      } else {
+        return NULL;
+      }
+    }
 
     function getSelect() : array {
       $sql = "SELECT * FROM compte";

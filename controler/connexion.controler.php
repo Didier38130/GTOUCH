@@ -8,20 +8,17 @@ require_once('../model/gtouchDAO.class.php');
 // PARTIE USAGE DU MODELE
 //////////////////////////////////////////////////////////////////////////////
 
-//$config = parse_ini_file('../config/config.ini');
-$bdd = new gtouchDAO();
+$DAO = new gtouchDAO();
 
-if(empty($_POST["mail"]) || empty($_POST["mdp"])) {
-  $message = '<label>Tous les champs sont requis</label>';
-} else {
-  $membreCo = $bdd->getMembreConnexion($_POST["mail"], $_POST["mdp"]);
-  if(($membreCo != NULL) && ($membreCo->getMail() == $_POST["mail"])) {
-    echo 'connecté';
+if(!empty($_POST["mail"]) || !empty($_POST["mdp"])) {
+  $compteCo = $DAO->getCompteConnexion($_POST["mail"], $_POST["mdp"]);
+  if(($compteCo != NULL) && ($compteCo->getMailUtil() == $_POST["mail"])) {
     session_start();
-    $_SESSION["newsession"] = $_POST["mail"];
-    header('Location: ../index.php');
+    $_SESSION["newsession"] = $compteCo->getIdUtil();
+    header('Location: page_accueil.controler.php');
   } else {
     $message = "<label>Les informations n'ont pas permis de vous identifier</label>";
+    echo 'Les informations n\'ont pas permis de vous identifier';
   }
 }
 

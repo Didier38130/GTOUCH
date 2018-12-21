@@ -10,7 +10,7 @@
   <a href="page_accueil.controler.php"><img src="../model/data/img/backspace.png" alt=""></a>
 
   <div class="formulaire">
-    <form class="" action="../controler/page_accueil.controler.php?id=1" method="post">
+    <form class="" action="../controler/connexion.controler.php" method="POST">
       <label>E-mail</label>
       <input type="text" name="mail" placeholder="E-mail" >
       <label>Mot de passe</label>

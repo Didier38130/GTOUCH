@@ -9,18 +9,19 @@ require_once('../model/ProduitRetouche.class.php');
 
 
 class CompteUtilisateur {
-  private $idUtil;
-  private $loginUtil;
-  private $mdpUtil;
-  private $messagerieUtil;
-  private $prenomUtil;
-  private $nomUtil;
-  private $mailUtil;
-  private $sexeUtil;
-  private $telephoneUtil;
-  private $adresseUtil;
+  private $id;
+  private $login;
+  private $mdp;
+  private $messagerie;
+  private $prenom;
+  private $nom;
+  private $mail;
+  private $sexe;
+  private $telephone;
+  private $adresse;
   private $estOuvert;
 
+ /*
   public function __construct($idUtil, $loginUtil, $mdpUtil, Messagerie $messagerieUtil, $prenomUtil, $nomUtil, $mailUtil, $sexeUtil, $telephoneUtil, $adresseUtil, $estOuvert) {
     $this->idUtil = $idUtil;
     $this->loginUtil = $loginUtil;
@@ -34,50 +35,51 @@ class CompteUtilisateur {
     $this->adresseUtil = $adresseUtil;
     $this->estOuvert = $estOuvert;
   }
+*/
 
   public function getMailUtil() {
-    return $this->mailUtil;
+    return $this->mail;
   }
 
   public function getLoginUtil() {
-    return $this->loginUtil;
+    return $this->login;
   }
 
   public function getIdUtil() {
-    return $this->idUtil;
+    return $this->id;
   }
 
   public function getMdpUtil() {
-    return $this->mdpUtil;
+    return $this->mdp;
   }
 
   public function getNomUtil() {
-    return $this->nomUtil;
+    return $this->nom;
   }
 
   public function getPrenomUtil() {
-    return $this->prenomUtil;
+    return $this->prenom;
   }
 
   public function getSexeUtil() {
-    return $this->sexeUtil;
+    return $this->sexe;
   }
 
   public function getTelephoneUtil() {
-    return $this->telephoneUtil;
+    return $this->telephone;
   }
 
   public function adresseUtil() {
-    return $this->adresseUtil;
+    return $this->adresse;
   }
 
   public function getMessagerieUtil() {
-    return $this->messagerieUtil;
+    return $this->messagerie;
   }
 
 }
 
-class CompteAdministrateur extends CompteUtilisateur {}
+  class CompteAdministrateur extends CompteUtilisateur {}
 
   class CompteGraphiste extends CompteUtilisateur {
     private $nbComEnCours;
