@@ -6,12 +6,7 @@
     </head>
     <body>
         <?php
-<<<<<<< HEAD
       include("header.view.php");
-=======
-    
-        ?>
->>>>>>> 02503ce735ff2eab8c397ece29a2d2665b6c9ff0
 
         ?>
         <audio autoplay="true" src="../model/inscription.mp4">
