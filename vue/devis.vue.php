@@ -8,7 +8,7 @@
 <body>
   <h1>Gtouch</h1>
   <?php
-  include('header.view.php');
+  include('header.vue.php');
   if(isset($_SESSION['mail'])){
     echo "<a href=\"monCompte.controller.php?id=";
     echo $_SESSION['mail'];
