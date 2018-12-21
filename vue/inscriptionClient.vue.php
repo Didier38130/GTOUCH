@@ -7,7 +7,7 @@
   </head>
   <body>
 
-  <a href="page_accueil.vue.php"><img class="retour" src="../model/data/img/backspace.png" alt=""></a>
+  <a href="../controler/page_accueil.controler.php"><img class="retour" src="../model/data/img/backspace.png" alt=""></a>
 
   <div class="formulaire">
     <form class="" action="../controler/inscription.controler.php" method="post">
