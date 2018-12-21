@@ -44,8 +44,7 @@ if ($mdp != $mdpConfirm || empty($mdpConfirm) || empty($mdp))
 }
 if ($nbErr==0)
 {
-  var_dump($id);
-     $BDD->insertMembre($id,$login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse);
+     $BDD->insertClient($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse);
      $_SESSION['e-mail'] = $mail;
      include('../vue/inscriptionOk.vue.php');
  }

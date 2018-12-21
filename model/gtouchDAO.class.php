@@ -14,7 +14,7 @@
     function insertClient($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse) {
       $query=$this->db->prepare('INSERT INTO compteClient (login,mdp,prenom,nom,mail,sexe,telephone,adresse)
       VALUES(:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse)');
-      $query->bindValue(':login', $login, PDO::PARAM_STR);
+    /*  $query->bindValue(':login', $login, PDO::PARAM_STR);
       $query->bindValue(':mdp', $mdp, PDO::PARAM_STR);
       $query->bindValue(':prenom', $prenom, PDO::PARAM_STR);
       $query->bindValue(':nom', $nom, PDO::PARAM_STR);
@@ -22,14 +22,17 @@
       $query->bindValue(':sexe', $sexe, PDO::PARAM_STR);
       $query->bindValue(':telephone', $telephone, PDO::PARAM_INT);
       $query->bindValue(':adresse', $adresse, PDO::PARAM_STR);
-
-      $query->execute();
-      $_SESSION['login'] = $login;
-      $_SESSION['id'] = $db->lastInsertId(); ;
-      $_SESSION['level'] = 2;
-      $query->CloseCursor();
-
-      //$res=$this->getSelect();
+*/
+      $query->execute([
+        ':login' => $login,
+        ':mdp'=> $mdp,
+        ':prenom'=> $prenom,
+        ':nom'=> $nom,
+        ':mail'=> $mail,
+        ':sexe'=> $sexe,
+        ':telephone'=> $telephone,
+        ':adresse'=> $adresse
+      ]);
     }
 
     function getSelect() : array {
