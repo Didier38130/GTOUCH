@@ -1,6 +1,6 @@
   <!DOCTYPE html>
   <html lang="en" dir="ltr">
-  <link rel="stylesheet" href="css/erreurInscription.vue.css">
+  <link rel="stylesheet" href="./css/erreurInscription.vue.css">
 
     <head>
       <meta charset="utf-8">

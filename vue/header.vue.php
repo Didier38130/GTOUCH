@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="css/header.view.css">
+    <link rel="stylesheet" href="./css/header.view.css">
     <meta charset="utf-8">
     <title></title>
   </head>
