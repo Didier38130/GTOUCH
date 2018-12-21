@@ -14,22 +14,6 @@
     function insertClient($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse) {
       $query=$this->db->prepare('INSERT INTO compteClient (login,mdp,prenom,nom,mail,sexe,telephone,adresse)
       VALUES(:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse)');
-
-      $query->execute([
-        ':login' => $login,
-        ':mdp'=> $mdp,
-        ':prenom'=> $prenom,
-        ':nom'=> $nom,
-        ':mail'=> $mail,
-        ':sexe'=> $sexe,
-        ':telephone'=> $telephone,
-        ':adresse'=> $adresse
-      ]);
-    }
-    function insertGraphiste($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse,$portfolio) {
-      $query=$this->db->prepare('INSERT INTO compteClient (login,mdp,prenom,nom,mail,sexe,telephone,adresse,portfolio)
-      VALUES(:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse,:portfolio)');
-
       $query->execute([
         ':login' => $login,
         ':mdp'=> $mdp,
@@ -39,7 +23,22 @@
         ':sexe'=> $sexe,
         ':telephone'=> $telephone,
         ':adresse'=> $adresse,
-        ':portfolio'=>$portfolio
+      ]);
+    }
+
+    function insertGraphiste($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse,$portfolio) {
+      $query=$this->db->prepare('INSERT INTO compteGraphiste (login,mdp,prenom,nom,mail,sexe,telephone,adresse,portfolio)
+      VALUES(:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse,:portfolio)');
+      $query->execute([
+        ':login' => $login,
+        ':mdp'=> $mdp,
+        ':prenom'=> $prenom,
+        ':nom'=> $nom,
+        ':mail'=> $mail,
+        ':sexe'=> $sexe,
+        ':telephone'=> $telephone,
+        ':adresse'=> $adresse,
+        ':portfolio'=>$portfolio,
       ]);
     }
 

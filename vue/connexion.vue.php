@@ -7,7 +7,7 @@
 </head>
 <body>
 
-  <a href="page_accueil.controler.php"><img src="../model/data/img/backspace.png" alt=""></a>
+  <a href="../controler/page_accueil.controler.php"><img src="../model/data/img/backspace.png" alt=""></a>
 
   <div class="formulaire">
     <form class="" action="../controler/connexion.controler.php" method="POST">

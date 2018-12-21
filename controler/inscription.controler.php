@@ -13,8 +13,10 @@ $mail = $_POST['e-mail'];
 $sexe = $_POST['sexe'];
 $telephone=$_POST['telephone'];
 $adresse=$_POST['adresse'];
+
+if(isset($_POST['portfolio'])){
 $portfolio=$_POST['portfolio'];
-var_dump($portfolio);
+}
 $listErr = array();
 
 //Vérification du mail mon_compte
@@ -44,12 +46,14 @@ if ($mdp != $mdpConfirm || empty($mdpConfirm) || empty($mdp))
     $nbErr++;
 }
 if ($nbErr==0){
-  if($portfolio==null){
+  if(!isset($_POST['portfolio'])){
+      echo"compte client";
      $BDD->insertClient($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse);
      $_SESSION['e-mail'] = $mail;
      include('../vue/inscriptionOk.vue.php');
   }
-  else if ($portfolio!=null){
+  else{
+    echo"compte Graphiste";
     $BDD->insertGraphiste($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse,$portfolio);
     $_SESSION['e-mail'] = $mail;
     include('../vue/inscriptionOk.vue.php');
