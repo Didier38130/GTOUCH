@@ -24,7 +24,7 @@
               <li class=""><a href="../vue/inscriptionClient.vue.php">JE SUIS CLIENT</a></li>
             </ul>
           </li>
-          <li class="connexion"><a href="../vue/connexion.vue.php">Connexion</a></li>
+          <li class="connexion"><a href="../controler/connexion.controler.php">Connexion</a></li>
         <?php } ?>
         <li class="demande"><a href="devis.controler.php">Déposer une annonce</a>
           <ul class = "sebmenu">

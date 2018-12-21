@@ -14,7 +14,7 @@
     function insertClient($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse) {
       $query=$this->db->prepare('INSERT INTO compteClient (login,mdp,prenom,nom,mail,sexe,telephone,adresse)
       VALUES(:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse)');
-
+      var_dump($login);
       $query->execute([
         ':login' => $login,
         ':mdp'=> $mdp,
@@ -27,9 +27,9 @@
       ]);
     }
     function insertGraphiste($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse,$portfolio) {
-      $query=$this->db->prepare('INSERT INTO compteClient (login,mdp,prenom,nom,mail,sexe,telephone,adresse,portfolio)
+      $query=$this->db->prepare('INSERT INTO compteGraphiste (login,mdp,prenom,nom,mail,sexe,telephone,adresse,portfolio)
       VALUES(:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse,:portfolio)');
-
+      var_dump($login);
       $query->execute([
         ':login' => $login,
         ':mdp'=> $mdp,
@@ -41,6 +41,7 @@
         ':adresse'=> $adresse,
         ':portfolio'=>$portfolio
       ]);
+      var_dump($query);
     }
 
 

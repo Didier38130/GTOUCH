@@ -1,7 +1,7 @@
 <?php
 require_once('../model/Compte.class.php');
 require_once('../model/Devis.class.php');
-require_once('../model/LigneProduit.class.php');
+//require_once('../model/LigneProduit.class.php');
 
 class Panier {
   private $idPan;

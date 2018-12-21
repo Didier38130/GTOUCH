@@ -8,8 +8,8 @@ require_once('../model/gtouchDAO.class.php');
 // PARTIE USAGE DU MODELE
 //////////////////////////////////////////////////////////////////////////////
 
-$config = parse_ini_file('../config/config.ini');
-$bdd = new gtouchDAO($config['database_path']);
+//$config = parse_ini_file('../config/config.ini');
+$bdd = new gtouchDAO();
 
 if(empty($_POST["mail"]) || empty($_POST["mdp"])) {
   $message = '<label>Tous les champs sont requis</label>';
@@ -25,5 +25,5 @@ if(empty($_POST["mail"]) || empty($_POST["mdp"])) {
   }
 }
 
-include('../view/connexion.vue.php');
+include('../vue/connexion.vue.php');
 ?>

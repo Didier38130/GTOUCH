@@ -25,8 +25,8 @@
   <form class="messagerie" action="messagerie.controler.php">
     <table>
       <tr>
-        <th>Messages reçus</th>
-        <th>Messages envoyés</th>
+        <th><?=  ?></th>
+        <th></th>
       </tr>
     </table>
     <input type="text" name="message_a_envoyer" placeholder="Ecrivez votre message ici" size="88">

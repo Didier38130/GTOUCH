@@ -1,7 +1,7 @@
 <?php
-require_once('../model/Produit.class.php');
+//require_once('../model/Produit.class.php');
 
-class ProduitRetouche extends Produit{
+class ProduitRetouche {
   private $idProduitRetouche;
   private $lienImage;
 
