@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+<<<<<<< HEAD
     <link rel="stylesheet" href="../vue/css/header.view.css">
+=======
+    <link rel="stylesheet" href="./css/header.view.css">
+>>>>>>> a17f8055c2e9986ae76cc803a832b5df4da4f262
     <meta charset="utf-8">
     <title></title>
   </head>

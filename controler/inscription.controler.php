@@ -13,7 +13,8 @@ $mail = $_POST['e-mail'];
 $sexe = $_POST['sexe'];
 $telephone=$_POST['telephone'];
 $adresse=$_POST['adresse'];
-
+$portfolio=$_POST['portfolio'];
+var_dump($portfolio);
 $listErr = array();
 
 //Vérification du mail mon_compte
@@ -42,17 +43,25 @@ if ($mdp != $mdpConfirm || empty($mdpConfirm) || empty($mdp))
     array_push($listErr, "Votre mot de Mot de passe est différent du mot de passe de confirmation");
     $nbErr++;
 }
-if ($nbErr==0)
-{
-  var_dump($id);
-     $BDD->insertMembre($id,$login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse);
+if ($nbErr==0){
+  if($portfolio==null){
+     $BDD->insertClient($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse);
      $_SESSION['e-mail'] = $mail;
      include('../vue/inscriptionOk.vue.php');
+  }
+  else if ($portfolio!=null){
+    $BDD->insertGraphiste($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse,$portfolio);
+    $_SESSION['e-mail'] = $mail;
+    include('../vue/inscriptionOk.vue.php');
+  }
  }
  else
  {
   include("../vue/erreurInscription.vue.php");
  }
 
+<<<<<<< HEAD
  
+=======
+>>>>>>> a17f8055c2e9986ae76cc803a832b5df4da4f262
  ?>

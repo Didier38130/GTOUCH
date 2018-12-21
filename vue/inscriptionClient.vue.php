@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang=fr dir="ltr">
   <head>
-    <link rel="stylesheet" href="css/inscription.vue.css">
+    <link rel="stylesheet" href="./css/inscription.vue.css">
     <meta charset="utf-8">
     <title>Inscription</title>
   </head>
@@ -10,7 +10,7 @@
   <a href="page_accueil.vue.php"><img class="retour" src="../model/data/img/backspace.png" alt=""></a>
 
   <div class="formulaire">
-    <form class="" action="../controler/inscription.controler.php?id=1" method="post">
+    <form class="" action="../controler/inscription.controler.php" method="post">
       <header>
         <h2>Inscription</h2>
       </header>

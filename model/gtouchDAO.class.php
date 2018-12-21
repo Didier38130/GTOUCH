@@ -11,28 +11,38 @@
       }
     }
 
-    function insertMembre($id,$login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse) {
-      $query=$this->db->prepare('INSERT INTO compte (id,login,mdp,prenom,nom,mail,sexe,telephone,adresse)
-      VALUES(:id,:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse)');
-      var_dump($id);
-      var_dump($query);
-      $query->bindValue(':login', $login, PDO::PARAM_STR);
-      $query->bindValue(':mdp', $mdp, PDO::PARAM_STR);
-      $query->bindValue(':prenom', $prenom, PDO::PARAM_STR);
-      $query->bindValue(':nom', $nom, PDO::PARAM_STR);
-      $query->bindValue(':mail', $mail, PDO::PARAM_STR);
-      $query->bindValue(':sexe', $sexe, PDO::PARAM_STR);
-      $query->bindValue(':telephone', $telephone, PDO::PARAM_INT);
-      $query->bindValue(':adresse', $adresse, PDO::PARAM_STR);
+    function insertClient($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse) {
+      $query=$this->db->prepare('INSERT INTO compteClient (login,mdp,prenom,nom,mail,sexe,telephone,adresse)
+      VALUES(:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse)');
 
-      $query->execute();
-      $_SESSION['pseudo'] = $pseudo;
-      $_SESSION['id'] = $db->lastInsertId(); ;
-      $_SESSION['level'] = 2;
-      $query->CloseCursor();
-
-      //$res=$this->getSelect();
+      $query->execute([
+        ':login' => $login,
+        ':mdp'=> $mdp,
+        ':prenom'=> $prenom,
+        ':nom'=> $nom,
+        ':mail'=> $mail,
+        ':sexe'=> $sexe,
+        ':telephone'=> $telephone,
+        ':adresse'=> $adresse
+      ]);
     }
+    function insertGraphiste($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse,$portfolio) {
+      $query=$this->db->prepare('INSERT INTO compteClient (login,mdp,prenom,nom,mail,sexe,telephone,adresse,portfolio)
+      VALUES(:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse,:portfolio)');
+
+      $query->execute([
+        ':login' => $login,
+        ':mdp'=> $mdp,
+        ':prenom'=> $prenom,
+        ':nom'=> $nom,
+        ':mail'=> $mail,
+        ':sexe'=> $sexe,
+        ':telephone'=> $telephone,
+        ':adresse'=> $adresse,
+        ':portfolio'=>$portfolio
+      ]);
+    }
+
 
     function getSelect() : array {
       $sql = "SELECT * FROM compte";
@@ -77,6 +87,20 @@
         ':listeId' => $listeId,
         ':descripRequete' => $descripRequete,
         ':dateRequete' => $dateRequete,
+      ]);
+      return $this->db->lastInsertId();
+    }
+
+    public function insertMessage($idExpediteur, $idDestinataire, $dateMessage, $objetMessage, $contenuMessage) {
+      $sql = "INSERT INTO messages(:idExpediteur, :idDestinataire, :dateMessage, :objetMessage, :contenuMessage)
+              VALUES($idExpediteur, $idDestinataire, $dateMessage, $objetMessage, $contenuMessage)";
+      $sth = $this->db->query($sql);
+      $sth->execute([
+        ':idExpediteur' => $idExpediteur,
+        ':idDestinataire' => $idDestinataire,
+        ':dateMessage' => $dateMessage,
+        ':objetMessage' => $objetMessage,
+        ':contenuMessage' => $contenuMessage,
       ]);
       return $this->db->lastInsertId();
     }

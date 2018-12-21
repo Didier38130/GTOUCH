@@ -1,13 +1,25 @@
-CREATE TABLE compte (
-  id INTEGER,
+CREATE TABLE compteClient (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
   login STRING,
   mdp STRING,
   prenom STRING,
   nom STRING,
   mail STRING,
   sexe STRING,
-  telephone INTEGER,
+  telephone STRING,
   adresse STRING
+);
+CREATE TABLE compteGraphiste (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  login STRING,
+  mdp STRING,
+  prenom STRING,
+  nom STRING,
+  mail STRING,
+  sexe STRING,
+  telephone STRING,
+  adresse STRING,
+  portfolio STRING
 );
 
 CREATE TABLE requetesClient (
@@ -17,7 +29,6 @@ CREATE TABLE requetesClient (
   descripRequete STRING,
   dateRequete date
 );
---remplacer liste id par des référence sur tous les services possibles ?
 
 CREATE TABLE servicesDispo (
   idService INTEGER,
@@ -25,4 +36,13 @@ CREATE TABLE servicesDispo (
   nomServiceParent STRING,
   nomServiceGrandparent STRING,
   descripService STRING
+);
+
+CREATE TABLE messages (
+	idMessage INTEGER PRIMARY KEY AUTOINCREMENT,
+	idExpediteur INTEGER NOT NULL default '0',
+	idDestinataire INTEGER NOT NULL default '0',
+	dateMessage date NOT NULL default '0000-00-00 00:00:00',
+	objetMessage STRING NOT NULL,
+	contenuMessage STRING NOT NULL
 );

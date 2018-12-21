@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-<link rel="stylesheet" href="css/connexion.vue.css">
+<link rel="stylesheet" href="./css/connexion.vue.css">
 <head>
   <meta charset="utf-8">
   <title>Connexion</title>
