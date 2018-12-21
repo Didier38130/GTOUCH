@@ -14,8 +14,6 @@
     function insertClient($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse) {
       $query=$this->db->prepare('INSERT INTO compteClient (login,mdp,prenom,nom,mail,sexe,telephone,adresse)
       VALUES(:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse)');
-      var_dump($id);
-      var_dump($query);
       $query->bindValue(':login', $login, PDO::PARAM_STR);
       $query->bindValue(':mdp', $mdp, PDO::PARAM_STR);
       $query->bindValue(':prenom', $prenom, PDO::PARAM_STR);
