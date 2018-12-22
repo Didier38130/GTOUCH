@@ -1,19 +1,24 @@
   <!DOCTYPE html>
   <html lang="en" dir="ltr">
     <head>
+      <link rel="stylesheet" href="../vue/css/inscriptionOK.css">
       <meta charset="utf-8">
       <title></title>
     </head>
     <body>
-        <?php
-      include("header.view.php");
 
-        ?>
+        <div class="cont">
+          <div class="header">
+            <h3>Inscription réussi !</h3>
+            <a href="../controler/page_accueil.controler.php"><img src="../model/data/img/croix.png" alt=""></a>
+          </div>
+          <div class="body">
+            <img src="../model/data/img/check.png" alt="">
+            <p>Votre inscription s'est déroulé avec succès !</p>
+          </div>
+        </div>
+
         <audio autoplay="true" src="../model/inscription.mp4">
-      <p>
-        Votre inscription à été confirmée, retourner à la
-        <a href="../controler/page_acceuil.controler.php?id=1">Page D'acceuil</a>.
 
-      </p>
     </body>
   </html>

@@ -47,14 +47,16 @@ if ($mdp != $mdpConfirm || empty($mdpConfirm) || empty($mdp))
 }
 if ($nbErr==0){
   if(!isset($_POST['portfolio'])){
-      echo"compte client";
+     echo"compte client";
      $BDD->insertClient($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse);
+     session_start();
      $_SESSION['e-mail'] = $mail;
      include('../vue/inscriptionOk.vue.php');
   }
   else{
     echo"compte Graphiste";
     $BDD->insertGraphiste($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse,$portfolio);
+    session_start();
     $_SESSION['e-mail'] = $mail;
     include('../vue/inscriptionOk.vue.php');
   }

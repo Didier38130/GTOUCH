@@ -8,5 +8,6 @@ setcookie('login', '', -1);
 
 session_destroy();
 
-include('../vue/deconnexionOk.vue.html');
+include('../vue/deconnexionOk.vue.php');
+
 ?>

@@ -102,11 +102,6 @@ nav li:hover .sebmenu {
   background-color: #212F3C;
 }
 
-.menu-connexion .sebmenu {
-  border-top: 1px solid white;
-  background-color: #212F3C;
-}
-
 .demande .sebmenu {
   border-top: 1px solid white;
   background-color: #212F3C;
@@ -121,9 +116,15 @@ nav li:hover .sebmenu {
 }
 
 .demande {
-  background-color: #E74C3C;
+  background-color: #FFA200;
   float: right;
   height: 59px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.demande:hover {
+  height: 58px;
 }
 
 .accueil {
@@ -136,7 +137,7 @@ nav li:hover .sebmenu {
 
 .connexion:hover {
   background-color: #E74C3C;
-  border-left: 1px solid white;
+  height: 59px;
 }
 
 .menu-inscription {
@@ -151,12 +152,8 @@ nav li:hover .sebmenu {
   float: right;
 }
 
-.demande {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
 .menu-inscription {
   padding-left: 25px;
   padding-right: 25px;
+  height: 58px;
 }
