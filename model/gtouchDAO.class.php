@@ -14,14 +14,6 @@
     function insertClient($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse) {
       $query=$this->db->prepare('INSERT INTO compteClient (login,mdp,prenom,nom,mail,sexe,telephone,adresse)
       VALUES(:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse)');
-      var_dump($login);
-      var_dump($mdp);
-      var_dump($prenom);
-      var_dump($nom);
-      var_dump($mail);
-      var_dump($sexe);
-      var_dump($telephone);
-      var_dump($adresse);
       $query->execute([
         ':login' => $login,
         ':mdp'=> $mdp,
@@ -37,7 +29,6 @@
     function insertGraphiste($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse,$portfolio) {
       $query=$this->db->prepare('INSERT INTO compteGraphiste (login,mdp,prenom,nom,mail,sexe,telephone,adresse,portfolio)
       VALUES(:login,:mdp,:prenom,:nom,:mail,:sexe,:telephone,:adresse,:portfolio)');
-      var_dump($query);
       $query->execute([
         ':login' => $login,
         ':mdp'=> $mdp,
@@ -49,9 +40,18 @@
         ':adresse'=> $adresse,
         ':portfolio'=>$portfolio,
       ]);
-      var_dump($query);
     }
 
+    public function getCompteConnexion(string $mail, string $mdp) {
+      $sql = "SELECT * FROM compteClient WHERE mail = '$mail' AND mdp = '$mdp'";
+      $sth = $this->db->query($sql);
+      $result=$sth->fetchAll(PDO::FETCH_CLASS, 'CompteUtilisateur');
+      if ($result != NULL) {
+        return $result[0];
+      } else {
+        return NULL;
+      }
+    }
 
     function getSelect() : array {
       $sql = "SELECT * FROM compte";
