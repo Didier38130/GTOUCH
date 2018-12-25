@@ -13,6 +13,7 @@ body {
 .cont h2 {
   text-align: center;
   color: white;
+  font-size: 2em;
 }
 
 .cont1 {
@@ -20,7 +21,10 @@ body {
 }
 
 .client, .graphiste {
-  padding: 120px 80px;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 300px;
+  width: 300px;
   background-color: red;
   cursor: pointer;
   transition: all 0.15s ease-in-out;
@@ -29,7 +33,7 @@ body {
 
 }
 
-a {
+button {
   color: white;
   font-weight: bold;
   font-size: 1.5em;

@@ -13,8 +13,8 @@
 
     <div class="cont1">
 
-    <button class="client"><a href="inscriptionClient.vue.php">UN CLIENT ?</a></button>
-    <button class="graphiste"><a href="inscriptionGraphiste.vue.php">UN GRAPHISTE ?</a></button>
+    <a href="inscriptionClient.vue.php"><button class="client">UN CLIENT ?</button></a>
+    <a href="inscriptionGraphiste.vue.php"><button class="graphiste">UN GRAPHISTE ?</button></a>
 
     </div>
     </div>
