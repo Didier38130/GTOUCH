@@ -31,5 +31,6 @@
         <p class = "note">*Si annulation de la commande, remboursement d'une partie de la somme totale de la prestation.</p>
         <br>
       </div>
+
     </body>
   </html>
