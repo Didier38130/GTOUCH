@@ -33,4 +33,8 @@
       </div>
 
     </body>
+
+    <footer>
+      <?php include('footer.vue.php') ;  ?>
+    </footer>
   </html>

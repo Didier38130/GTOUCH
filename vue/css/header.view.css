@@ -1,16 +1,19 @@
 body {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 nav {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-left: 0;
   padding: 0;
-  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 90%;
   background: #212F3C;
   position: fixed;
   top: 0px;
+  z-index: 2;
 }
 
 nav > ul {

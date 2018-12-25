@@ -10,10 +10,10 @@
       <div class="cont1">
         <div class="loca">
           <h2>Nous contacter</h2>
-          <p><img src="../model/data/img/loca.png" alt="">1 rue Emile Gueymard</p>
+          <p><img src="../model/data/img/loca.png" alt="">1 rue du zgueg</p>
         </div>
         <div class="tel">
-          <p><img src="../model/data/img/tel.png" alt="">0638132543</p>
+          <p><img src="../model/data/img/tel.png" alt="">0666666666</p>
         </div>
         <div class="mail">
           <p><img src="../model/data/img/mail.png" alt=""><a href="#">GTouchCompany@gtouch.fr</a></p>
@@ -21,7 +21,7 @@
       </div>
       <div class="cont2">
         <h2>Partenaire</h2>
-        <p><img src="../model/data/img/photoweb.png" alt=""><a href="#">Photoweb</a></p>
+        <p><img src="../model/data/img/photoweb.png" alt=""><a href="#">Photozgueg</a></p>
       </div>
       <div class="cont3">
         <div class="text">
