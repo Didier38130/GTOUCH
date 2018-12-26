@@ -1,4 +1,7 @@
 <?php
+
+ini_set('display_errors', 'on');
+
   class gtouchDAO{
     private $db;
 
@@ -9,6 +12,10 @@
       catch(PDOException $e){
         die("erreur de connexion :".$e->getmessage());
       }
+    }
+
+    function db() {
+      return $this->db;
     }
 
     function insertClient($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse) {
@@ -67,17 +74,28 @@
     }
 
 
-    function getInfoMembre($mail) : bool{
-     $sql = "SELECT COUNT(*) AS nbr FROM membres WHERE mail='$mail'";
-     $sth = $this->db->query($sql);
-     if($sql!=0){
-       return false;
-     }
-     else{
+    function getInfoClient($mail) : bool {
+      $sql = "SELECT * FROM compteClient WHERE mail = '$mail'";
+      $sth = $this->db->query($sql);
+      $result=$sth->fetchAll(PDO::FETCH_CLASS, 'CompteUtilisateur');
+      if ($result == NULL) {
         return true;
-     }
-     //$dispo = ($sth->fetchColumn()==0)?1:0;
+      } else {
+        return false;
+      }
+    }
 
+    function getInfoGraphiste($mail) : bool {
+      $query = $this->db->prepare("SELECT COUNT(*) FROM CompteGraphiste WHERE mail = '$mail'");
+      $query->bindValue('mail', $mail, PDO::PARAM_STR);
+      $query->execute();
+      $num_row = $query->fetchColumn();
+      if ($num_row == 0) {
+        return true;
+      }
+      else {
+        return false;
+      }
     }
 
     public function getRequeteClient() : array {

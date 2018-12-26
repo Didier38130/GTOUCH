@@ -1,12 +1,15 @@
 <?php
+
+require_once('../model/Compte.class.php');
 require_once('../model/gtouchDAO.class.php');
 $BDD = new gtouchDAO();
 $nbErr = 0;
 
 
 $login = $_POST['login'];
-$mdp = md5($_POST['mdp']);
-$mdpConfirm = md5($_POST['mdpConfirm']);
+$mdp = $_POST['mdp'];
+$mdphash = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
+$mdpConfirm = $_POST['mdpConfirm'];
 $nom=$_POST['nom'];
 $prenom=$_POST['prenom'];
 $mail = $_POST['e-mail'];
@@ -15,13 +18,15 @@ $telephone=$_POST['telephone'];
 $adresse=$_POST['adresse'];
 
 if(isset($_POST['portfolio'])){
-$portfolio=$_POST['portfolio'];
+  $portfolio=$_POST['portfolio'];
+  $mail_dispo=$BDD->getInfoGraphiste($mail);
+}
+else {
+  $mail_dispo=$BDD->getInfoClient($mail);
 }
 $listErr = array();
 
 //Vérification du mail mon_compte
-
-$mail_dispo=$BDD->getInfoMembre($mail);
 
 if(!$mail_dispo)
 {
@@ -47,23 +52,20 @@ if ($mdp != $mdpConfirm || empty($mdpConfirm) || empty($mdp))
 }
 if ($nbErr==0){
   if(!isset($_POST['portfolio'])){
-     echo"compte client";
-     $BDD->insertClient($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse);
+     $BDD->insertClient($login,$mdphash,$prenom,$nom,$mail,$sexe,$telephone,$adresse);
      session_start();
      $_SESSION['e-mail'] = $mail;
      include('../vue/inscriptionOk.vue.php');
   }
-  else{
-    echo"compte Graphiste";
-    $BDD->insertGraphiste($login,$mdp,$prenom,$nom,$mail,$sexe,$telephone,$adresse,$portfolio);
+  else {
+    $BDD->insertGraphiste($login,$mdphash,$prenom,$nom,$mail,$sexe,$telephone,$adresse,$portfolio);
     session_start();
     $_SESSION['e-mail'] = $mail;
     include('../vue/inscriptionOk.vue.php');
   }
- }
- else
- {
+}
+else {
   include("../vue/erreurInscription.vue.php");
- }
+}
 
  ?>
