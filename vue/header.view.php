@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="../vue/css/header.view.css">
+    <link rel="stylesheet" href="../vue/css/header.vue.css">
     <meta charset="utf-8">
     <title></title>
   </head>
@@ -11,7 +11,7 @@
     <nav>
 
       <ul>
-        <li class="accueil"><a href="page_accueil.controler.php">GTOUCH</a></li>
+        <li class="accueil"><a href="page_accueil.vue.php">GTOUCH</a></li>
         <li class="annonces"><a href="#">Annonces</a></li>
         <li class="portfolios"><a href="#">Portfolios</a></li>
         <?php if (isset($_SESSION['e-mail'])) { ?>

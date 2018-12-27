@@ -21,7 +21,7 @@
       </div>
       <div class="cont2">
         <h2>Partenaire</h2>
-        <p><img src="../model/data/img/photoweb.png" alt=""><a href="#">Photozgueg</a></p>
+        <p><img src="../model/data/img/photoweb.png" alt=""><a href="https://www.photoweb.fr/" target=_blank>Photozgueg</a></p>
       </div>
       <div class="cont3">
         <div class="text">

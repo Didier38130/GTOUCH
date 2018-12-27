@@ -1,31 +1,27 @@
-  <!DOCTYPE html>
-  <html lang="en" dir="ltr">
-  <link rel="stylesheet" href="./css/erreurInscription.vue.css">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="../vue/css/inscriptionOK.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
 
-    <head>
-      <meta charset="utf-8">
-      <title></title>
-    </head>
-    <body>
-        <?php
-      include('header.view.php');
-      if(isset($_SESSION['mail'])){
-        echo "<a href=\"mon_Compte.controller.php?id=";
-        echo $_SESSION['mail'];
-        echo"<p>Bienvenue";
-        echo $_SESSION['mail'];
-        echo"</p></a>";
-        echo"<a href=\"../controler/deconnexion.controler.php\"><p>Déconnexion</p></a>";
-      }
-      else {
-        echo "<a href=\"../vue/connexion.vue.php\"><p>Se connecter</p></a>";
-      }
+  <body>
+
+    <div class="cont">
+      <div class="header">
+        <h3>Un problème est survenue !</h3>
+        <a href=<?php echo $_SERVER['HTTP_REFERER']; ?>><img src="../model/data/img/croix.png" alt=""></a>
+      </div>
+      <div class="body">
+        <img src="../model/data/img/check.png" alt="">
+        <p>Erreur lors de l'inscription : </p>
+        <?php  foreach ($listErr as $value) {
+          echo "<p>", $value, "</p>";
+        }
         ?>
-      <p>Erreur lors de l'inscription :</p>
-      <?php  foreach ($listErr as $value) {
-        echo "<p>", $value, "</p>";
-      }
-      ?>
-      <p>Cliquez <a href="../vue/inscription.vue.php">ici</a> pour revenir à la page d'inscription</p>
-    </body>
-  </html>
+      </div>
+    </div>
+
+  </body>
+</html>

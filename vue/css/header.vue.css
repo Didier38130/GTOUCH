@@ -54,6 +54,11 @@ nav > ul > li > a {
 }
 
 
+.accueil:hover, .annonces:hover, .portfolios:hover, .compte:hover, .deco:hover, .connexion:hover {
+  background-color: #E74C3C;
+  height: 59px;
+}
+
 nav li:hover .sebmenu {
   display: inline-block;
   position : absolute;
@@ -74,30 +79,8 @@ nav li:hover .sebmenu {
   color : WHITE;
 }
 
-.accueil:hover {
-  background-color: #E74C3C;
-}
-
-.annonces:hover {
-  background-color: #E74C3C;
-  height: 59px;
-}
-
-.portfolios:hover {
-  background-color: #E74C3C;
-  height: 59px;
-}
-
-.compte:hover {
-  background-color: #E74C3C;
-}
-
-.deco:hover {
-  background-color: #E74C3C;
-}
-
-.menu-inscription:hover {
-  background-color: #E74C3C;
+.sebmenu li:hover a {
+  color : #EEE;
 }
 
 .menu-inscription .sebmenu {
@@ -105,13 +88,14 @@ nav li:hover .sebmenu {
   background-color: #212F3C;
 }
 
-.demande .sebmenu {
-  border-top: 1px solid white;
-  background-color: #212F3C;
+.menu-inscription:hover {
+  background-color: #E74C3C;
 }
 
-.sebmenu li:hover a {
-  color : #EEE;
+.menu-inscription {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 58px;
 }
 
 .menu-inscription .sebmenu li:hover {
@@ -130,17 +114,17 @@ nav li:hover .sebmenu {
   height: 58px;
 }
 
+.demande .sebmenu {
+  border-top: 1px solid white;
+  background-color: #212F3C;
+}
+
 .accueil {
   font-weight: bold;
 }
 
 .connexion {
   float: right;
-}
-
-.connexion:hover {
-  background-color: #E74C3C;
-  height: 59px;
 }
 
 .menu-inscription {
@@ -153,10 +137,4 @@ nav li:hover .sebmenu {
 
 .deco {
   float: right;
-}
-
-.menu-inscription {
-  padding-left: 20px;
-  padding-right: 20px;
-  height: 58px;
 }
