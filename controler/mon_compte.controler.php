@@ -1,16 +1,9 @@
 <?php
 session_start();
 
+require_once('../model/Compte.class.php');
 require_once('../model/gtouchDAO.class.php');
 $BDD = new gtouchDAO();
 
-
-if(isset($_SESSION['mail'])){
-  include("../vue/mon_compte.vue.php");
-}
-
-else{
-  include("../vue/connexion.vue.php");
-}
-
- ?>
+include("../vue/mon_Compte.vue.php");
+?>

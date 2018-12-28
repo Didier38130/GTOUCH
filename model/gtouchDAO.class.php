@@ -49,6 +49,18 @@ ini_set('display_errors', 'on');
       ]);
     }
 
+    public function insertMessage($idExpediteur, $idDestinataire, $dateMessage, $objetMessage, $contenuMessage) {
+      $query=$this->db->prepare('INSERT INTO messages (idExpediteur, idDestinataire, dateMessage, objetMessage, contenuMessage)
+              VALUES(:idExpediteur, :idDestinataire, :dateMessage, :objetMessage,:contenuMessage)');
+      $query->execute([
+        ':idExpediteur' => $idExpediteur,
+        ':idDestinataire' => $idDestinataire,
+        ':dateMessage' => $dateMessage,
+        ':objetMessage' => $objetMessage,
+        ':contenuMessage' => $contenuMessage,
+      ]);
+    }
+
     public function getCompteConnexion(string $mail, string $mdp) {
       $sql = "SELECT * FROM compteClient WHERE mail = '$mail' AND mdp = '$mdp'";
       $sth = $this->db->query($sql);
@@ -118,18 +130,11 @@ ini_set('display_errors', 'on');
       return $this->db->lastInsertId();
     }
 
-    public function insertMessage($idExpediteur, $idDestinataire, $dateMessage, $objetMessage, $contenuMessage) {
-      $sql = "INSERT INTO messages(:idExpediteur, :idDestinataire, :dateMessage, :objetMessage, :contenuMessage)
-              VALUES($idExpediteur, $idDestinataire, $dateMessage, $objetMessage, $contenuMessage)";
+    public function getMessageFromIdClient($id) : array {
+      $sql = "SELECT * FROM messages WHERE idExpediteur='$id' or idDestinataire='$id'";
       $sth = $this->db->query($sql);
-      $sth->execute([
-        ':idExpediteur' => $idExpediteur,
-        ':idDestinataire' => $idDestinataire,
-        ':dateMessage' => $dateMessage,
-        ':objetMessage' => $objetMessage,
-        ':contenuMessage' => $contenuMessage,
-      ]);
-      return $this->db->lastInsertId();
+      $res = $sth->fetchAll(PDO::FETCH_CLASS,'Message');
+      return $res;
     }
 
     function getServicesDispo() : array {
@@ -137,5 +142,42 @@ ini_set('display_errors', 'on');
       $sth = $this->db->query($sql);
       $res = $sth->fetchAll(PDO::FETCH_CLASS, 'ServiceDispo');
     }
+
+    function getIdFromMail($mail) : array {
+      $sql = "SELECT * FROM compteClient WHERE mail='$mail'";
+      $sth = $this->db->query($sql);
+      $res = $sth->fetchAll(PDO::FETCH_CLASS,'CompteUtilisateur');
+      return $res;
+    }
+
+    function getIdFromLogin($login) : array {
+      $sql = "SELECT * FROM compteClient WHERE login='$login'";
+      $sth = $this->db->query($sql);
+      $res = $sth->fetchAll(PDO::FETCH_CLASS,'CompteUtilisateur');
+      return $res;
+    }
+
+    function getLoginFromId($id) : array {
+      $sql = "SELECT * FROM compteClient WHERE id='$id'";
+      $sth = $this->db->query($sql);
+      $res = $sth->fetchAll(PDO::FETCH_CLASS,'CompteUtilisateur');
+      return $res;
+    }
+
+    public function getIdConvsFromIdClient($id) : array {
+      $sql = "SELECT * from messages where idExpediteur = '$id' and idDestinataire not in (select idExpediteur from messages where idDestinataire  = '$id' group by idExpediteur) group by idDestinataire union SELECT * from messages where idDestinataire  = '$id' group by idExpediteur";
+      $sth = $this->db->query($sql);
+      $res = $sth->fetchAll(PDO::FETCH_CLASS,'Message');
+      return $res;
+    }
+
+    public function getMessages($idClient, $id) : array {
+      $sql = "SELECT * from messages where idExpediteur in ('$idClient', '$id') and idDestinataire in ('$idClient', '$id') order by idMessage DESC";
+      $sth = $this->db->query($sql);
+      $res = $sth->fetchAll(PDO::FETCH_CLASS,'Message');
+      return $res;
+    }
+
+
   }
  ?>

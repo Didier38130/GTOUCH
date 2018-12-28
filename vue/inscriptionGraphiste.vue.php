@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang=fr dir="ltr">
   <head>
-    <link rel="stylesheet" href="./css/inscription.vue.css">
+    <link rel="stylesheet" href="../vue/css/inscription.vue.css">
     <meta charset="utf-8">
     <title>Inscription</title>
   </head>

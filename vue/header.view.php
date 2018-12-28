@@ -15,7 +15,7 @@
         <li class="annonces"><a href="#">Annonces</a></li>
         <li class="portfolios"><a href="#">Portfolios</a></li>
         <?php if (isset($_SESSION['e-mail'])) { ?>
-          <li class="compte"><a href="#">Mon compte</a>
+          <li class="compte"><a href="../controler/mon_compte.controler.php">Mon compte</a>
           <li class="deco"><a href="../controler/deconnexion.controler.php">Deconnexion</a>
         <?php } else { ?>
           <li class="menu-inscription"><a href="#">Inscription &#x25bc</a>

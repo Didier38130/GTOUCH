@@ -25,3 +25,5 @@ insert into servicesdispo values(7, "Silhouette", "Corps", "Retouche beauté", "
 insert into servicesdispo values(8, "Regard", "Visage", "Retouche beauté", "Adoucir le regard");
 insert into servicesdispo values(9, "Peau", "Visage", "Retouche beauté", "Revoir le tein de peau");
 insert into servicesdispo values(10, "Nez", "Visage", "Retouche beauté", "Corriger la forme du nez");
+
+insert into messages values(2, 1, "2018-12-01 20:12:56", "test", "test");
