@@ -85,7 +85,6 @@ ini_set('display_errors', 'on');
       return $res;
     }
 
-
     function getInfoClient($mail) : bool {
       $sql = "SELECT * FROM compteClient WHERE mail = '$mail'";
       $sth = $this->db->query($sql);
@@ -178,6 +177,16 @@ ini_set('display_errors', 'on');
       return $res;
     }
 
+    function ClientExiste($mail) {
+      $stmt = $this->db->prepare("SELECT * FROM compteClient WHERE mail=?");
+      $stmt->execute([$mail]);
+      return $stmt->fetchColumn();
+    }
+    function GraphistetExiste($mail) {
+      $stmt = $this->db->prepare("SELECT * FROM compteGraphiste WHERE mail=?");
+      $stmt->execute([$mail]);
+      return $stmt->fetchColumn();
+    }
 
   }
  ?>

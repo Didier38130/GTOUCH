@@ -3,7 +3,7 @@ body {
   padding: 0;
 }
 
-nav {
+#header {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-left: 0;
   padding: 0;
@@ -16,18 +16,18 @@ nav {
   z-index: 2;
 }
 
-nav > ul {
+#header > ul {
   margin: 0;
   padding: 0;
 }
 
 
-nav > ul > li {
+#header  > ul > li {
   float: left;
   position: relative;
 }
 
-nav li {
+#header  li {
   list-style-type: none;
   padding-right: 15px;
   padding-left: 15px;
@@ -37,18 +37,18 @@ nav li {
   display : none;
 }
 
-nav > ul::after {
+#header > ul::after {
   content: "";
   display: block;
   clear: both;
 }
 
-nav a {
+#header a {
   display: inline-block;
   text-decoration: none;
 }
 
-nav > ul > li > a {
+#header> ul > li > a {
   padding: 20px 30px;
   color: white;
 }
@@ -59,7 +59,7 @@ nav > ul > li > a {
   height: 59px;
 }
 
-nav li:hover .sebmenu {
+#header li:hover .sebmenu {
   display: inline-block;
   position : absolute;
   top: 100%;

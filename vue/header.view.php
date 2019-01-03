@@ -8,7 +8,7 @@
 
   <body>
 
-    <nav>
+    <nav id="header">
 
       <ul>
         <li class="accueil"><a href="../controler/page_accueil.controler.php">GTOUCH</a></li>
