@@ -8,11 +8,11 @@
 
   <body>
 
-    <nav>
+    <nav id="header">
 
       <ul>
-        <li class="accueil"><a href="page_accueil.vue.php">GTOUCH</a></li>
-        <li class="annonces"><a href="../controler/annonces.controler.php">Annonces</a></li>
+        <li class="accueil"><a href="../controler/page_accueil.controler.php">GTOUCH</a></li>
+        <li class="annonces"><a href="#">Annonces</a></li>
         <li class="portfolios"><a href="#">Portfolios</a></li>
         <?php if (isset($_SESSION['e-mail'])) { ?>
           <li class="compte"><a href="../controler/mon_compte.controler.php">Mon compte</a>
