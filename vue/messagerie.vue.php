@@ -23,13 +23,13 @@
   else {
     foreach ($convs as $value) {
       if ($value->getIdExp() == $id) {
-        $log = $BDD->getLoginFromId($value->getIdDest());
-        $loginDest = $log[0]->getLoginUtil();
+        $log = $BDD->getUtilFromId($value->getIdDest());
+        $loginDest = $log->getLoginUtil();
         ?> <a href="../controler/message.controler.php?id=<?php echo $value->getIdDest() ?>">Conversation avec <?php echo $loginDest ?></a> <?php
       }
       else {
-        $log = $BDD->getLoginFromId($value->getIdExp());
-        $loginExp = $log[0]->getLoginUtil();
+        $log = $BDD->getUtilFromId($value->getIdExp());
+        $loginExp = $log->getLoginUtil();
         ?> <a href="../controler/message.controler.php?id=<?php echo $value->getIdExp() ?>">Conversation avec <?php echo $loginExp ?></a> <?php
       }
     }

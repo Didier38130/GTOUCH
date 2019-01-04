@@ -23,11 +23,12 @@ CREATE TABLE compteGraphiste (
 );
 
 CREATE TABLE requetesClient (
-  idRequete INTEGER,
+  idRequete INTEGER PRIMARY KEY AUTOINCREMENT,
+  loginClient STRING,
   idClient INTEGER,
   listeId STRING,
-  descripRequete STRING,
-  dateRequete date
+  dateRequete date,
+  idGraphiste INTEGER default '0'
 );
 
 CREATE TABLE servicesDispo (
@@ -35,7 +36,8 @@ CREATE TABLE servicesDispo (
   nomService STRING,
   nomServiceParent STRING,
   nomServiceGrandparent STRING,
-  descripService STRING
+  descripService STRING,
+  prixService INTEGER
 );
 
 CREATE TABLE messages (

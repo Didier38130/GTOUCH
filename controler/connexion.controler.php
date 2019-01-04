@@ -22,7 +22,6 @@ if(!empty($_POST["mail"]) || !empty($_POST["mdp"])) {
     header('Location: page_accueil.controler.php');
   } else {
     $message = "<label>Les informations n'ont pas permis de vous identifier</label>";
-    echo 'Les informations n\'ont pas permis de vous identifier';
   }
 }
 

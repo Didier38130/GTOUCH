@@ -110,21 +110,28 @@ ini_set('display_errors', 'on');
       }
     }
 
-    public function getRequeteClient() : array {
+    public function getRequetesClient() : array {
       $sql = "SELECT * FROM requetesClient";
       $sth = $this->db->query($sql);
       $res = $sth->fetchAll(PDO::FETCH_CLASS, 'RequeteClient');
+      return $res;
     }
 
-    public function insertRequeteClient($idRequete, $idClient, $listeId, $descripRequete, $dateRequete) {
-      $sql = "INSERT INTO requetesClient(idRequete, idClient, listeId, descripRequete, dateRequete)
-      VALUES(:idRequete, :idClient, :listeId, :descripRequete, :dateRequete)";
+    public function getRequeteFromId($idReq) : RequeteClient {
+      $sql = "SELECT * FROM requetesClient WHERE idRequete = '$idReq'";
       $sth = $this->db->query($sql);
+      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'RequeteClient');
+      return $res[0];
+    }
+
+    public function insertRequeteClient($loginClient, $idClient, $listeId, $dateRequete) {
+      $sql = "INSERT INTO requetesClient(loginClient, idClient, listeId, dateRequete)
+      VALUES(:loginClient, :idClient, :listeId, :dateRequete)";
+      $sth = $this->db->prepare($sql);
       $sth->execute([
-        ':idRequete' => $idRequete,
+        ':loginClient' => $loginClient,
         ':idClient' => $idClient,
         ':listeId' => $listeId,
-        ':descripRequete' => $descripRequete,
         ':dateRequete' => $dateRequete,
       ]);
       return $this->db->lastInsertId();
@@ -141,27 +148,35 @@ ini_set('display_errors', 'on');
       $sql = "SELECT * FROM servicesdispo";
       $sth = $this->db->query($sql);
       $res = $sth->fetchAll(PDO::FETCH_CLASS, 'ServiceDispo');
+      return $res;
     }
 
-    function getIdFromMail($mail) : array {
+    public function getServiceFromId($idReq) : ServiceDispo {
+      $sql = "SELECT nomService FROM servicesdispo where idService = '$idReq'";
+      $sth = $this->db->query($sql);
+      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'ServiceDispo');
+      return $res[0];
+    }
+
+    function getUtilFromMail($mail) : CompteUtilisateur {
       $sql = "SELECT * FROM compteClient WHERE mail='$mail'";
       $sth = $this->db->query($sql);
       $res = $sth->fetchAll(PDO::FETCH_CLASS,'CompteUtilisateur');
-      return $res;
+      return $res[0];
     }
 
-    function getIdFromLogin($login) : array {
+    function getUtilFromLogin($login) : CompteUtilisateur {
       $sql = "SELECT * FROM compteClient WHERE login='$login'";
       $sth = $this->db->query($sql);
       $res = $sth->fetchAll(PDO::FETCH_CLASS,'CompteUtilisateur');
-      return $res;
+      return $res[0];
     }
 
-    function getLoginFromId($id) : array {
+    function getUtilFromId($id) : CompteUtilisateur {
       $sql = "SELECT * FROM compteClient WHERE id='$id'";
       $sth = $this->db->query($sql);
       $res = $sth->fetchAll(PDO::FETCH_CLASS,'CompteUtilisateur');
-      return $res;
+      return $res[0];
     }
 
     public function getIdConvsFromIdClient($id) : array {
@@ -177,7 +192,6 @@ ini_set('display_errors', 'on');
       $res = $sth->fetchAll(PDO::FETCH_CLASS,'Message');
       return $res;
     }
-
 
   }
  ?>

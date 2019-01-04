@@ -5,8 +5,8 @@ require_once('../model/Compte.class.php');
 require_once('../model/gtouchDAO.class.php');
 $BDD = new gtouchDAO();
 
-$res = $BDD->getIdFromMail($_SESSION['e-mail']);
-$id = $res[0]->getIdUtil();
+$res = $BDD->getUtilFromMail($_SESSION['e-mail']);
+$id = $res->getIdUtil();
 $idConv = $_GET['id'];
 
 if(!empty($_POST["objet"]) && !empty($_POST["message"])) {
