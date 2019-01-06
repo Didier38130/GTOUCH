@@ -153,13 +153,21 @@ ini_set('display_errors', 'on');
       $sql = "SELECT * FROM servicesdispo";
       $sth = $this->db->query($sql);
       $res = $sth->fetchAll(PDO::FETCH_CLASS, 'ServiceDispo');
+      return $res;
     }
 
-    function getIdFromMailClient($mail) : array {
+    public function getServiceFromId($idReq) : ServiceDispo {
+      $sql = "SELECT nomService FROM servicesdispo where idService = '$idReq'";
+      $sth = $this->db->query($sql);
+      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'ServiceDispo');
+      return $res[0];
+    }
+
+    function getUtilFromMail($mail) : CompteUtilisateur {
       $sql = "SELECT * FROM compteClient WHERE mail='$mail'";
       $sth = $this->db->query($sql);
       $res = $sth->fetchAll(PDO::FETCH_CLASS,'CompteUtilisateur');
-      return $res;
+      return $res[0];
     }
 
     function getIdFromMailGraphiste($mail) : array {
@@ -173,7 +181,7 @@ ini_set('display_errors', 'on');
       $sql = "SELECT * FROM compteClient WHERE login='$login'";
       $sth = $this->db->query($sql);
       $res = $sth->fetchAll(PDO::FETCH_CLASS,'CompteUtilisateur');
-      return $res;
+      return $res[0];
     }
 
     function getIdFromLoginGraphiste($login) : array {
@@ -187,7 +195,7 @@ ini_set('display_errors', 'on');
       $sql = "SELECT * FROM compteClient WHERE id='$id'";
       $sth = $this->db->query($sql);
       $res = $sth->fetchAll(PDO::FETCH_CLASS,'CompteUtilisateur');
-      return $res;
+      return $res[0];
     }
 
     function getLoginFromIdGraphiste($id) : array {

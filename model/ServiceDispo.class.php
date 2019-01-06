@@ -5,6 +5,7 @@ class ServiceDispo {
   private $nomServiceParent;
   private $nomServiceGrandParent;
   private $descripService;
+  private $prixService;
 
   public function getIdService() {
     return $this->idService;
@@ -25,5 +26,10 @@ class ServiceDispo {
   public function getDescripService() {
     return $this->descripService;
   }
-}
+
+  public function getPrixService() {
+    return $this->prixService;
+  }
+
+}  
 ?>

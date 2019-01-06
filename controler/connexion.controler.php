@@ -32,6 +32,17 @@ include('../vue/connexion.vue.php');
 */
 if(!empty($_POST["mail"]) || !empty($_POST["mdp"])) {
   $mail = $_POST["mail"];
+<<<<<<< HEAD
+  $requete = "SELECT mdp FROM compteClient WHERE mail='$mail'";
+  $q = $DAO->db()->query($requete);
+  $mp = $q->fetch();
+  if(password_verify($_POST["mdp"], $mp[0])) {
+    session_start();
+    $_SESSION["e-mail"] = $_POST["mail"];
+    header('Location: page_accueil.controler.php');
+  } else {
+    $message = "<label>Les informations n'ont pas permis de vous identifier</label>";
+=======
   $q1 = $DAO->ClientExiste($mail);
   $q2 = $DAO->GraphistetExiste($mail);
 
@@ -62,6 +73,7 @@ if(!empty($_POST["mail"]) || !empty($_POST["mdp"])) {
     }
   }else {
     echo 'Votre login est inconnu.Veuillez vous inscrire';
+>>>>>>> b930a04e4a390e14b1fbe6a86ec47f0b41b33f19
   }
 }
 include('../vue/connexion.vue.php');
