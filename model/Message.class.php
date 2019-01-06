@@ -6,9 +6,14 @@ class Message {
   private $dateMessage;
   private $objetMessage;
   private $contenuMessage;
+  private $typeExp;
 
   public function getIdMess() {
     return $this->idMess;
+  }
+
+  public function getTypeExp() {
+    return $this->typeExp;
   }
 
   public function getIdDest() {

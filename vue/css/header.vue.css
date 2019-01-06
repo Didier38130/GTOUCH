@@ -102,7 +102,7 @@ body {
   background-color: #E74C3C;
 }
 
-.demande {
+#header .demande {
   background-color: #FFA200;
   float: right;
   height: 59px;
@@ -123,18 +123,18 @@ body {
   font-weight: bold;
 }
 
-.connexion {
+#header .connexion {
   float: right;
 }
 
-.menu-inscription {
+#header .menu-inscription {
   float: right;
 }
 
-.compte {
+#header .compte {
   float: right;
 }
 
-.deco {
+#header .deco {
   float: right;
 }

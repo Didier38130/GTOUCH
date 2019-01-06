@@ -16,19 +16,18 @@ $mail = $_POST['e-mail'];
 $sexe = $_POST['sexe'];
 $telephone=$_POST['telephone'];
 $adresse=$_POST['adresse'];
+$mail_dispoGraphiste=$BDD->getInfoGraphiste($mail);
+$mail_dispoClient=$BDD->getInfoClient($mail);
 
 if(isset($_POST['portfolio'])){
   $portfolio=$_POST['portfolio'];
-  $mail_dispo=$BDD->getInfoGraphiste($mail);
 }
-else {
-  $mail_dispo=$BDD->getInfoClient($mail);
-}
+
 $listErr = array();
 
 //Vérification du mail mon_compte
 
-if(!$mail_dispo)
+if(!$mail_dispoGraphiste || !$mail_dispoClient)
 {
     array_push($listErr, "Votre mail est déjà utilisé par un membre");
     $nbErr++;

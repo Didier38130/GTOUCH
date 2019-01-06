@@ -23,7 +23,8 @@ CREATE TABLE compteGraphiste (
 );
 
 CREATE TABLE requetesClient (
-  idRequete INTEGER,
+  image BLOB,
+  idRequete INTEGER PRIMARY KEY AUTOINCREMENT,
   idClient INTEGER,
   listeId STRING,
   descripRequete STRING,
@@ -44,5 +45,6 @@ CREATE TABLE messages (
 	idDestinataire INTEGER NOT NULL default '0',
 	dateMessage date NOT NULL default '0000-00-00 00:00:00',
 	objetMessage STRING NOT NULL,
-	contenuMessage STRING NOT NULL
+	contenuMessage STRING NOT NULL,
+  typeExp STRING
 );

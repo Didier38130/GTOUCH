@@ -173,12 +173,22 @@ if (isset($_GET['Valider']) && (isset($nomService_0) || isset($nomService_1) || 
   if (isset($detailService_10)) {
     array_push($tableauDescrip, '10'.$detailService_10);
   }
+}
+
+$file = $_FILES['image']['tmp_name'];
+
 
   $descripRequete = implode("|", $tableauDescrip);
 
   $idRequete = count($DAO->getAnnonces())+1;
 
   $dateRequete = date("j/m/Y");
+
+  if (!isset($file)) {
+    echo "Please select a profile pic";
+  } else {
+    $image = file_get_contents($_FILES['image']['tmp_name']);
+  }
 
   /* // récuperer l'id du client connecté à faire
 
