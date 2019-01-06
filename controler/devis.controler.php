@@ -1,8 +1,8 @@
 <?php
+require_once('../model/gtouchDAO.class.php');
+require_once('../model/Compte.class.php');
 session_start();
-
 date_default_timezone_set('UTC');
-
 //Récupération des services grands parents disponibles cochés
 if (isset($_GET['nomServiceGrandparent_1'])) {
   $nomServiceGrandparent_1 = $_GET['nomServiceGrandparent_1'];
@@ -10,7 +10,6 @@ if (isset($_GET['nomServiceGrandparent_1'])) {
 if (isset($_GET['nomServiceGrandparent_2'])) {
   $nomServiceGrandparent_2 = $_GET['nomServiceGrandparent_2'];
 }
-
 //Récupération des services parents disponibles cochés
 if (isset($_GET['nomServiceParent_1'])) {
   $nomServiceParent_1 = $_GET['nomServiceParent_1'];
@@ -24,7 +23,6 @@ if (isset($_GET['nomServiceParent_3'])) {
 if (isset($_GET['nomServiceParent_4'])) {
   $nomServiceParent_4 = $_GET['nomServiceParent_4'];
 }
-
 //Récupération des services disponibles cochés
 if (isset($_GET['nomService_0'])) {
   $nomService_0 = $_GET['nomService_0'];
@@ -59,7 +57,6 @@ if (isset($_GET['nomService_9'])) {
 if (isset($_GET['nomService_10'])) {
   $nomService_10 = $_GET['nomService_10'];
 }
-
 //Récupération des détails de chaque service
 if (isset($_GET['details_service_0'])) {
   $details_service_0 = $_GET['details_service_0'];
@@ -94,14 +91,19 @@ if (isset($_GET['details_service_9'])) {
 if (isset($_GET['details_service_10'])) {
   $details_service_10 = $_GET['details_service_10'];
 }
-
-if (isset($_GET['Valider']) && (isset($nomService_0) || isset($nomService_1) || isset($nomService_3)
+$BDD = new gtouchDAO();
+if (isset($_SESSION["e-mail"])) {
+  $res = $BDD->getUtilFromMail($_SESSION['e-mail']);
+  $idClient = $res->getIdUtil();
+  $loginClient = $res->getLoginUtil();
+} else {
+  $connecte = 0;
+}
+if (!isset($connecte) && isset($_GET['Valider']) && (isset($nomService_0) || isset($nomService_1) || isset($nomService_3)
 || isset($nomService_4) || isset($nomService_5) || isset($nomService_6)
 || isset($nomService_7) || isset($nomService_8) || isset($nomService_9)
 || isset($nomService_10))) {
-
   $tableauID = array();
-
   if (isset($nomService_0)) {
     array_push($tableauID, $nomService_0);
   }
@@ -135,72 +137,13 @@ if (isset($_GET['Valider']) && (isset($nomService_0) || isset($nomService_1) || 
   if (isset($nomService_10)) {
     array_push($tableauID, $nomService_10);
   }
-
-  $listeId = implode("|", $tableauID);
-
-  $tableauDescrip = array();
-
-  if (isset($detailService_0)) {
-    array_push($tableauDescrip, '0'.$detailService_0);
-  }
-  if (isset($detailService_1)) {
-    array_push($tableauDescrip, '1'.$detailService_1);
-  }
-  if (isset($detailService_2)) {
-    array_push($tableauDescrip, '2'.$detailService_2);
-  }
-  if (isset($detailService_3)) {
-    array_push($tableauDescrip, '3'.$detailService_3);
-  }
-  if (isset($detailService_4)) {
-    array_push($tableauDescrip, '4'.$detailService_4);
-  }
-  if (isset($detailService_5)) {
-    array_push($tableauDescrip, '5'.$detailService_5);
-  }
-  if (isset($detailService_6)) {
-    array_push($tableauDescrip, '6'.$detailService_6);
-  }
-  if (isset($detailService_7)) {
-    array_push($tableauDescrip, '7'.$detailService_7);
-  }
-  if (isset($detailService_8)) {
-    array_push($tableauDescrip, '8'.$detailService_8);
-  }
-  if (isset($detailService_9)) {
-    array_push($tableauDescrip, '9'.$detailService_9);
-  }
-  if (isset($detailService_10)) {
-    array_push($tableauDescrip, '10'.$detailService_10);
-  }
-}
-
-$file = $_FILES['image']['tmp_name'];
-
-
-  $descripRequete = implode("|", $tableauDescrip);
-
-  $idRequete = count($DAO->getAnnonces())+1;
-
+  $listeId = implode("&", $tableauID);
+  var_dump($listeId);
   $dateRequete = date("j/m/Y");
-
-  if (!isset($file)) {
-    echo "Please select a profile pic";
-  } else {
-    $image = file_get_contents($_FILES['image']['tmp_name']);
-  }
-
-  /* // récuperer l'id du client connecté à faire
-
-  session_start();
-  if (isset($_SESSION["newsession"])) {
-    $idClient = $_SESSION["newsession"];
-  }
-  */
-
   include("../vue/formulaireEnvoye.vue.php");
+} else if (isset($connecte)) {
+  header('Location: connexion.controler.php');
 } else {
   include("../vue/devis.vue.php");
 }
-
  ?>

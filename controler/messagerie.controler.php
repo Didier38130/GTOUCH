@@ -5,7 +5,6 @@ require_once('../model/Compte.class.php');
 require_once('../model/gtouchDAO.class.php');
 $BDD = new gtouchDAO();
 
-<<<<<<< HEAD
 $mail = $_SESSION['e-mail'];
 $mail_dispoClient=$BDD->getInfoClient($mail);
 $mail_dispoGraphiste=$BDD->getInfoGraphiste($mail);
@@ -22,18 +21,8 @@ if ($mail_dispoClient && !$mail_dispoGraphiste) {
   $convs = $BDD->getIdConvsFromIdClient($id);
 }
 
-
 if(!empty($_POST["login"]) && !empty($_POST["objet"]) && !empty($_POST["message"])) {
   $message = $_POST["message"];
-=======
-$res = $BDD->getUtilFromMail($_SESSION['e-mail']);
-$id = $res->getIdUtil();
-
-if(!empty($_POST["login"]) && !empty($_POST["objet"]) && !empty($_POST["message"])) {
-  $message = $_POST["message"];
-  $log = $BDD->getUtilFromLogin($_POST['login']);
-  $idDest = $log->getIdUtil();
->>>>>>> 8396aac878254c1b556ead93475a34dcb592ee3d
   $objet = $_POST["objet"];
   $dateMessage = date('Y:m:d H:i:s');
   $resClient = $BDD->getInfoClientLogin($_POST['login']);
@@ -41,7 +30,7 @@ if(!empty($_POST["login"]) && !empty($_POST["objet"]) && !empty($_POST["message"
   if ($resClient && $resGraphiste) {
     echo "<p>le login n'existe pas</p>";
   }
-  else { 
+  else {
     if ($typeExp == 'client' && !$resClient) {
       echo "<p>vous ne pouvez pas envoyez de message à un autre client</p>";
     } else if ($typeExp == 'graphiste' && !$resGraphiste) {

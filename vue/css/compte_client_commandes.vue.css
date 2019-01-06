@@ -3,29 +3,6 @@
   margin-top: 59px;
 }
 
-.baniere h1 {
-  position: absolute;
-  left: 5%;
-  margin-right: 5%;
-  color: white;
-  z-index: 1;
-  top : 139px;
-  font-size: 3em;
-}
-
-.baniere h2 {
-  position: absolute;
-  left: 5%;
-  margin-right: 5%;
-  color: white;
-  z-index: 1;
-  top : 209px;
-  border: none;
-  font-size: 2em;
-}
-
-
-
 table{
   width: 100%;
   text-align: center;

@@ -51,10 +51,6 @@ form .valider {
   transition: all 0.15s ease-in-out;
 }
 
-.messages {
-  margin-left: 15px;
-}
-
 .messages h3, .messages h4, .messages p {
   margin-left: 15px;
 }

@@ -49,17 +49,19 @@ ini_set('display_errors', 'on');
       ]);
     }
 
-    function insertRequeteClient($image, $idClient, $listeId, $descripRequete, $dateRequete) {
-      $query=$this->db->prepare('INSERT INTO requetesClient (image,idClient,listeId,descripRequete,dateRequete)
-      VALUES(:image,:idClient,:listeId,:descripRequete,:dateRequete)');
-      $query->execute([
-        ':image' => $image,
-        ':idClient'=> $idClient,
-        ':listeId'=> $listeId,
-        ':descripRequete'=> $descripRequete,
-        ':dateRequete'=> $dateRequete,
+    public function insertRequeteClient($loginClient, $idClient, $listeId, $dateRequete) {
+      $sql = "INSERT INTO requetesClient(loginClient, idClient, listeId, dateRequete)
+      VALUES(:loginClient, :idClient, :listeId, :dateRequete)";
+      $sth = $this->db->prepare($sql);
+      $sth->execute([
+        ':loginClient' => $loginClient,
+        ':idClient' => $idClient,
+        ':listeId' => $listeId,
+        ':dateRequete' => $dateRequete,
       ]);
+      return $this->db->lastInsertId();
     }
+
 
     public function insertMessage($idExpediteur, $idDestinataire, $dateMessage, $objetMessage, $contenuMessage, $typeExp) {
       $query=$this->db->prepare('INSERT INTO messages (idExpediteur, idDestinataire, dateMessage, objetMessage, contenuMessage, typeExp)
@@ -142,13 +144,6 @@ ini_set('display_errors', 'on');
       }
     }
 
-    public function getRequeteClient() : array {
-      $sql = "SELECT * FROM requetesClient";
-      $sth = $this->db->query($sql);
-      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'RequeteClient');
-      return $res;
-    }
-
     function getServicesDispo() : array {
       $sql = "SELECT * FROM servicesdispo";
       $sth = $this->db->query($sql);
@@ -168,6 +163,13 @@ ini_set('display_errors', 'on');
       $sth = $this->db->query($sql);
       $res = $sth->fetchAll(PDO::FETCH_CLASS,'CompteUtilisateur');
       return $res[0];
+    }
+
+    function getIdFromMailClient($mail) : array {
+      $sql = "SELECT * FROM compteClient WHERE mail='$mail'";
+      $sth = $this->db->query($sql);
+      $res = $sth->fetchAll(PDO::FETCH_CLASS,'CompteUtilisateur');
+      return $res;
     }
 
     function getIdFromMailGraphiste($mail) : array {
@@ -241,17 +243,23 @@ ini_set('display_errors', 'on');
     function getRequetesClient() : array {
       $sql = "SELECT * from requetesClient";
       $sth = $this->db->query($sql);
-      $res = $sth->fetchAll(PDO::FETCH_CLASS,'RequeteClient ');
+      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'RequeteClient');
       return $res;
     }
 
-    function getImage() : array {
-      $sql = "SELECT * from test";
-      $sth = $this->db->query($sql);
-      $res = $sth->fetchAll(PDO::FETCH_CLASS,'test');
-      return $res;
-    }
+    public function getRequeteFromId($idReq) : RequeteClient {
+     $sql = "SELECT * FROM requetesClient WHERE idRequete = '$idReq'";
+     $sth = $this->db->query($sql);
+     $res = $sth->fetchAll(PDO::FETCH_CLASS, 'RequeteClient');
+     return $res[0];
+   }
 
+   //public function getServiceFromId($idReq) : ServiceDispo {
+    //  $sql = "SELECT nomService FROM servicesdispo where idService = '$idReq'";
+    //  $sth = $this->db->query($sql);
+    //  $res = $sth->fetchAll(PDO::FETCH_CLASS, 'ServiceDispo');
+    //  return $res[0];
+    //}
 
   }
  ?>

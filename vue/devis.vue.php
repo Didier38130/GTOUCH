@@ -19,7 +19,7 @@
 
     <form class="infos" action="devis.controler.php">
       <p>Votre photo </p>
-      <input type="file" class="photo" name="image">
+      <input type="file" class="photo">
       <p>Vous pouvez entourer les modifications et ajouter des annotations sur vos photos <a href="#">ici</a> </p>
       <p>Cocher les cases corespondant à vos retouches :</p>
       <div class="choix">
