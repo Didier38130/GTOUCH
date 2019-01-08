@@ -1,11 +1,12 @@
 <?php
-class ServiceDispo {
+class ServicesDispo {
   private $idService;
   private $nomService;
   private $nomServiceParent;
   private $nomServiceGrandParent;
   private $descripService;
   private $prixService;
+
   public function getIdService() {
     return $this->idService;
   }
