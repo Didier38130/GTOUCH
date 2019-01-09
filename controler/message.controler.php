@@ -7,9 +7,9 @@ $BDD = new gtouchDAO();
 
 //on recupere le mail de la personne connectée
 $mail = $_SESSION['e-mail'];
-//on vérifie s'il existe un client dans la base de donnée qui possède ce mail (si oui, la personne connectée est un client)
+//on vérifie s'il existe un client dans la base de donnée qui possède ce mail (si return false, la personne connectée est un client)
 $mail_dispoClient=$BDD->getInfoClient($mail);
-//on vérifie s'il existe un graphiste dans la base de donnée qui possède ce mail (si oui, la personne connectée est un graphiste)
+//on vérifie s'il existe un graphiste dans la base de donnée qui possède ce mail (si return false, la personne connectée est un graphiste)
 $mail_dispoGraphiste=$BDD->getInfoGraphiste($mail);
 
 //si la personne connectée est un graphiste
@@ -34,11 +34,11 @@ if(!empty($_POST["objet"]) && !empty($_POST["message"])) {
   $objet = $_POST["objet"];
   $dateMessage = date('d/m/Y à H:i:s');
   //si la personne connectée est un graphiste
-  if ($typeExp = 'graphiste') {
+  if ($typeExp == 'graphiste') {
     //on insert le message dans la base de donnée avec les bons paramètres
     $BDD->insertMessage($id, $idConv, $dateMessage, $objet, $message, $typeExp);
   //si c'est un client
-  } else if ($typeExp = 'client') {
+  } else if ($typeExp == 'client') {
     //on insert le message dans la base de donnée avec les bons paramètres
     $BDD->insertMessage($id, $idConv, $dateMessage, $objet, $message, $typeExp);
   }

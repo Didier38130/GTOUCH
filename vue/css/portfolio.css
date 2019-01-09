@@ -1,0 +1,49 @@
+body {
+  margin-top: 59px;
+}
+
+.baniere {
+  width: 100%;
+  background-color: #f92828;
+  margin-top: 0px;
+}
+
+.portfolios h2 {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-left: 5%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.portfolio {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio h3, .portfolio h4 {
+  margin-bottom: 5px;
+  margin-top: 20px;
+  max-width: 45%;
+}
+
+.portfolio p {
+  margin-top: 0px;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}
+
+.portfolio .cont1, .portfolio .cont2 {
+  width: 50%;
+}
+
+.desc, .competence, .realisations, .logiciel {
+  margin: 25px;
+}

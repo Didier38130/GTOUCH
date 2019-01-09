@@ -49,19 +49,18 @@ ini_set('display_errors', 'on');
       ]);
     }
 
-    public function insertRequeteClient($image, $loginClient, $idClient, $listeId, $dateRequete) {
-      $sql = "INSERT INTO requetesClient(image, loginClient, idClient, listeId, dateRequete)
-      VALUES(:image, :loginClient, :idClient, :listeId, :dateRequete)";
-      $sth = $this->db->prepare($sql);
-      $sth->execute([
-        ':image' => $image,
-        ':loginClient' => $loginClient,
-        ':idClient' => $idClient,
-        ':listeId' => $listeId,
-        ':dateRequete' => $dateRequete,
-      ]);
-      return $this->db->lastInsertId();
-    }
+    public function insertRequeteClient($loginClient, $idClient, $listeId, $dateRequete) {
+        $sql = "INSERT INTO requetesClient(loginClient, idClient, listeId, dateRequete)
+        VALUES(:loginClient, :idClient, :listeId, :dateRequete)";
+        $sth = $this->db->prepare($sql);
+        $sth->execute([
+          ':loginClient' => $loginClient,
+          ':idClient' => $idClient,
+          ':listeId' => $listeId,
+          ':dateRequete' => $dateRequete,
+        ]);
+        return $this->db->lastInsertId();
+      }
 
 
     public function insertMessage($idExpediteur, $idDestinataire, $dateMessage, $objetMessage, $contenuMessage, $typeExp) {

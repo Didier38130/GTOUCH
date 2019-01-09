@@ -7,6 +7,8 @@ require_once('../model/gtouchDAO.class.php');
 
 $BDD = new gtouchDAO();
 
+include('../vue/header.view.php');
+
 $portfolios = $BDD->getPortfolio();
 
 //on recupere le mail de la personne connectée
