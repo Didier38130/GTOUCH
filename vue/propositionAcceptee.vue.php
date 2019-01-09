@@ -11,7 +11,8 @@
   <?php if (isset($_SESSION["e-mail"])) {
           $util = $DAO->getUtilFromMail($_SESSION['e-mail']);
           $idGraph = $util->getIdUtil();
-          if ($DAO->idDeGraphiste($idGraph)) {
+
+          if ($DAO->mailDeGraphiste($_SESSION["e-mail"]) == true) {
             $DAO->addProposition($_SESSION['idRequ'], $idGraph, $dateProposition);
             echo '<br>';
             echo '<br>';
