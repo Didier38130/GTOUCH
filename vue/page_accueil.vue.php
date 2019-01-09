@@ -20,7 +20,7 @@ ini_set('display_errors', 'on');
         include("../vue/header_compte_client.vue.php");
       }
     }?>
-    
+
     <img src="../model/data/img/baniere.jpg" alt="Header" id="baniere">
 
   </header>
