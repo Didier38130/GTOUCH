@@ -27,7 +27,7 @@ if (!empty($_SESSION["e-mail"]) && !empty($_SESSION["mdp"])) {
     $q2=$DAO->db()->query($requete);
 
 
-    $q3=$DAO->getInformationsClient($mail);
+    $q3=$DAO->getInfoClient($mail);
     $infos=  array_unique($q3);
 
   }
