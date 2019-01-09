@@ -6,10 +6,10 @@ require_once('../model/gtouchDAO.class.php');
 $DAO = new gtouchDAO();
 global $infos;
 
-if (!empty($_SESSION["e-mail"]) && !empty($_SESSION["mdp"])) {
+if ( (!empty($_SESSION["e-mail"]) && !empty($_SESSION["mdp"])) || (!empty($_SESSION["e-mail"])) ) {
 
   $mail=$_SESSION["e-mail"];
-  $q=$DAO->getInfoClient($mail);
+  $q=$DAO->getInformationsClient($mail);
   $infos=  array_unique($q);
 
   if(isset($_POST['enregistrer'])){
@@ -27,7 +27,7 @@ if (!empty($_SESSION["e-mail"]) && !empty($_SESSION["mdp"])) {
     $q2=$DAO->db()->query($requete);
 
 
-    $q3=$DAO->getInfoClient($mail);
+    $q3=$DAO->getInformationsClient($mail);
     $infos=  array_unique($q3);
 
   }

@@ -29,4 +29,9 @@ insert into servicesdispo values(10, "Nez", "Visage", "Retouche beauté", "Corri
 insert into requetesClient values(1,7,"4-5","Retouche paysage", "2018-12-01");
 insert into requetesClient values(2,7,"8-9-10","Retouche beauté", "2018-12-01");
 
+insert into requetesClient values(4," ", "duboist",5,"8-9-10", "2018-12-01","",3);
+insert into requetesClient values(5," ","duboist",5,"8-9-10", "2018-12-01","",3);
+insert into requetesClient values(6," ","duboist",5,"10", "2018-12-15","",2);
+
+
 insert into messages values(2, 1, "2018-12-01 20:12:56", "test", "test");

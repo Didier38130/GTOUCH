@@ -16,7 +16,6 @@
     <tr>
       <td>Commande N°</td>
       <td>Services retouche sollicitées</td>
-      <td>Description de la retouche demandée </td>
       <td>Date</td>
     </tr>
     <?php

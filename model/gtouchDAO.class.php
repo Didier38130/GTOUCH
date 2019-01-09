@@ -287,8 +287,8 @@ ini_set('display_errors', 'on');
       return $this->db->lastInsertId();
    }
 
-   public function idDeGraphiste($idUtil) : bool {
-     $sql = "SELECT * FROM compteGraphiste WHERE id = $idUtil";
+   public function mailDeGraphiste($mail) : bool {
+     $sql = "SELECT * FROM compteGraphiste WHERE mail = '$mail'";
      $sth = $this->db->query($sql);
      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'compteGraphiste');
      if ($res != NULL) {
@@ -319,5 +319,18 @@ ini_set('display_errors', 'on');
       $res = $sth->fetchAll(PDO::FETCH_CLASS, 'Portfolio');
       return $res;
     }
+    function getInformationsClient($mail) : array {
+     $sql = "SELECT * FROM compteClient WHERE mail='$mail'";
+     $sth = $this->db->query($sql);
+     $res = $sth->fetch();
+     return $res;
+   }
+
+   function getInformationsGraphiste($mail) : array {
+     $sql = "SELECT * FROM compteGraphiste WHERE mail='$mail'";
+     $sth = $this->db->query($sql);
+     $res = $sth->fetch();
+     return $res;
+   }
   }
  ?>
