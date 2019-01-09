@@ -31,6 +31,8 @@ if (!empty($_SESSION['e-mail'])) {
         <h3>Vous n'avez pas de portfolio</h3>
         <a href="../controler/creerPortfolio.controler.php"><h4>Cliquez ici pour vous en créer un</h4></a>
       <?php
+    } else {
+      include('../vue/portfolio.vue.php');
     }
   } else {
       include('../vue/portfolio.vue.php');
