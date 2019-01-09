@@ -13,14 +13,17 @@ ini_set('display_errors', 'on');
   <header>
     <?php
     include("../vue/header.view.php");
-    if ($mail != NULL)  {
-      if ($mail_dispoClient && !$mail_dispoGraphiste) {
-        include("../vue/header_compte_graphiste.vue.php");;
-      } else if (!$mail_dispoClient && $mail_dispoGraphiste){
-        include("../vue/header_compte_client.vue.php");
+    if (!empty($_SESSION['e-mail'])) {
+      if ($mail != NULL)  {
+        if ($mail_dispoClient && !$mail_dispoGraphiste) {
+          include("../vue/header_compte_graphiste.vue.php");;
+        } else if (!$mail_dispoClient && $mail_dispoGraphiste){
+          include("../vue/header_compte_client.vue.php");
+        }
       }
-    }?>
-    
+    }
+   ?>
+
     <img src="../model/data/img/baniere.jpg" alt="Header" id="baniere">
 
   </header>
