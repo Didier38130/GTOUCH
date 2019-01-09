@@ -9,17 +9,11 @@
 
   <?php include('header.view.php'); ?>
 
-  <p class = "description">Ici vous pouvez télécharger vos photos afin d'avoir l'aide d'un graphiste,
-    pour ce faire nous avons besoin de quelques informations à votre sujet
-    ainsi que la photo et une description des modifications que le graphiste
-    devra faire.</p>
-
 
   <div class="contenair">
 
     <form class="infos" action="devis.controler.php">
-      <p>Votre photo </p>
-      <input type="file" class="photo">
+
       <p>Vous pouvez entourer les modifications et ajouter des annotations sur vos photos <a href="#">ici</a> </p>
       <p>Cocher les cases corespondant à vos retouches :</p>
       <div class="choix">

@@ -21,11 +21,14 @@
   <div class="messages">
 
   <?php
+  //si la personne connectée n'a aucun message avec la personne avec qui elle veut discuter
   if ($messages == NULL) {
     echo "vous n'avez pas de messages";
   }
   else {
+    //pour chaque messages
     foreach ($messages as $value) {
+      //si l'expediteur est la personne connectée
       if ($value->getIdExp() == $id && $value->getTypeExp() == $typeExp) {
         ?>
         <div class="messagesEnvoyes">
@@ -35,6 +38,7 @@
         </div>
         <?php
       }
+      //si la personne connectée est destinataire
       else {
         ?>
         <div class="messagesRecus">

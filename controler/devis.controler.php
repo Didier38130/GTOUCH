@@ -138,8 +138,9 @@ if (!isset($connecte) && isset($_GET['Valider']) && (isset($nomService_0) || iss
     array_push($tableauID, $nomService_10);
   }
   $listeId = implode("&", $tableauID);
-  var_dump($listeId);
   $dateRequete = date("j/m/Y");
+  //$image= file_get_contents($_FILES['image']['tmp_name']);
+
   include("../vue/formulaireEnvoye.vue.php");
 } else if (isset($connecte)) {
   header('Location: connexion.controler.php');

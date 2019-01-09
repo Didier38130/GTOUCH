@@ -18,7 +18,7 @@
       <button class="connexion">Connexion</button>
 
       <footer>
-        <h3>Inscription</h3>
+        <h3>Inscription : </h3>
         <a href="../vue/quiestce.vue.php"><p class="inscription">Créer un compte</p></a>
       </footer>
     </form>

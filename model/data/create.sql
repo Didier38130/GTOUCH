@@ -24,6 +24,7 @@ CREATE TABLE compteGraphiste (
 
 CREATE TABLE requetesClient (
   idRequete INTEGER PRIMARY KEY AUTOINCREMENT,
+  image BLOB,
   loginClient STRING,
   idClient INTEGER,
   listeId STRING,
@@ -48,4 +49,11 @@ CREATE TABLE messages (
 	objetMessage STRING NOT NULL,
 	contenuMessage STRING NOT NULL,
   typeExp STRING
+);
+
+Create table portfolio (
+  idGraphiste INTEGER PRIMARY KEY,
+  competences STRING,
+  logiMaitrises STRING,
+  descriptionPerso STRING
 );

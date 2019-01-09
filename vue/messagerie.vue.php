@@ -26,19 +26,26 @@
   <div class="conversations">
   <?php
 
+  //Si la personne connectée n'a aucune conversation
   if ($convs == NULL) {
     echo "<h3>vous n'avez encore aucune conversation</h3>";
   }
   else {
+    //Pour chaque conversation avec une personne
     foreach ($convs as $value) {
+      //Si l'expediteur est la personne connectée
       if ($value->getIdExp() == $id && $value->getTypeExp() == $typeExp) {
+        //Si c'est un graphiste
         if ($value->getTypeExp() == 'graphiste') {
+          //on recupere le login client du destinataire
           $log = $BDD->getLoginFromIdClient($value->getIdDest());
         } else {
+          //sinon on recupere le login graphiste du destinataire
           $log = $BDD->getLoginFromIdGraphiste($value->getIdDest());
         }
         $loginDest = $log[0]->getLoginUtil();
-        ?> <a href="../controler/message.controler.php?id=<?php echo $value->getIdDest() ?>"> • Conversation avec <?php echo $loginDest ?></a> <?php
+        //On affiche le login de la personne avec qui la personne connectée a eu une conversation avec un lien vers l'ensemble des messages qu'ils ont échangés
+        ?> <a href="../controler/message.controler.php?id=<?php echo $value->getIdDest() ?>"><h3> • Conversation avec <?php echo $loginDest ?></h3></a> <?php
       }
       else {
         if ($value->getTypeExp() == 'graphiste' ) {
@@ -46,7 +53,6 @@
         } else {
           $log = $BDD->getLoginFromIdClient($value->getIdExp());
         }
-
         $loginExp = $log[0]->getLoginUtil();
         ?> <a href="../controler/message.controler.php?id=<?php echo $value->getIdExp() ?>"><h3> • Conversation avec <?php echo $loginExp ?></h3></a> <?php
       }

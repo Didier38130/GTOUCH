@@ -49,11 +49,12 @@ ini_set('display_errors', 'on');
       ]);
     }
 
-    public function insertRequeteClient($loginClient, $idClient, $listeId, $dateRequete) {
-      $sql = "INSERT INTO requetesClient(loginClient, idClient, listeId, dateRequete)
-      VALUES(:loginClient, :idClient, :listeId, :dateRequete)";
+    public function insertRequeteClient($image, $loginClient, $idClient, $listeId, $dateRequete) {
+      $sql = "INSERT INTO requetesClient(image, loginClient, idClient, listeId, dateRequete)
+      VALUES(:image, :loginClient, :idClient, :listeId, :dateRequete)";
       $sth = $this->db->prepare($sql);
       $sth->execute([
+        ':image' => $image,
         ':loginClient' => $loginClient,
         ':idClient' => $idClient,
         ':listeId' => $listeId,
@@ -73,6 +74,17 @@ ini_set('display_errors', 'on');
         ':objetMessage' => $objetMessage,
         ':contenuMessage' => $contenuMessage,
         ':typeExp' => $typeExp,
+      ]);
+    }
+
+    public function insertPorfolio($idGraphiste, $competences, $logiMaitrises, $descriptionPerso) {
+      $query=$this->db->prepare('INSERT INTO portfolio (idGraphiste, competences, logiMaitrises, descriptionPerso)
+      VALUES(:idGraphiste, :competences, :logiMaitrises, :descriptionPerso)');
+      $query->execute([
+        ':idGraphiste' => $idGraphiste,
+        ':competences' => $competences,
+        ':logiMaitrises' => $logiMaitrises,
+        ':descriptionPerso' => $descriptionPerso,
       ]);
     }
 
@@ -197,7 +209,7 @@ ini_set('display_errors', 'on');
       $sql = "SELECT * FROM compteClient WHERE id='$id'";
       $sth = $this->db->query($sql);
       $res = $sth->fetchAll(PDO::FETCH_CLASS,'CompteUtilisateur');
-      return $res[0];
+      return $res;
     }
 
     function getLoginFromIdGraphiste($id) : array {
@@ -261,5 +273,18 @@ ini_set('display_errors', 'on');
     //  return $res[0];
     //}
 
+    public function getUtilIdPortfolio($id) : array {
+      $sql = "SELECT * from portfolio where idGraphiste = '$id'";
+      $sth = $this->db->query($sql);
+      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'Portfolio');
+      return $res;
+    }
+
+    public function getPortfolio() : array {
+      $sql = "SELECT * from portfolio";
+      $sth = $this->db->query($sql);
+      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'Portfolio');
+      return $res;
+    }
   }
  ?>

@@ -8,10 +8,10 @@ body {
   margin-left: 0;
   padding: 0;
   padding-left: 25%;
-  width: 90%;
+  width: 50%;
   background: #0000;
   position: fixed;
-  top: 9%;
+  top: 59px;
   z-index: 3;
 }
 
@@ -24,6 +24,7 @@ body {
 #header_compte_client  > ul > li {
   float: left;
   position: relative;
+  background-color: #212F3C;
 }
 
 #header_compte_client  li {
@@ -39,8 +40,9 @@ body {
 }
 
 #header_compte_client a {
-  display: inline-block;
+  display: flex;
   text-decoration: none;
+  justify-content: space-around;
 }
 
 #header_compte_client> ul > li > a {

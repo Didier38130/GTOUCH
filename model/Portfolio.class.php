@@ -1,32 +1,29 @@
 <?php
-require_once('../model/Oeuvre.class.php');
-require_once('../model/Compte.class.php');
-
 class Portfolio {
-  private $idPortF;
-  private $oeuvres;
-  private $compteGraphiste;
 
-  public function __construct($idPortF, CompteGraphiste $compteGraphiste) {
-    $this->idPortF = $idPortF;
-    $this->oeuvres = array();
-    $this->compteGraphiste = $compteGraphiste;
+  private $idGraphiste;
+  private $competences;
+  private $logiMaitrises;
+  private $descriptionPerso;
+
+  //public function Add(Oeuvre $oeuvre) {
+  //  array_push($this->oeuvres, $oeuvre);
+  //}
+
+  public function getId() {
+    return $this->idGraphiste;
   }
 
-  public function Add(Oeuvre $oeuvre) {
-    array_push($this->oeuvres, $oeuvre);
+  public function getCompetences() {
+    return $this->competences;
   }
 
-  public function getOeuvres() {
-    return $this->oeuvres;
+  public function getLogiciels() {
+    return $this->logiMaitrises;
   }
 
-  public function getIdPortF() {
-    return $this->idPortF;
-  }
-
-  public function getCompteGraphiste() {
-    return $this->compteGraphiste;
+  public function getDescription() {
+    return $this->descriptionPerso;
   }
 }
 ?>
