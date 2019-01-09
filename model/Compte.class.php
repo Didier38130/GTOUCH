@@ -86,12 +86,6 @@ class CompteUtilisateur {
     private $portfolio;
     private $conflitsG;
 
-    public function __construct($nbComEnCours, Portfolio $portfolio) {
-      $this->nbComEnCours = $nbComEnCours;
-      $this->portfolio = $portfolio;
-      $this->conflitsG = array();
-    }
-
     public function getNbComEnCours() {
       return $this->nbComEnCours;
     }
@@ -117,15 +111,6 @@ class CompteUtilisateur {
     private $panier;
     private $commandes;
     private $factures;
-
-    public function __construct($nbComEnCours, Panier $panier) {
-      $this->nbComEnCours = $nbComEnCours;
-      $this->panier = $panier;
-      $this->produitsRetouches = array();
-      $this->conflitsC = array();
-      $this->commandes = array();
-      $this->factures = array();
-    }
 
     public function getNbComEnCours() {
       return $this->nbComEnCours;

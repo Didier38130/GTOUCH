@@ -162,7 +162,16 @@ ini_set('display_errors', 'on');
       $sql = "SELECT * FROM compteClient WHERE mail='$mail'";
       $sth = $this->db->query($sql);
       $res = $sth->fetchAll(PDO::FETCH_CLASS,'CompteUtilisateur');
-      return $res[0];
+      if ($res != NULL) {
+        return $res[0];
+      } else {
+        $sql = "SELECT * FROM compteGraphiste WHERE mail='$mail'";
+        $sth = $this->db->query($sql);
+        $res = $sth->fetchAll(PDO::FETCH_CLASS,'CompteUtilisateur');
+        if ($res != NULL) {
+          return $res[0];
+        }
+      }
     }
 
     function getIdFromMailClient($mail) : array {
@@ -241,7 +250,7 @@ ini_set('display_errors', 'on');
     }
 
     function getRequetesClient() : array {
-      $sql = "SELECT * from requetesClient";
+      $sql = "SELECT * FROM requetesClient";
       $sth = $this->db->query($sql);
       $res = $sth->fetchAll(PDO::FETCH_CLASS, 'RequeteClient');
       return $res;
@@ -254,14 +263,27 @@ ini_set('display_errors', 'on');
      return $res[0];
    }
 
-   public function addIdGraphiste(string $idGraph) {
-     $sql = "INSERT INTO requetesClient(listeIdGraphiste)
-      VALUES ((SELECT listeIdGraphiste FROM requetesClient) || '&' || :idGraph)";
+   public function addProposition($idReq, $idGraph, $dateProposition) {
+     $sql = "INSERT INTO propositionGraphiste (idReq, idGraph, dateProposition)
+      VALUES (:idReq, :idGraph, :dateProposition)";
       $sth = $this->db->prepare($sql);
       $sth->execute([
+        ':idReq' => $idReq,
         ':idGraph' => $idGraph,
+        ':dateProposition' => $dateProposition,
       ]);
       return $this->db->lastInsertId();
+   }
+
+   public function idDeGraphiste($idUtil) : bool {
+     $sql = "SELECT * FROM compteGraphiste WHERE id = $idUtil";
+     $sth = $this->db->query($sql);
+     $res = $sth->fetchAll(PDO::FETCH_CLASS, 'compteGraphiste');
+     if ($res != NULL) {
+       return true;
+     } else {
+       return false;
+     }
    }
 
 
