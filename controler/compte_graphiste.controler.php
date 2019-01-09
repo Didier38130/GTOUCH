@@ -5,7 +5,8 @@ require_once('../model/Compte.class.php');
 require_once('../model/gtouchDAO.class.php');
 $DAO = new gtouchDAO();
 global $infos;
-if (!empty($_SESSION["e-mail"]) && !empty($_SESSION["mdp"])) {
+
+if ( (!empty($_SESSION["e-mail"]) && !empty($_SESSION["mdp"])) || (!empty($_SESSION["e-mail"])) ) {
 
   $mail=$_SESSION["e-mail"];
   $q=$DAO->getInfoGraphiste($mail);
@@ -21,10 +22,10 @@ if (!empty($_SESSION["e-mail"]) && !empty($_SESSION["mdp"])) {
     $telephone= $_POST['telephone'];
     $adresse= $_POST['adresse'];
 
-    $requete  = "UPDATE compteClient SET login='$login', mdp='$mdp',nom='$nom',prenom='$prenom',mail='$mail',
+    $requete  = "UPDATE compteGraphiste SET login='$login', mdp='$mdp',nom='$nom',prenom='$prenom',mail='$mail',
     sexe='$sexe',telephone='$telephone',adresse='$adresse' WHERE mail='$mail'";
     $q2=$DAO->db()->query($requete);
-    $mp2 = $q2->fetch();
+
 
     $q3=$DAO->getInformationsGraphiste($mail);
     $infos=  array_unique($q3);
@@ -32,4 +33,5 @@ if (!empty($_SESSION["e-mail"]) && !empty($_SESSION["mdp"])) {
   }
   include ("../vue/compte_graphiste.vue.php");
 }
+
 ?>
