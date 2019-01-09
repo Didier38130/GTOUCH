@@ -3,13 +3,13 @@ body {
   padding: 0;
 }
 
+
 #header_compte_client {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-left: 0;
-  padding: 0;
-  padding-left: 25%;
   width: 50%;
-  background: #0000;
+  margin-left: 25%;
+  background-color: grey;
+  padding: 0;
   position: fixed;
   top: 59px;
   z-index: 3;
@@ -18,19 +18,19 @@ body {
 #header_compte_client > ul {
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: space-around;
 }
 
 
 #header_compte_client  > ul > li {
   float: left;
   position: relative;
-  background-color: #212F3C;
+  background-color: grey;
 }
 
 #header_compte_client  li {
   list-style-type: none;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 #header_compte_client > ul::after {
@@ -42,7 +42,6 @@ body {
 #header_compte_client a {
   display: flex;
   text-decoration: none;
-  justify-content: space-around;
 }
 
 #header_compte_client> ul > li > a {

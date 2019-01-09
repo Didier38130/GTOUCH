@@ -7,6 +7,9 @@
   <style></style>
 </head>
 <body>
+
+  <a href="../controler/page_accueil.controler.php"><img src="../model/data/img/backspace.png" alt=""></a>
+
   <div class="container">
 
   <h2>Envoyer un message : </h2>

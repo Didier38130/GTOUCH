@@ -1,5 +1,9 @@
 body {
   margin-top: 90px;
+  padding: 0;
+  background-image: url(../../model/data/img/imageFond3.jpg);
+  background-attachment: fixed;
+  margin-bottom: 60px;
 }
 
 .container {
@@ -7,9 +11,17 @@ body {
   margin-left: 5%;
 }
 
+img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 90px;
+  right: 5%;
+}
+
 form {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  color: white;
 }
 
 form label {
@@ -92,4 +104,5 @@ form .valider {
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 50%;
+  background-color: white;
 }

@@ -8,6 +8,8 @@
 </head>
 <body>
 
+  <a href="javascript:window.history.go(-1)"><img src="../model/data/img/backspace.png" alt=""></a>
+
   <div class="container">
 
   <form class="messagerie" action="../controler/message.controler.php?id=<?php echo $idConv ?>" method="post">

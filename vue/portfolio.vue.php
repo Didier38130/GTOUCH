@@ -20,7 +20,7 @@
     }
     else {
       ?>
-      <div class="portfolios">
+      <div class="container">
       <h2>Vous trouverez ici l'ensemble des porfolios de nos graphistes !</h2>
       <?php
       foreach ($portfolios as $key => $value) {
@@ -32,24 +32,24 @@
         ?>
         <div class="portfolio">
           <div class="cont1">
-          <div class="desc">
-            <h3>Portfolio de <?php echo $login ?></h3>
-            <p><?php echo $descriptionPerso ?></p>
-          </div>
-          <div class="competence">
-            <h4>Compétences du graphistes</h4>
-            <p><?php echo $competences ?></p>
-          </div>
+            <div class="desc">
+              <h3>Portfolio de <?php echo $login ?></h3>
+              <p><?php echo $descriptionPerso ?></p>
+            </div>
+            <div class="realisations">
+              <h4>Dernieres réalisations : </h4>
+              <p>A voir !!!</p>
+            </div>
           </div>
           <div class="cont2">
-          <div class="realisations">
-            <h4>Dernieres réalisations : </h4>
-            <p>A voir !!!</p>
-          </div>
-          <div class="logiciel">
-            <h4>Logiciels maitrisés</h4>
-            <p><?php echo $logiciels ?></p>
-          </div>
+            <div class="competence">
+              <h4>Compétences du graphistes</h4>
+              <p><?php echo $competences ?></p>
+            </div>
+            <div class="logiciel">
+              <h4>Logiciels maitrisés</h4>
+              <p><?php echo $logiciels ?></p>
+            </div>
           </div>
         </div>
         <?php
@@ -58,6 +58,8 @@
       </div>
       <?php
     }
+
+    include('../vue/footer.vue.php');
     ?>
 
   </body>

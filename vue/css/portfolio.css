@@ -5,10 +5,10 @@ body {
 .baniere {
   width: 100%;
   background-color: #f92828;
-  margin-top: 0px;
+  margin-top: 59px;
 }
 
-.portfolios h2 {
+.container h2 {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-left: 5%;
   margin-bottom: 30px;
@@ -21,18 +21,18 @@ body {
   border-bottom: 1px solid black;
   width: 90%;
   margin-left: 5%;
-  display: flex;
-  justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .portfolio h3, .portfolio h4 {
   margin-bottom: 5px;
-  margin-top: 20px;
   max-width: 45%;
+  margin-top: 20px;
 }
 
 .portfolio p {
-  margin-top: 0px;
+  margin: 0px;
+  max-width: 98%;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
@@ -41,9 +41,16 @@ body {
 }
 
 .portfolio .cont1, .portfolio .cont2 {
-  width: 50%;
+  display: flex;
+  width: 100%;
+  margin: 0px;
 }
 
-.desc, .competence, .realisations, .logiciel {
-  margin: 25px;
+.portfolio .desc, .portfolio .competence, .portfolio .realisations, .portfolio .logiciel {
+  width: 49%;
+  margin-left: 10px;
+}
+
+.portfolio .competence, .portfolio .logiciel {
+  margin-bottom: 25px;
 }
