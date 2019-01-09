@@ -7,9 +7,9 @@
 </head>
 
 <header>
-  <?php include("../vue/header.view.php"); ?>
+  <?php //include("../vue/header.view.php"); ?>
   <img src="../model/data/img/baniere.jpg" alt="Header" id="baniere">
-  <?php include("../vue/header_compte_client.vue.php");?>
+  <?php //include("../vue/header_compte_client.vue.php");?>
 </header>
 <body>
   <div align="center" class="formulaire">

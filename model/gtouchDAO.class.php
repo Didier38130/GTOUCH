@@ -100,7 +100,7 @@ ini_set('display_errors', 'on');
       return $res;
     }
 
-    function getInfoClient($mail) : bool {
+    function getInfoClient($mail) : array {
       $sql = "SELECT * FROM compteClient WHERE mail = '$mail'";
       $sth = $this->db->query($sql);
       $result=$sth->fetchAll(PDO::FETCH_CLASS, 'CompteUtilisateur');
