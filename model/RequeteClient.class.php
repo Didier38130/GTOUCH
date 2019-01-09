@@ -6,6 +6,7 @@ class RequeteClient {
   private $listeId = array();
   //private $descripRequete = array();
   private $idGraphiste;
+  
   public function getIdRequete() {
     return $this->idRequete;
   }
@@ -18,13 +19,13 @@ class RequeteClient {
   public function getListeId() : string {
     return $this->listeId;
   }
-/*
+  /*
   public function getDescripRequete() {
-    return $this->descripRequete;
-  }
-*/
-public function getIdGraphiste() {
-  return $this->idGraphiste;
+  return $this->descripRequete;
 }
+*/
+  public function getIdGraphiste() {
+    return $this->idGraphiste;
+  }
 }
 ?>

@@ -5,7 +5,7 @@
   <title>Annonces</title>
 </head>
 <body>
-  <?php include('header.view.php'); ?>
+  <?php //include('header.view.php'); ?>
   <?php if(isset($requetes)) {foreach ($requetes as $requete) { ?>
     <a href="../controler/annonce.controler.php?idReq=<?= $requete->getIdRequete() ?>"><?= $requete->getLoginCLient() ?></a>
     <br><br>

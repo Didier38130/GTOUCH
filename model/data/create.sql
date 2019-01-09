@@ -28,6 +28,7 @@ CREATE TABLE requetesClient (
   idClient INTEGER,
   listeId STRING,
   dateRequete date,
+  listeIdGraphiste STRING default ' ',
   idGraphiste INTEGER default '0'
 );
 

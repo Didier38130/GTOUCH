@@ -147,14 +147,14 @@ ini_set('display_errors', 'on');
     function getServicesDispo() : array {
       $sql = "SELECT * FROM servicesdispo";
       $sth = $this->db->query($sql);
-      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'ServiceDispo');
+      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'ServicesDispo');
       return $res;
     }
 
-    public function getServiceFromId($idReq) : ServiceDispo {
-      $sql = "SELECT nomService FROM servicesdispo where idService = '$idReq'";
+    public function getServiceFromId($idSer) : ServicesDispo {
+      $sql = "SELECT * FROM servicesdispo where idService = '$idSer'";
       $sth = $this->db->query($sql);
-      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'ServiceDispo');
+      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'ServicesDispo');
       return $res[0];
     }
 
@@ -253,6 +253,17 @@ ini_set('display_errors', 'on');
      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'RequeteClient');
      return $res[0];
    }
+
+   public function addIdGraphiste(string $idGraph) {
+     $sql = "INSERT INTO requetesClient(listeIdGraphiste)
+      VALUES ((SELECT listeIdGraphiste FROM requetesClient) || '&' || :idGraph)";
+      $sth = $this->db->prepare($sql);
+      $sth->execute([
+        ':idGraph' => $idGraph,
+      ]);
+      return $this->db->lastInsertId();
+   }
+
 
    //public function getServiceFromId($idReq) : ServiceDispo {
     //  $sql = "SELECT nomService FROM servicesdispo where idService = '$idReq'";
