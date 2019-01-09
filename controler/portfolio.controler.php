@@ -32,9 +32,8 @@ if (!empty($_SESSION['e-mail'])) {
         <a href="../controler/creerPortfolio.controler.php"><h4>Cliquez ici pour vous en créer un</h4></a>
       <?php
     }
-    else {
+  } else {
       include('../vue/portfolio.vue.php');
-    }
   }
 } else {
   include('../vue/portfolio.vue.php');
