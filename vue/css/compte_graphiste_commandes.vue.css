@@ -1,0 +1,18 @@
+#baniere {
+  width: 100%;
+  margin-top: 59px;
+}
+
+table{
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+tr td{
+  border-bottom:1pt solid black;
+}
+
+table tr:nth-child(1){
+  background-color: #212F3C;
+  color: white;
+}
