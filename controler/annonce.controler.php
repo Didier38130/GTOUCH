@@ -1,6 +1,6 @@
 <?php
 require_once('../model/RequeteClient.class.php');
-require_once('../model/ServiceDispo.class.php');
+require_once('../model/ServicesDispo.class.php');
 require_once('../model/gtouchDAO.class.php');
 //////////////////////////////////////////////////////////////////////////////
 // PARTIE RECUPERATION DES DONNEES

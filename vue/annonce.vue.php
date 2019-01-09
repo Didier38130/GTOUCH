@@ -6,7 +6,7 @@
 </head>
 <body>
   <?php $DAO = new gtouchDAO(); ?>
-  <?php include('header.view.php'); ?>
+  <?php //include('header.view.php'); ?>
   <?php if(isset($requete)) { ?>
     <?php $listeId = $requete->getListeId(); $tableauId = explode('&', $listeId); ?>
     <?php if(isset($tableauId)) { foreach ($tableauId as $id) { $service = $DAO->getServiceFromId($id); var_dump($service);?>
@@ -17,6 +17,10 @@
     <?php } } ?>
 
     Se proposer pour cette annonce :
+    <form class="infos" action="annonce.controler.php">
+      <input class = "Se proposer" name="Se proposer" type="submit" value="Se proposer">
+    </form>
+
   <?php } ?>
 
 </body>
