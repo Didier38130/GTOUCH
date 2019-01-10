@@ -12,13 +12,13 @@
   <?php include("../vue/header_compte_graphiste.vue.php");?>
 </header>
 <body>
-  <table class="w3-table w3-bordered">
-    <tr>
-      <td>Commande N°</td>
-      <td>Client</td>
-      <td>Date</td>
-    </tr>
-    <?php
+  <?php
+  if(!empty($mp)){
+    echo '<table class="w3-table w3-bordered">';
+    echo  '<tr>';
+    echo  '<td>Commande N°</td>';
+    echo '<td>Date</td>';
+    echo '</tr>';
     foreach($mp as $k=>$v){
       $unique=array_unique($v);
       $array[$k]=$unique;
@@ -28,9 +28,12 @@
       }
       echo "</tr>";
     }
-    ?>
-  </tr>
-</table>
+    echo '</tr>';
+    echo '</table>';
+  }else{
+    echo '<p>Aucun projet en cours</p>';
+  }
+  ?>
 </body>
 <footer>
   <?php include("../vue/footer.vue.php"); ?>

@@ -14,6 +14,7 @@
 
       <form class="portfolio" action="creerPortfolio.controler.php" method="post">
         <label>Description personnelle</label>
+<<<<<<< HEAD
         <textarea type="text" name="desc" class ="desc" placeholder="Bonjour, je m'apelle ... je suis graphiste spécialisé en ..." required></textarea>
         <div class="competlog">
           <div class="compe">
@@ -25,6 +26,13 @@
             <textarea type="text" name="logi" class="log" placeholder="Enumérez ici les logiciels que vous utilisez ( séparés d'un '/' )" required></textarea>
           </div>
         </div>
+=======
+        <textarea type="text" name="desc" placeholder="Décrivez vous, n'hésitez pas a vous présenter !" required></textarea>
+        <label>Compétences</label>
+        <textarea type="text" name="comp" placeholder="Enumérez ici vos compétences (séparer d'un "/")" required></textarea>
+        <label>Logiciels</label>
+        <textarea type="text" name="logi" placeholder="Enumérez ici les logiciels que vous utilisez (séparer d'un "/")" required></textarea>
+>>>>>>> 85b3949c619f7efca7eea20523c94909cccf6401
         <button class="valider">Valider</button>
       </form>
 
