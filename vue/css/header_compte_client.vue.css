@@ -8,11 +8,17 @@ body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 50%;
   margin-left: 25%;
-  background-color: grey;
+  background-color: black;
   padding: 0;
+  padding-left: 10px;
   position: fixed;
+  top: 19px;
+  z-index: 1;
+  border-radius:0px 0px 40px 40px;
+}
+
+#header_compte_client:hover {
   top: 59px;
-  z-index: 3;
 }
 
 #header_compte_client > ul {
@@ -26,11 +32,12 @@ body {
 #header_compte_client  > ul > li {
   float: left;
   position: relative;
-  background-color: grey;
+  background-color: black;
 }
 
 #header_compte_client  li {
   list-style-type: none;
+  border-radius:0px 0px 20px 20px;
 }
 
 #header_compte_client > ul::after {
@@ -52,4 +59,9 @@ body {
 #header_compte_client a:hover
  {
   background-color: #E74C3C;
+}
+
+#header_compte_client .commandes:hover
+ {
+  border-radius:0px 0px 0px 10px;
 }

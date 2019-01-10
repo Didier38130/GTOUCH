@@ -7,7 +7,7 @@ body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 50%;
   margin-left: 25%;
-  background-color: #212F3C;
+  background-color: black;
   padding: 0;
   position: fixed;
   top: 59px;
@@ -22,12 +22,13 @@ body {
 }
 
 
-#header_compte_graphiste  > ul > li {
+#header_compte_graphiste > ul > li {
   float: left;
   position: relative;
+  background-color: black;
 }
 
-#header_compte_graphiste  li {
+#header_compte_graphiste li {
   list-style-type: none;
   padding-right: 15px;
   padding-left: 15px;

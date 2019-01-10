@@ -3,9 +3,11 @@ body {
 }
 
 .baniere {
-  width: 100%;
-  background-color: #f92828;
+  width: 90%;
+  background-color: black;
   margin-top: 59px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .container h2 {
