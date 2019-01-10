@@ -366,7 +366,6 @@ ini_set('display_errors', 'on');
      return $res;
    }
 
-<<<<<<< HEAD
    function getRequeteSansGraphiste($idClient) : array {
      $sql = "SELECT * FROM requetesClient WHERE idClient='$idClient' and idGraphiste = 0 and etatRequete = 'zero'";
      $sth = $this->db->query($sql);
@@ -380,7 +379,5 @@ ini_set('display_errors', 'on');
      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'PropositionGraphiste');
      return $res;
    }
-=======
->>>>>>> 1d16edbb941fd6ce5b513be13790f45668f665f6
   }
  ?>
