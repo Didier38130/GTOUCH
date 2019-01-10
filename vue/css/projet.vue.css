@@ -1,0 +1,34 @@
+#baniere {
+  width: 100%;
+  margin-top: 19px;
+}
+
+label{
+  display: block;
+  width: 10%;
+  float: left;
+}
+
+input[type=text],input[type=email],input[type=password]{
+  width: 50%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  width: 50%;
+  background-color: #212F3C;
+  color: white;
+  padding: 12px 20px;
+}
+
+div {
+  border-radius: 5px;
+  padding: 10px;
+
+}
+#Commande {
+  text-align: center;
+}

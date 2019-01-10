@@ -31,6 +31,7 @@ if ( (!empty($_SESSION["e-mail"]) && !empty($_SESSION["mdp"])) || (!empty($_SESS
     $infos=  array_unique($q3);
 
   }
+  //var_dump($infos);
   include ("../vue/compte_client.vue.php");
 }
 
