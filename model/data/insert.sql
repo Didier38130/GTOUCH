@@ -32,6 +32,12 @@ insert into requetesClient values(2,7,"8-9-10","Retouche beauté", "2018-12-01")
 insert into requetesClient values(4," ", "duboist",6,"8-9-10", "2018-12-01","",3);
 insert into requetesClient values(5," ","duboist",6,"8-9-10", "2018-12-01","",3);
 insert into requetesClient values(6," ","duboist",6,"10", "2018-12-15","",2);
+insert into requetesClient values(4," ", "duboist",5,"8-9-10", "2018-12-01","",3, 'zero');
+insert into requetesClient values(5," ","duboist",5,"8-9-10", "2018-12-01","",3, 'zero');
+insert into requetesClient values(6," ","duboist",5,"10", "2018-12-15","",2, 'zero');
 
 
 insert into messages values(2, 1, "2018-12-01 20:12:56", "test", "test");
+
+insert into propositionGraphiste values (7, 1, "12-01-18");
+insert into propositionGraphiste values (7, 2, "12-01-18");

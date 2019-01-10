@@ -30,7 +30,8 @@ CREATE TABLE requetesClient (
   listeId STRING,
   dateRequete date,
   descripRequete STRING,
-  idGraphiste INTEGER default '0'
+  idGraphiste INTEGER default '0',
+  etatRequete STRING default 'zero'
 );
 
 CREATE TABLE propositionGraphiste (
