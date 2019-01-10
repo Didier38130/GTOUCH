@@ -12,5 +12,4 @@ if (!empty($_SESSION['e-mail'])) {
 }
 
 include("../vue/page_accueil.vue.php");
-
 ?>
