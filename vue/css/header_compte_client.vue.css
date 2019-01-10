@@ -8,7 +8,7 @@ body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 50%;
   margin-left: 25%;
-  background-color: black;
+  background-color: grey;
   padding: 0;
   padding-left: 10px;
   position: fixed;
@@ -32,7 +32,7 @@ body {
 #header_compte_client  > ul > li {
   float: left;
   position: relative;
-  background-color: black;
+  background-color: grey;
 }
 
 #header_compte_client  li {

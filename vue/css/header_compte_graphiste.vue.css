@@ -7,11 +7,15 @@ body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 50%;
   margin-left: 25%;
-  background-color: black;
+  background-color: grey;
   padding: 0;
   position: fixed;
+  top: 19px;
+  z-index: 1;
+  border-radius:0px 0px 40px 40px;
+}
+#header_compte_graphiste:hover {
   top: 59px;
-  z-index: 3;
 }
 
 #header_compte_graphiste > ul {
@@ -25,13 +29,14 @@ body {
 #header_compte_graphiste > ul > li {
   float: left;
   position: relative;
-  background-color: black;
+  background-color: grey;
 }
 
 #header_compte_graphiste li {
   list-style-type: none;
   padding-right: 15px;
   padding-left: 15px;
+  border-radius:0px 0px 20px 20px;
 }
 
 #header_compte_graphiste > ul::after {

@@ -19,6 +19,13 @@
       <?php
     }
     else {
+      if (!empty($_SESSION['e-mail'])) {
+        if ($mail_dispoClient && !$mail_dispoGraphiste) {
+          ?>
+            <a href="../controler/modifPortfolio.controler.php"><button type="button" name="button" class="modif">Mettre à jours mon portfolio</button></a>
+          <?php
+        }
+      }
       ?>
       <div class="container">
       <h2>Vous trouverez ici l'ensemble des porfolios de nos graphistes !</h2>

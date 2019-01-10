@@ -319,6 +319,14 @@ ini_set('display_errors', 'on');
       $res = $sth->fetchAll(PDO::FETCH_CLASS, 'Portfolio');
       return $res;
     }
+
+    public function getPortfolioId($id) : array {
+      $sql = "SELECT * from portfolio where idGraphiste = '$id'";
+      $sth = $this->db->query($sql);
+      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'Portfolio');
+      return $res;
+    }
+
     function getInformationsClient($mail) : array {
      $sql = "SELECT * FROM compteClient WHERE mail='$mail'";
      $sth = $this->db->query($sql);
