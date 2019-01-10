@@ -366,9 +366,5 @@ ini_set('display_errors', 'on');
      return $res;
    }
 
-   function getImageRequeteFromIdRequ($idRequete) {
-     $sql = "SELECT image FROM requetesClient WHERE ";
-   }
-
   }
  ?>
