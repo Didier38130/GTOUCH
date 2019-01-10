@@ -17,7 +17,7 @@
     <label>Objet</label>
     <input type="text" name="objet" placeholder="Objet du message" required>
     <label>Message</label>
-    <input type="text" name="message" placeholder="Message à envoyer" required class="message">
+    <textarea type="text" name="message" placeholder="Message à envoyer" required class="message"></textarea>
     <button class="valider">Envoyer</button>
   </form>
 

@@ -12,11 +12,11 @@
 
       <form class="portfolio" action="creerPortfolio.controler.php" method="post">
         <label>Description personnelle</label>
-        <input type="text" name="desc" placeholder="Décrivez vous, n'hésitez pas a vous présenter !" required>
+        <textarea type="text" name="desc" placeholder="Décrivez vous, n'hésitez pas a vous présenter !" required></textarea>
         <label>Compétences</label>
-        <input type="text" name="comp" placeholder="Enumérez ici vos compétences (séparer d'un "/")" required>
+        <textarea type="text" name="comp" placeholder="Enumérez ici vos compétences (séparer d'un "/")" required></textarea>
         <label>Logiciels</label>
-        <input type="text" name="logi" placeholder="Enumérez ici les logiciels que vous utilisez (séparer d'un "/")" required>
+        <textarea type="text" name="logi" placeholder="Enumérez ici les logiciels que vous utilisez (séparer d'un "/")" required></textarea>
         <button class="valider">Valider</button>
       </form>
 
