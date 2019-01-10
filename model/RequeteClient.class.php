@@ -8,6 +8,7 @@ class RequeteClient {
   private $dateRequete;
   private $descripRequete;
   private $idGraphiste;
+  private $etatRequete;
 
   public function getIdRequete() {
     return $this->idRequete;

@@ -2,7 +2,7 @@
 session_start();
 require_once('../model/Compte.class.php');
 require_once('../model/gtouchDAO.class.php');
-require_once('../model/PropositionGraphiste');
+require_once('../model/PropositionGraphiste.class.php');
 $DAO = new gtouchDAO();
 global $mp;
 

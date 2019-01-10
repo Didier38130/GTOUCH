@@ -223,7 +223,7 @@ ini_set('display_errors', 'on');
       $sql = "SELECT * FROM compteClient WHERE login='$login'";
       $sth = $this->db->query($sql);
       $res = $sth->fetchAll(PDO::FETCH_CLASS,'CompteUtilisateur');
-      return $res[0];
+      return $res;
     }
 
     function getIdFromLoginGraphiste($login) : array {
@@ -364,6 +364,20 @@ ini_set('display_errors', 'on');
      $sql = "SELECT * FROM compteGraphiste WHERE mail='$mail'";
      $sth = $this->db->query($sql);
      $res = $sth->fetch();
+     return $res;
+   }
+
+   function getRequeteSansGraphiste($idClient) : array {
+     $sql = "SELECT * FROM requetesClient WHERE idClient='$idClient' and idGraphiste = 0 and etatRequete = 'zero'";
+     $sth = $this->db->query($sql);
+     $res = $sth->fetchAll(PDO::FETCH_CLASS, 'RequeteClient');
+     return $res;
+   }
+
+   function getPropositionsGraphiste($idRequete) : array {
+     $sql = "SELECT * FROM propositionGraphiste WHERE idReq='$idRequete'";
+     $sth = $this->db->query($sql);
+     $res = $sth->fetchAll(PDO::FETCH_CLASS, 'PropositionGraphiste');
      return $res;
    }
   }
