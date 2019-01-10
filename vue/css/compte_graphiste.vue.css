@@ -1,6 +1,58 @@
 #baniere {
   width: 100%;
-  margin-top: 59px;
+  margin-top: 19px;
+}
+
+#header_compte_graphiste {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-left: 0;
+  padding: 0;
+  padding-left: 25%;
+  width: 50%;
+  background: #0000;
+  position: fixed;
+  top: 59px;
+  z-index: 3;
+}
+
+#header_compte_graphiste > ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+#header_compte_graphiste  > ul > li {
+  float: left;
+  position: relative;
+  background-color: #212F3C;
+}
+
+#header_compte_graphiste  li {
+  list-style-type: none;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#header_compte_graphiste > ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#header_compte_graphiste a {
+  display: flex;
+  text-decoration: none;
+  justify-content: space-around;
+}
+
+#header_compte_graphiste> ul > li > a {
+  padding: 20px 30px;
+  color: white;
+}
+
+#header_compte_graphiste a:hover
+ {
+  background-color: #E74C3C;
 }
 
 label{

@@ -14,7 +14,7 @@ if ( (!empty($_SESSION["e-mail"]) && !empty($_SESSION["mdp"])) || (!empty($_SESS
 
   if(isset($_POST['enregistrer'])){
     $login= $_POST['login'];
-    $mdp= $_POST['mdp'];
+    $mdp= password_hash($_POST['mdp'],PASSWORD_DEFAULT);
     $nom= $_POST['nom'];
     $prenom= $_POST['prenom'];
     $mail= $_POST['mail'];
@@ -22,7 +22,7 @@ if ( (!empty($_SESSION["e-mail"]) && !empty($_SESSION["mdp"])) || (!empty($_SESS
     $telephone= $_POST['telephone'];
     $adresse= $_POST['adresse'];
 
-    $requete  = "UPDATE compteGraphiste SET login='$login', mdp='$mdp',nom='$nom',prenom='$prenom',mail='$mail',
+    $requete  = "UPDATE compteGraphiste SET login='$login', mdp='$mdp', nom='$nom', prenom='$prenom',mail='$mail',
     sexe='$sexe',telephone='$telephone',adresse='$adresse' WHERE mail='$mail'";
     $q2=$DAO->db()->query($requete);
 

@@ -32,8 +32,10 @@ form input {
 }
 
 form .message {
-  width: 90%;
+  width: 98%;
+  margin-left: 20px;
   height: 150px;
+  font-size: 1.3em;
 }
 
 form .valider {

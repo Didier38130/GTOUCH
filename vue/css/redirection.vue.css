@@ -1,0 +1,12 @@
+html {
+background-image: url("../model/data/img/baniere.jpg");
+
+}
+
+div{
+  text-align: center;
+}
+
+div p{
+  font-family: 'Roboto', sans-serif;
+}
