@@ -13,7 +13,7 @@ ini_set('display_errors', 'on');
   <header>
     <?php
     include("../vue/header.view.php");
-    
+
     if (!empty($_SESSION['e-mail'])) {
       if ($mail != NULL)  {
         if ($mail_dispoClient && !$mail_dispoGraphiste) {

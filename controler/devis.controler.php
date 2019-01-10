@@ -144,6 +144,8 @@ if (!isset($connecte) && isset($_GET['Valider']) && (isset($nomService_0) || iss
   include("../vue/devis_descrip.vue.php");
 } else if (isset($connecte)) {
   header('Location: connexion.controler.php');
+} else if ($DAO->mailDeGraphiste($_SESSION["e-mail"])) {
+  include("../vue/erreurTypeDeCompte.vue.php");
 } else {
   include("../vue/devis.vue.php");
 }
