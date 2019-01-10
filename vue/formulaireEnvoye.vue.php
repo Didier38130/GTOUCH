@@ -8,7 +8,7 @@
 
   <?php include('header.view.php'); ?>
   <?php $DAO = new gtouchDAO(); ?>
-  <?php $DAO->updateImageRequeteClient($_SESSION['idRequete'], $image); ?>
+  <?php $DAO->updateImageRequeteClient($_SESSION['idRequete'], $_SESSION['imageaupload']); ?>
   <br>
   <br>
   <br>

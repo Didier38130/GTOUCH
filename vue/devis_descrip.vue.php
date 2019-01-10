@@ -6,7 +6,7 @@
 </head>
 <body>
 
-  <?php //include('header.view.php'); ?>
+  <?php include('header.view.php'); ?>
   <?php $_SESSION['idRequete'] = $DAO->insertRequeteClient($loginClient, $idClient, $listeId, $dateRequete); ?>
   <br>
   <br>

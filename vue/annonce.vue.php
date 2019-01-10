@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>Formulaire envoyé</title>
+  <title>Annonce</title>
 </head>
 <body>
   <?php $DAO = new gtouchDAO(); ?>
@@ -14,8 +14,10 @@
   <?php if(isset($requete)) { ?>
     <?php $listeId = $requete->getListeId(); $tableauId = explode('&', $listeId); ?>
 
-    <?php if(isset($tableauId)) { foreach ($tableauId as $id) { $service = $DAO->getServiceFromId($id); ?>
+    <?php if(isset($tableauId)) { foreach ($tableauId as $id) { $service = $DAO->getServiceFromId($id); var_dump($id);?>
       <h2>Retouche : <?= $service->getNomService() ?></h2>
+      <?php $image = $requete->getImage(); ?>
+      <img src="data:image/jpeg:base64.'.<?=base64_encode($image)?>.'" class="img"/>
       <h3><?= $service->getDescripService() ?></h3>
       <h3>Le graphiste recevra un montant de : <?= $service->getPrixService() ?>€ pour cette retouche, conformément à la grille tarifaire.</h3>
       <br>

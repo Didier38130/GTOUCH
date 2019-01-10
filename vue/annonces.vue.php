@@ -13,8 +13,8 @@
   <?php if(isset($requetes)) {foreach ($requetes as $requete) { ?>
     <a href="../controler/annonce.controler.php?idReq=<?= $requete->getIdRequete() ?>"><?= $requete->getLoginCLient() ?></a>
     <br><br>
-  <?php } } ?>
-
-
+  <?php } } else if (count($requetes) == 0) { ?>
+    <h3>Pas de requêtes à afficher</h3>
+  <?php } ?>
 
 </body>

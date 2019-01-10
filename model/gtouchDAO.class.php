@@ -65,10 +65,9 @@ ini_set('display_errors', 'on');
     public function updateImageRequeteClient($idRequete, $image) {
       $sql = "UPDATE requetesClient SET image = :image WHERE idRequete = :idRequete";
       $sth = $this->db->prepare($sql);
-      $sth->execute([
-        ':idRequete' => $idRequete,
-        ':image' => $image,
-      ]);
+      $sth->bindParam(':image', $image);
+      $sth->bindParam(':idRequete', $idRequete);
+      $sth->execute();
       return $this->db->lastInsertId();
     }
 
@@ -366,5 +365,10 @@ ini_set('display_errors', 'on');
      $res = $sth->fetch();
      return $res;
    }
+
+   function getImageRequeteFromIdRequ($idRequete) {
+     $sql = "SELECT image FROM requetesClient WHERE ";
+   }
+
   }
  ?>

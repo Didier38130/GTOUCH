@@ -12,13 +12,18 @@ class RequeteClient {
   public function getIdRequete() {
     return $this->idRequete;
   }
+
+  public function getImage() {
+    return $this->image;
+  }
+
   public function getLoginClient() {
     return $this->loginClient;
   }
   public function getClient() {
     return $this->idClient;
   }
-  public function getListeId() : string {
+  public function getListeId() {
     return $this->listeId;
   }
   public function getDateRequete() {
