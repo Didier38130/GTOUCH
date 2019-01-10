@@ -12,12 +12,13 @@
   <br>
   <h2>Requête datée du <?= $requete->getDateRequete() ?></h2>
   <?php if(isset($requete)) { ?>
+    <?php $image = $requete->getImage();?>
     <?php $listeId = $requete->getListeId(); $tableauId = explode('&', $listeId); ?>
-
-    <?php if(isset($tableauId)) { foreach ($tableauId as $id) { $service = $DAO->getServiceFromId($id); var_dump($id);?>
+    <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($image).'" class="img"/>'; ?>
+    <?php if(isset($tableauId)) { foreach ($tableauId as $id) { $service = $DAO->getServiceFromId($id);?>
       <h2>Retouche : <?= $service->getNomService() ?></h2>
-      <?php $image = $requete->getImage(); ?>
-      <img src="data:image/jpeg:base64.'.<?=base64_encode($image)?>.'" class="img"/>
+
+
       <h3><?= $service->getDescripService() ?></h3>
       <h3>Le graphiste recevra un montant de : <?= $service->getPrixService() ?>€ pour cette retouche, conformément à la grille tarifaire.</h3>
       <br>
