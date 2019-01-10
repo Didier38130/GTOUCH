@@ -22,9 +22,9 @@
     foreach($mp as $k=>$v){
       $unique=array_unique($v);
       $array[$k]=$unique;
-      echo "<tr>";
+      echo '<tr>';
       foreach ($array[$k] as $key => $value) {
-        echo "<td>".$value."</td>";
+        echo '<td><a href="../controler/commande.controler.php?idReq='.$value.'">'.$value.'</a></td>';
       }
       echo "</tr>";
     }
