@@ -9,7 +9,7 @@ global $infos;
 if ( (!empty($_SESSION["e-mail"]) && !empty($_SESSION["mdp"])) || (!empty($_SESSION["e-mail"])) ) {
 
   $mail=$_SESSION["e-mail"];
-  $q=$DAO->getInfoGraphiste($mail);
+  $q=$DAO->getInformationsGraphiste($mail);
   $infos=  array_unique($q);
 
   if(isset($_POST['enregistrer'])){
