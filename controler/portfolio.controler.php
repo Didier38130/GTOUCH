@@ -27,33 +27,16 @@ if (!empty($_SESSION['e-mail'])) {
     //on vérifie si le graphiste a déjà un portfolio
     $portfolio = $BDD->getUtilIdPortfolio($id);
     if ($portfolio == NULL) {
-<<<<<<< HEAD
       include('../vue/portfolioErreur.vue.php');
-=======
-      ?>
-      <h3>Vous n'avez pas de portfolio</h3>
-      <a href="../controler/creerPortfolio.controler.php"><h4>Cliquez ici pour vous en créer un</h4></a>
-      <?php
->>>>>>> 85b3949c619f7efca7eea20523c94909cccf6401
     } else {
       include('../vue/portfolio.vue.php');
     }
   } else {
-<<<<<<< HEAD
-      include('../vue/portfolio.vue.php');
-=======
     include('../vue/portfolio.vue.php');
->>>>>>> 85b3949c619f7efca7eea20523c94909cccf6401
   }
 } else {
   include('../vue/portfolio.vue.php');
 }
 
 
-<<<<<<< HEAD
  ?>
-=======
-
-
-?>
->>>>>>> 85b3949c619f7efca7eea20523c94909cccf6401

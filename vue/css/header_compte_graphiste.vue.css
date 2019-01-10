@@ -10,17 +10,12 @@ body {
   background-color: grey;
   padding: 0;
   position: fixed;
-<<<<<<< HEAD
   top: 19px;
   z-index: 1;
   border-radius:0px 0px 40px 40px;
 }
 #header_compte_graphiste:hover {
   top: 59px;
-=======
-  top: 59px;
-  z-index: 3;
->>>>>>> 85b3949c619f7efca7eea20523c94909cccf6401
 }
 
 #header_compte_graphiste > ul {
