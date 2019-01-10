@@ -12,25 +12,27 @@
   <?php include("../vue/header_compte_graphiste.vue.php");?>
 </header>
 <body>
-  <table class="w3-table w3-bordered">
-    <tr>
-      <td>Commande N°</td>
-      <td>Client</td>
-      <td>Date</td>
-    </tr>
-    <?php
+  <?php
+  if(!empty($mp)){
+    echo '<table class="w3-table w3-bordered">';
+    echo  '<tr>';
+    echo  '<td>Commande N°</td>';
+    echo '</tr>';
     foreach($mp as $k=>$v){
       $unique=array_unique($v);
       $array[$k]=$unique;
-      echo "<tr>";
+      echo '<tr>';
       foreach ($array[$k] as $key => $value) {
-        echo "<td>".$value."</td>";
+        echo '<td><a href="../controler/projet.controler.php?idReq='.$value.'">'.$value.'</a></td>';
       }
       echo "</tr>";
     }
-    ?>
-  </tr>
-</table>
+    echo '</tr>';
+    echo '</table>';
+  }else{
+    echo '<p>Aucun projet en cours</p>';
+  }
+  ?>
 </body>
 <footer>
   <?php include("../vue/footer.vue.php"); ?>
