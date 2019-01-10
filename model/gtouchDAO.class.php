@@ -60,8 +60,27 @@ ini_set('display_errors', 'on');
           ':dateRequete' => $dateRequete,
         ]);
         return $this->db->lastInsertId();
-      }
+    }
 
+    public function updateImageRequeteClient($idRequete, $image) {
+      $sql = "UPDATE requetesClient SET image = :image WHERE idRequete = :idRequete";
+      $sth = $this->db->prepare($sql);
+      $sth->execute([
+        ':idRequete' => $idRequete,
+        ':image' => $image,
+      ]);
+      return $this->db->lastInsertId();
+    }
+
+    public function updateDescripRequeteClient($idRequete, $descripRequete) {
+      $sql = "UPDATE requetesClient SET descripRequete = :descripRequete WHERE idRequete = :idRequete";
+      $sth = $this->db->prepare($sql);
+      $sth->execute([
+        ':idRequete' => $idRequete,
+        ':descripRequete' => $descripRequete,
+      ]);
+      return $this->db->lastInsertId();
+    }
 
     public function insertMessage($idExpediteur, $idDestinataire, $dateMessage, $objetMessage, $contenuMessage, $typeExp) {
       $query=$this->db->prepare('INSERT INTO messages (idExpediteur, idDestinataire, dateMessage, objetMessage, contenuMessage, typeExp)
@@ -285,6 +304,13 @@ ini_set('display_errors', 'on');
         ':dateProposition' => $dateProposition,
       ]);
       return $this->db->lastInsertId();
+   }
+
+   public function getPropositions() : array {
+     $sql = "SELECT * FROM propositionGraphiste";
+     $sth = $this->db->query($sql);
+     $res = $sth->fetchAll(PDO::FETCH_CLASS, 'PropositionGraphiste');
+     return $res;
    }
 
    public function mailDeGraphiste($mail) : bool {

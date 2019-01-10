@@ -10,14 +10,22 @@
   <br>
   <br>
   <br>
+  <h2>Requête datée du <?= $requete->getDateRequete() ?></h2>
   <?php if(isset($requete)) { ?>
     <?php $listeId = $requete->getListeId(); $tableauId = explode('&', $listeId); ?>
+
     <?php if(isset($tableauId)) { foreach ($tableauId as $id) { $service = $DAO->getServiceFromId($id); ?>
-      <h2><?= $service->getNomService() ?></h2>
+      <h2>Retouche : <?= $service->getNomService() ?></h2>
       <h3><?= $service->getDescripService() ?></h3>
       <h3>Le graphiste recevra un montant de : <?= $service->getPrixService() ?>€ pour cette retouche, conformément à la grille tarifaire.</h3>
-      <br><br>
+      <br>
     <?php } } ?>
+
+    <?php if ($requete->getDescripRequete() != '') { ?>
+      <h3><?=$requete->getLoginClient()?> dit : </h3>
+      <h4><?=$requete->getDescripRequete()?></h4>
+    <?php } ?>
+
     Se proposer pour cette annonce :
     <br><br>
     <form action="annonce.controler.php">
