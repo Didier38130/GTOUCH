@@ -17,6 +17,7 @@
     echo '<table class="w3-table w3-bordered">';
     echo  '<tr>';
     echo  '<td>Commande N°</td>';
+    echo '<td>Date</td>';
     echo '</tr>';
     foreach($mp as $k=>$v){
       $unique=array_unique($v);

@@ -8,8 +8,10 @@
 
   <?php include('header.view.php'); ?>
   <?php $DAO = new gtouchDAO(); ?>
-  <?php $DAO->insertRequeteClient($loginClient, $idClient, $listeId, $dateRequete) ?>
-
+  <?php $DAO->updateImageRequeteClient($_SESSION['idRequete'], $_SESSION['imageaupload']); ?>
+  <br>
+  <br>
+  <br>
   <h2>Merci, votre requête a été déposée</h2>
 
 </body>

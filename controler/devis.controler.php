@@ -91,9 +91,9 @@ if (isset($_GET['details_service_9'])) {
 if (isset($_GET['details_service_10'])) {
   $details_service_10 = $_GET['details_service_10'];
 }
-$BDD = new gtouchDAO();
+$DAO = new gtouchDAO();
 if (isset($_SESSION["e-mail"])) {
-  $res = $BDD->getUtilFromMail($_SESSION['e-mail']);
+  $res = $DAO->getUtilFromMail($_SESSION['e-mail']);
   $idClient = $res->getIdUtil();
   $loginClient = $res->getLoginUtil();
 } else {
@@ -139,9 +139,9 @@ if (!isset($connecte) && isset($_GET['Valider']) && (isset($nomService_0) || iss
   }
   $listeId = implode("&", $tableauID);
   $dateRequete = date("j/m/Y");
-  //$image= file_get_contents($_FILES['image']['tmp_name']);
 
-  include("../vue/formulaireEnvoye.vue.php");
+
+  include("../vue/devis_descrip.vue.php");
 } else if (isset($connecte)) {
   header('Location: connexion.controler.php');
 } else {

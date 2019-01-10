@@ -26,12 +26,18 @@ body {
 
 .footer p {
   font-size: 90%;
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
 
 .cont1, .cont2, .cont3 {
   width: 25%;
   margin-top: 10px;
   margin-bottom: 15px;
+}
+
+.loca, .tel, .mail {
+  padding: 0px;
 }
 
 .cont1 img {

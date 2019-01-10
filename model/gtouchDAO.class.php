@@ -60,8 +60,26 @@ ini_set('display_errors', 'on');
           ':dateRequete' => $dateRequete,
         ]);
         return $this->db->lastInsertId();
-      }
+    }
 
+    public function updateImageRequeteClient($idRequete, $image) {
+      $sql = "UPDATE requetesClient SET image = :image WHERE idRequete = :idRequete";
+      $sth = $this->db->prepare($sql);
+      $sth->bindParam(':image', $image);
+      $sth->bindParam(':idRequete', $idRequete);
+      $sth->execute();
+      return $this->db->lastInsertId();
+    }
+
+    public function updateDescripRequeteClient($idRequete, $descripRequete) {
+      $sql = "UPDATE requetesClient SET descripRequete = :descripRequete WHERE idRequete = :idRequete";
+      $sth = $this->db->prepare($sql);
+      $sth->execute([
+        ':idRequete' => $idRequete,
+        ':descripRequete' => $descripRequete,
+      ]);
+      return $this->db->lastInsertId();
+    }
 
     public function insertMessage($idExpediteur, $idDestinataire, $dateMessage, $objetMessage, $contenuMessage, $typeExp) {
       $query=$this->db->prepare('INSERT INTO messages (idExpediteur, idDestinataire, dateMessage, objetMessage, contenuMessage, typeExp)
@@ -287,8 +305,15 @@ ini_set('display_errors', 'on');
       return $this->db->lastInsertId();
    }
 
-   public function idDeGraphiste($idUtil) : bool {
-     $sql = "SELECT * FROM compteGraphiste WHERE id = $idUtil";
+   public function getPropositions() : array {
+     $sql = "SELECT * FROM propositionGraphiste";
+     $sth = $this->db->query($sql);
+     $res = $sth->fetchAll(PDO::FETCH_CLASS, 'PropositionGraphiste');
+     return $res;
+   }
+
+   public function mailDeGraphiste($mail) : bool {
+     $sql = "SELECT * FROM compteGraphiste WHERE mail = '$mail'";
      $sth = $this->db->query($sql);
      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'compteGraphiste');
      if ($res != NULL) {
@@ -319,6 +344,14 @@ ini_set('display_errors', 'on');
       $res = $sth->fetchAll(PDO::FETCH_CLASS, 'Portfolio');
       return $res;
     }
+
+    public function getPortfolioId($id) : array {
+      $sql = "SELECT * from portfolio where idGraphiste = '$id'";
+      $sth = $this->db->query($sql);
+      $res = $sth->fetchAll(PDO::FETCH_CLASS, 'Portfolio');
+      return $res;
+    }
+
     function getInformationsClient($mail) : array {
      $sql = "SELECT * FROM compteClient WHERE mail='$mail'";
      $sth = $this->db->query($sql);
@@ -332,5 +365,10 @@ ini_set('display_errors', 'on');
      $res = $sth->fetch();
      return $res;
    }
+
+   function getImageRequeteFromIdRequ($idRequete) {
+     $sql = "SELECT image FROM requetesClient WHERE ";
+   }
+
   }
  ?>

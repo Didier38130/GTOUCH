@@ -5,6 +5,8 @@ require_once('../model/Compte.class.php');
 require_once('../model/Portfolio.class.php');
 require_once('../model/gtouchDAO.class.php');
 
+include('../vue/header.view.php');
+
 $DAO = new gtouchDAO();
 
 //on recupère l'id du graphiste en fonction de son mail

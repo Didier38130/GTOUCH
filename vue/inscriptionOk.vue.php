@@ -18,7 +18,5 @@
           </div>
         </div>
 
-        <audio autoplay="true" src="../model/inscription.mp4">
-
     </body>
   </html>
