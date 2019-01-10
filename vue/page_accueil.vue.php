@@ -25,8 +25,8 @@ ini_set('display_errors', 'on');
     }
    ?>
 
-    <img src="../model/data/img/baniere.jpg" alt="Header" id="baniere">
 
+    <img src="../model/data/img/baniere.jpg" alt="Header" id="baniere">
   </header>
 
   <body>
