@@ -2,10 +2,11 @@
 
 require_once('../model/Compte.class.php');
 require_once('../model/gtouchDAO.class.php');
+//accès à la BD
 $BDD = new gtouchDAO();
 $nbErr = 0;
 
-
+//Récupération des informations pour l'inscription
 $login = $_POST['login'];
 $mdp = $_POST['mdp'];
 $mdphash = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
@@ -25,7 +26,7 @@ if(isset($_POST['portfolio'])){
 
 $listErr = array();
 
-//Vérification du mail mon_compte
+//Vérification du mail et du login
 
 if(!$mail_dispoGraphiste || !$mail_dispoClient)
 {
@@ -49,6 +50,7 @@ if ($mdp != $mdpConfirm || empty($mdpConfirm) || empty($mdp))
     array_push($listErr, "Votre mot de Mot de passe est différent du mot de passe de confirmation");
     $nbErr++;
 }
+//Si tout est conforme ajout du client ou graphiste à la base et inscription terminée puis affichage de la page adéquat
 if ($nbErr==0){
   if(!isset($_POST['portfolio'])){
      $BDD->insertClient($login,$mdphash,$prenom,$nom,$mail,$sexe,$telephone,$adresse);

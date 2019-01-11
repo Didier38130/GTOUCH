@@ -1,8 +1,10 @@
 <?php
+//début session
 session_start();
 
 require_once('../model/Compte.class.php');
 require_once('../model/gtouchDAO.class.php');
+//accès à la BD
 $BDD = new gtouchDAO();
 
 //on recupere le mail de la personne connectée
@@ -53,6 +55,6 @@ if ($typeExp == 'graphiste') {
   //meme chose mais inversé car requete sql doit etre inversée
   $messages = $BDD->getMessages($id, $idConv);
 }
-
+//affichage du header
 include("../vue/header.view.php");
 include("../vue/message.vue.php");

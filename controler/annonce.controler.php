@@ -4,8 +4,9 @@ require_once('../model/ServicesDispo.class.php');
 require_once('../model/Compte.class.php');
 require_once('../model/gtouchDAO.class.php');
 date_default_timezone_set('UTC');
+//début session
 session_start();
-
+//accès à la BD
 $DAO = new gtouchDAO();
 //////////////////////////////////////////////////////////////////////////////
 // PARTIE RECUPERATION DES DONNEES
@@ -30,6 +31,7 @@ $dateProposition = date("j/m/Y");
 // PARTIE USAGE DE LA VUE
 //////////////////////////////////////////////////////////////////////////////
 //On charge la vue avec les DAOcorrespondantes
+//affichage du header
 include('../vue/header.view.php');
 
 if ((isset($accepte) && $accepte != '')) {
