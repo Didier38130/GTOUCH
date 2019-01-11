@@ -1,11 +1,17 @@
 <?php
+// code de l'objet ServicesDispo
+
 class ServicesDispo {
+  // attributs privés de l'objet
+
   private $idService;
   private $nomService;
   private $nomServiceParent;
   private $nomServiceGrandParent;
   private $descripService;
   private $prixService;
+
+  // getters publics sur les attributs privés de l'objet
 
   public function getIdService() {
     return $this->idService;

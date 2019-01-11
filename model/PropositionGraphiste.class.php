@@ -1,8 +1,14 @@
 <?php
+// code de l'objet PropositionGraphiste
+
 class PropositionGraphiste {
+  // attributs privés de l'objet
+
   private $idReq;
   private $idGraph;
   private $dateProposition;
+
+  // getters publics sur les attributs privés de l'objet
 
   public function getIdReq() {
     return $this->idReq;
