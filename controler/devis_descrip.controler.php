@@ -9,6 +9,7 @@ if (isset($_GET['descrip'])) {
   $_SESSION['descrip'] = '';
 }
 
+
 if (isset($_SESSION['descrip'])) {
   include('../vue/devis_image.vue.php');
 } else {

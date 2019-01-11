@@ -1,15 +1,14 @@
-body {
-  background-image: url(../../model/data/img/imageFond2.jpg);
+img {
+  width: 100%;
+  margin-top: 59px;
 }
 
 .contenair {
+  margin-top: 50px;
+  margin-bottom: 50px;
   width: 50%;
   border: 3px solid black;
-  position:absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -25%;
-  margin-top: -15%;
+  margin-left: 25%;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: rgba(33,47,60, 0.8);
   color : ghostwhite;
@@ -23,7 +22,8 @@ body {
 }
 
 form {
-  margin-left: 10px;
+  margin-left: 15px;
+  margin-top: 20px;
 }
 
 .bouton {
@@ -55,4 +55,24 @@ form {
   cursor: pointer;
   transition: all 0.15s ease-in-out;
   outline: none;
+}
+
+.contenair form .gparent p {
+  color: red;
+  display: inline;
+  font-size: 1.3em;
+}
+
+.contenair form .parent p {
+  color: orange;
+  margin-left: 15px;
+  display: inline;
+  font-size: 1.1em;
+}
+
+.contenair form .service p {
+  color: yellow;
+  margin-left: 30px;
+  display: inline;
+  font-size: 1.1em;
 }

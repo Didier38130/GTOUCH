@@ -5,6 +5,8 @@ require_once('../model/Compte.class.php');
 require_once('../model/gtouchDAO.class.php');
 date_default_timezone_set('UTC');
 session_start();
+
+$DAO = new gtouchDAO();
 //////////////////////////////////////////////////////////////////////////////
 // PARTIE RECUPERATION DES DONNEES
 //////////////////////////////////////////////////////////////////////////////
@@ -21,7 +23,6 @@ if (isset($_GET['idReq'])) {
 }
 
 if (isset($_SESSION['idRequ']) && $_SESSION['idRequ'] != '') {
-  $DAO = new gtouchDAO();
   $requete = $DAO->getRequeteFromId($_SESSION['idRequ']);
 }
 $dateProposition = date("j/m/Y");
@@ -29,6 +30,8 @@ $dateProposition = date("j/m/Y");
 // PARTIE USAGE DE LA VUE
 //////////////////////////////////////////////////////////////////////////////
 //On charge la vue avec les DAOcorrespondantes
+include('../vue/header.view.php');
+
 if ((isset($accepte) && $accepte != '')) {
   include('../vue/propositionAcceptee.vue.php');
 } else {

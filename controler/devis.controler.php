@@ -149,4 +149,6 @@ if (!isset($connecte) && isset($_GET['Valider']) && (isset($nomService_0) || iss
 } else {
   include("../vue/devis.vue.php");
 }
+
+
  ?>

@@ -15,5 +15,6 @@ $id = $res[0]->getIdUtil();
 
 $requetesSansGraphistes = $DAO->getRequeteSansGraphiste($id);
 
+
 include('../vue/choixGraphisteCommande.vue.php');
 ?>

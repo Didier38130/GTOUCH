@@ -7,7 +7,7 @@
   </head>
   <body>
 
-    <img src="../model/data/img/portfolio.png" alt="baniere" class="baniere">
+    <img src="../model/data/img/portfolio.jpg" alt="baniere" class="baniere">
 
     <?php
     if ($portfolios == NULL) {
