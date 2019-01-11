@@ -3,6 +3,7 @@
 session_start();
 require_once('../model/Compte.class.php');
 require_once('../model/gtouchDAO.class.php');
+//accès à la BD
 $DAO = new gtouchDAO();
 global $infos;
 if(!empty($_SESSION["e-mail"]) || !empty($_SESSION["mdp"])) {

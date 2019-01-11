@@ -4,6 +4,7 @@ session_start();
 
 require_once('../model/Compte.class.php');
 require_once('../model/gtouchDAO.class.php');
+//accès à la BD
 $BDD = new gtouchDAO();
 
 //on recupere le mail de la personne connectée

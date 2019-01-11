@@ -4,8 +4,9 @@ require_once('../model/ServicesDispo.class.php');
 require_once('../model/Compte.class.php');
 require_once('../model/gtouchDAO.class.php');
 date_default_timezone_set('UTC');
+//début session
 session_start();
-
+//accès à la BD
 $DAO = new gtouchDAO();
 //////////////////////////////////////////////////////////////////////////////
 // PARTIE RECUPERATION DES DONNEES

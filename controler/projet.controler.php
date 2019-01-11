@@ -5,6 +5,7 @@ require_once('../model/RequeteClient.class.php');
 require_once('../model/ServicesDispo.class.php');
 require_once('../model/Compte.class.php');
 require_once('../model/gtouchDAO.class.php');
+//accès à la BD
 $DAO = new gtouchDAO();
 global $requete;
 

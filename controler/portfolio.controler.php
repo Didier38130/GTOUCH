@@ -5,7 +5,7 @@ session_start();
 require_once('../model/Compte.class.php');
 require_once('../model/Portfolio.class.php');
 require_once('../model/gtouchDAO.class.php');
-
+//accès à la BD
 $BDD = new gtouchDAO();
 
 include('../vue/header.view.php');

@@ -2,6 +2,7 @@
 require_once('../model/gtouchDAO.class.php');
 //début session
 session_start();
+//accès à la BD
 $DAO = new gtouchDAO();
 
 if (isset($_POST['Valider'])) {
