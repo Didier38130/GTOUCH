@@ -12,8 +12,8 @@
 </header>
 <body>
   <div>
-    <p>Merci d'avoir commander sur GTOUCH !</p>
-    <p>Cliquez sur l'icone pour commander votre retouche photo en grand format chez PhotoWeb !</p>
+    <p>Merci d'avoir commandé sur GTOUCH !</p>
+    <p>Cliquez sur l'icône pour commander votre retouche photo en grand format chez PhotoWeb !</p>
     <a href="https://www.photoweb.fr/"> <img src="../model/data/img/logo-photoweb.png" alt="image de PhotoWeb" height="100" width="250"> </a>
   </div>
 </body>
