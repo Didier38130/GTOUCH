@@ -74,7 +74,7 @@ if(!empty($_POST["login"]) && !empty($_POST["objet"]) && !empty($_POST["message"
     }
   }
 }
-
+//affichage du header
 include("../vue/header.view.php");
 include("../vue/messagerie.vue.php");
 ?>

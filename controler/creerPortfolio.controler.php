@@ -5,7 +5,7 @@ session_start();
 require_once('../model/Compte.class.php');
 require_once('../model/Portfolio.class.php');
 require_once('../model/gtouchDAO.class.php');
-
+//affichage du header
 include('../vue/header.view.php');
 //accès à la BD
 $DAO = new gtouchDAO();

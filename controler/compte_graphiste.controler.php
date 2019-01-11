@@ -7,12 +7,12 @@ require_once('../model/gtouchDAO.class.php');
 //accès à la BD
 $DAO = new gtouchDAO();
 global $infos;
-//
+//infos prend les données du compte graphiste correspondant à l'e-mail
 if ( (!empty($_SESSION["e-mail"]) && !empty($_SESSION["mdp"])) || (!empty($_SESSION["e-mail"])) ) {
 
   $mail=$_SESSION["e-mail"];
   $q=$DAO->getInformationsGraphiste($mail);
-  $infos=  array_unique($q);
+  $infos=array_unique($q);
 //récupération des nouvelles données du graphiste
   if(isset($_POST['enregistrer'])){
     $login= $_POST['login'];

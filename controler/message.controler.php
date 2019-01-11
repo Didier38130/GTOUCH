@@ -55,6 +55,6 @@ if ($typeExp == 'graphiste') {
   //meme chose mais inversé car requete sql doit etre inversée
   $messages = $BDD->getMessages($id, $idConv);
 }
-
+//affichage du header
 include("../vue/header.view.php");
 include("../vue/message.vue.php");
