@@ -11,7 +11,6 @@
       <li><a href="../controler/mesCommandesClient.controler.php" class="commandes">Mes Commandes</a></li>
       <li><a href="../controler/choixGraphisteCommande.controler.php">Mon graphiste</a></li>
       <li><a href="../controler/messagerie.controler.php">Mes Messages</a></li>
-      <li><a href="../controler/compte_client.controler.php">Mes Paramètres</a></li>
     </ul>
   </nav>
 </body>
