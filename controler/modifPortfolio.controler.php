@@ -18,7 +18,7 @@ if(!empty($_POST["desc"]) || !empty($_POST["comp"]) || !empty($_POST["logi"])) {
   $descriptionPerso = $_POST["desc"];
   $competences = $_POST["comp"];
   $logiciels = $_POST["logi"];
-  $requete  = "UPDATE portfolio SET descriptionPerso='$descriptionPerso', competences='$competences',logiciels='$logiciels' WHERE idGraphiste='$id'";
+  $requete  = "UPDATE portfolio SET descriptionPerso='$descriptionPerso', competences='$competences',logiMaitrises='$logiciels' WHERE idGraphiste='$id'";
   $q2=$BDD->db()->query($requete);
   header('Location: page_accueil.controler.php');
 }

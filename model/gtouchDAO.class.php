@@ -365,7 +365,7 @@ class gtouchDAO {
     $res = $sth->fetch();
     return $res;
   }
-  
+
   function getRequeteSansGraphiste($idClient) : array {
     $sql = "SELECT * FROM requetesClient WHERE idClient='$idClient' and idGraphiste = 0 and etatRequete = 'zero'";
     $sth = $this->db->query($sql);
