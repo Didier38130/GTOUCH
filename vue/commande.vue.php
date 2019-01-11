@@ -18,7 +18,6 @@
     echo '<div id="Commande"';
     echo '<p>Numéro de la commande: '.$array[0]["idRequete"].'</p>';
     echo '<p>Date de la commande: '.$array[0]["dateRequete"].'<p>';
-    echo '<p>Graphiste chargé de la commande: '.$array[0]["login"].'<p>';
     echo '<p>Détail de la commande: '.$array[0]["nomService"].'-'.$array[0]["nomServiceParent"].'-'.$array[0]["descripService"].'<p>';
     echo '<p>Prix de la commande: '.$array[0]["prixService"].' €<p>';
     echo '</div>';
