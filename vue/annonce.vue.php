@@ -2,40 +2,40 @@
 <html lang="fr" dir="ltr">
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="../vue/css/annonce.css">
   <title>Annonce</title>
 </head>
 <body>
-  <?php $DAO = new gtouchDAO(); ?>
-  <?php include('header.view.php'); ?>
-  <br>
-  <br>
-  <br>
+
   <h2>Requête datée du <?= $requete->getDateRequete() ?></h2>
+
+  <div class="container">
+
   <?php if(isset($requete)) { ?>
     <?php $image = $requete->getImage();?>
     <?php $listeId = $requete->getListeId(); $tableauId = explode('&', $listeId); ?>
-    <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($image).'" class="img"/>'; ?>
-    <?php if(isset($tableauId)) { foreach ($tableauId as $id) { $service = $DAO->getServiceFromId($id);?>
-      <h2>Retouche : <?= $service->getNomService() ?></h2>
+    <div class="image">
+      <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($image).'" class="img"/>'; ?>
+      <form action="annonce.controler.php">
+        <input class = "Accepter" name="Accepter" type="submit" value="Se proposer pour cette annonce">
+      </form>
+    </div>
+    <div class="description">
+      <?php if(isset($tableauId)) { foreach ($tableauId as $id) { $service = $DAO->getServiceFromId($id);?>
+        <h2>Retouche : <?= $service[0]->getNomService() ?></h2>
+        <h3><?= $service[0]->getDescripService() ?></h3>
+        <p>Le graphiste recevra un montant de : <?= $service[0]->getPrixService() ?>€ pour cette retouche, conformément à la grille tarifaire.</p>
+      <?php } } ?>
 
-
-      <h3><?= $service->getDescripService() ?></h3>
-      <h3>Le graphiste recevra un montant de : <?= $service->getPrixService() ?>€ pour cette retouche, conformément à la grille tarifaire.</h3>
-      <br>
-    <?php } } ?>
-
-    <?php if ($requete->getDescripRequete() != '') { ?>
-      <h3><?=$requete->getLoginClient()?> dit : </h3>
-      <h4><?=$requete->getDescripRequete()?></h4>
-    <?php } ?>
-
-    Se proposer pour cette annonce :
-    <br><br>
-    <form action="annonce.controler.php">
-      <input class = "Accepter" name="Accepter" type="submit" value="Accepter">
-    </form>
+      <?php if ($requete->getDescripRequete() != '') { ?>
+        <h3>Demande du client : </h3>
+        <p><?=$requete->getDescripRequete()?></p>
+      <?php } ?>
+    </div>
 
   <?php } ?>
+    </div>
+
 
 </body>
 </html>

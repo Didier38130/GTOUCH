@@ -19,7 +19,8 @@
           foreach ($requetesSansGraphistes as $key => $value) {
             ?> <div class="retouche"> <?php
             ?> <h3 class="demandeh3">DEMANDE DE RETOUCHE DU <?php echo $value->getDateRequete() ?></h3> <?php
-            $propositionGraphiste = $DAO->getPropositionsGraphiste($value->getIdRequete());
+            $idRequete = $value->getIdRequete();
+            $propositionGraphiste = $DAO->getPropositionsGraphiste($idRequete);
             if ($propositionGraphiste == NULL) {
               ?> <h4>Aucun graphiste ne s'est encore proposé pour retoucher votre photo</h4> <?php
             } else {
@@ -60,7 +61,7 @@
                           <p><?php echo $logiciels ?></p>
                         </div>
                       </div>
-                      <a href="#"><button type="button" name="button">Choisir ce graphiste</button></a>
+                      <a href="../controler/graphisteChoisi.controler.php?idGraph=<?php echo $idGraphiste ?>&idRequete=<?php echo $idRequete ?>"><button type="button" name="button">Choisir ce graphiste</button></a>
                     </div>
                     <?php
                   }

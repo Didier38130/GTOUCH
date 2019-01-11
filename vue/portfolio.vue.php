@@ -7,7 +7,7 @@
   </head>
   <body>
 
-    <img src="../model/data/img/portfolio.png" alt="baniere" class="baniere">
+    <img src="../model/data/img/portfolio.jpg" alt="baniere" class="baniere">
 
     <?php
     if ($portfolios == NULL) {
@@ -22,7 +22,7 @@
       if (!empty($_SESSION['e-mail'])) {
         if ($mail_dispoClient && !$mail_dispoGraphiste) {
           ?>
-            <a href="../controler/modifPortfolio.controler.php"><button type="button" name="button" class="modif">Mettre à jours mon portfolio</button></a>
+            <a href="../controler/modifPortfolio.controler.php"><button type="button" name="button" class="modif">Mettre à jour mon portfolio</button></a>
           <?php
         }
       }

@@ -2,6 +2,7 @@
 <html lang="fr" dir="ltr">
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="../vue/css/propositionAccepte.css">
   <title>Formulaire envoyé</title>
 </head>
 <body>
@@ -14,15 +15,9 @@
 
           if ($DAO->mailDeGraphiste($_SESSION["e-mail"]) == true) {
             $DAO->addProposition($_SESSION['idRequ'], $idGraph, $dateProposition);
-            echo '<br>';
-            echo '<br>';
-            echo '<br>';
-            echo '<h1>Merci, votre proposition a été enregistrée !</h2>';
+            echo '<h1>Merci, votre proposition a été enregistrée !</h1>';
           } else {
-            echo '<br>';
-            echo '<br>';
-            echo '<br>';
-            echo '<h1>Vous devez être graphiste pour vous proposer</h2>';
+            echo '<h1>Vous devez être graphiste pour vous proposer</h1>';
           }
         } else {
           header('Location: connexion.controler.php');

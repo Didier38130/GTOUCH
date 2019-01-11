@@ -25,7 +25,7 @@
   <?php
   //si la personne connectée n'a aucun message avec la personne avec qui elle veut discuter
   if ($messages == NULL) {
-    echo "vous n'avez pas de messages";
+    echo "<h2 class=\"pasmessage\">vous n'avez pas de messages</h2>";
   }
   else {
     //pour chaque messages

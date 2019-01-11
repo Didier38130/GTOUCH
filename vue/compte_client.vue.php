@@ -46,7 +46,7 @@
             <label for="adresse">Adresse :</label>
             <input type="text"  name="adresse" value="<?php if(!empty($infos["adresse"])){echo $infos["adresse"];}else{echo "adresse introuvable";};?>">
         </div>
-        <button type='submit' name='enregistrer'>Enregistrer</button>
+        <button class="enregistrer" type='submit' name='enregistrer'>Enregistrer</button>
     </form>
   </div>
 </body>

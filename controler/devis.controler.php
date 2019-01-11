@@ -1,6 +1,7 @@
 <?php
 require_once('../model/gtouchDAO.class.php');
 require_once('../model/Compte.class.php');
+//début session
 session_start();
 date_default_timezone_set('UTC');
 //Récupération des services grands parents disponibles cochés
@@ -149,4 +150,6 @@ if (!isset($connecte) && isset($_GET['Valider']) && (isset($nomService_0) || iss
 } else {
   include("../vue/devis.vue.php");
 }
+
+
  ?>

@@ -1,8 +1,10 @@
 <?php
+//début session
 session_start();
 
 require_once('../model/Compte.class.php');
 require_once('../model/gtouchDAO.class.php');
+//accès à la BD
 $BDD = new gtouchDAO();
 
 //on recupere le mail de la personne connectée
@@ -72,7 +74,7 @@ if(!empty($_POST["login"]) && !empty($_POST["objet"]) && !empty($_POST["message"
     }
   }
 }
-
+//affichage du header
 include("../vue/header.view.php");
 include("../vue/messagerie.vue.php");
 ?>

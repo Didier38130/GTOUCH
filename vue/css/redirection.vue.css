@@ -1,5 +1,33 @@
 html {
-background-image:url("../model/data/img/baniere.jpg");
+background-image:url("../../model/data/img/baniere.jpg");
+background-attachment:fixed;
+background-position:center;
+}
+
+#baniere {
+  width: 100%;
+  margin-top: 19px;
+}
+
+label{
+  display: block;
+  width: 10%;
+  float: left;
+}
+
+input[type=text],input[type=email],input[type=password]{
+  width: 50%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  width: 50%;
+  background-color: #212F3C;
+  color: white;
+  padding: 12px 20px;
 }
 
 div{
@@ -7,5 +35,6 @@ div{
 }
 
 div p{
+  color:white;
   font-family: 'Roboto', sans-serif;
 }

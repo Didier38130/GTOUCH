@@ -1,8 +1,10 @@
 <?php
+//début session
 session_start();
 
 require_once('../model/Compte.class.php');
 require_once('../model/gtouchDAO.class.php');
+//accès à la BD
 $BDD = new gtouchDAO();
 
 if (!empty($_SESSION['e-mail'])) {
@@ -12,5 +14,4 @@ if (!empty($_SESSION['e-mail'])) {
 }
 
 include("../vue/page_accueil.vue.php");
-
 ?>
