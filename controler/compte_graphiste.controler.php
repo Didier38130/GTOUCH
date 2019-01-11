@@ -9,7 +9,7 @@ $DAO = new gtouchDAO();
 global $infos;
 //infos prend les données du compte graphiste correspondant à l'e-mail
 if ( (!empty($_SESSION["e-mail"]) && !empty($_SESSION["mdp"])) || (!empty($_SESSION["e-mail"])) ) {
-
+  //on récupère les informations du graphiste selon son mail
   $mail=$_SESSION["e-mail"];
   $q=$DAO->getInformationsGraphiste($mail);
   $infos=array_unique($q);

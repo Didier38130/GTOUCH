@@ -9,7 +9,7 @@ $DAO = new gtouchDAO();
 global $infos;
 
 if ( (!empty($_SESSION["e-mail"]) && !empty($_SESSION["mdp"])) || (!empty($_SESSION["e-mail"])) ) {
-
+  //on récupère les informations du client selon son mail
   $mail=$_SESSION["e-mail"];
   $q=$DAO->getInformationsClient($mail);
   $infos=  array_unique($q);
