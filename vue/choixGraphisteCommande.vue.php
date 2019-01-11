@@ -31,7 +31,7 @@
                   if ($portfolio == NULL) {
                     ?>
                     <p>Le graphiste n'a pas de portfolio.</p>
-                    <a href="#"><button type="button" name="button">Choisir ce graphiste</button></a>
+                    <a href="../controler/graphisteChoisi.controler.php?idGraph=<?php echo $idGraphiste ?>&idRequete=<?php echo $idRequete ?>"><button type="button" name="button">Choisir ce graphiste</button></a>
                     <?php
                   } else {
                     $res = $DAO->getLoginFromIdGraphiste($portfolio[0]->getId());
