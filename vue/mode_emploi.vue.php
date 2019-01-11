@@ -25,7 +25,7 @@
         <p>Si acceptation, client débité du prix de la prestation puis fin de la prestation.</p>
         <p>Si refus, rectifications via messagerie avec le graphiste ou annulation*. (1ère fois gratuite puis rectifications payantes, augmentant à chacune d'entre elles)</p>
         <h3>Etape 7</h3>
-        <p>Récupérer la photo finale et possible redirection vers <a href="photoweb.fr">Photoweb afin de choisir un cadre et l'imprimer sa photo</a> </p>
+        <p>Récupérer la photo finale et possible redirection vers <a href="https://www.photoweb.fr/">Photoweb afin de choisir un cadre et l'imprimer sa photo</a> </p>
         <br>
         <br>
         <p class = "note">*Si annulation de la commande, remboursement d'une partie de la somme totale de la prestation.</p>
