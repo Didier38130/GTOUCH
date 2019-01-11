@@ -81,6 +81,15 @@ class gtouchDAO {
     return $this->db->lastInsertId();
   }
 
+  public function updateEtatRequeteClient($idRequete, $etat) {
+    $sql = "UPDATE requetesClient SET etatRequete = :etatRequete WHERE idRequete = :idRequete";
+    $sth = $this->db->prepare($sql);
+    $sth->execute([
+      ':etatRequete' => $etat,
+      ':idRequete' => $idRequete,
+    ]);
+  }
+
   public function insertMessage($idExpediteur, $idDestinataire, $dateMessage, $objetMessage, $contenuMessage, $typeExp) {
     $query=$this->db->prepare('INSERT INTO messages (idExpediteur, idDestinataire, dateMessage, objetMessage, contenuMessage, typeExp)
     VALUES(:idExpediteur, :idDestinataire, :dateMessage, :objetMessage,:contenuMessage, :typeExp)');
@@ -181,11 +190,11 @@ class gtouchDAO {
     return $res;
   }
 
-  public function getServiceFromId($idSer) : ServicesDispo {
+  public function getServiceFromId($idSer) : array {
     $sql = "SELECT * FROM servicesdispo where idService = '$idSer'";
     $sth = $this->db->query($sql);
     $res = $sth->fetchAll(PDO::FETCH_CLASS, 'ServicesDispo');
-    return $res[0];
+    return $res;
   }
 
   function getUtilFromMail($mail) : CompteUtilisateur {
@@ -377,6 +386,34 @@ class gtouchDAO {
     $sql = "SELECT * FROM propositionGraphiste WHERE idReq='$idRequete'";
     $sth = $this->db->query($sql);
     $res = $sth->fetchAll(PDO::FETCH_CLASS, 'PropositionGraphiste');
+    return $res;
+  }
+
+  function getRequetesEnCoursGraphiste($idGraphiste) : array {
+    $sql = "SELECT * FROM requetesClient WHERE idGraphiste='$idGraphiste' and etatRequete = 'encours' or etatRequete = 'zero'";
+    $sth = $this->db->query($sql);
+    $res = $sth->fetchAll(PDO::FETCH_CLASS, 'RequeteClient');
+    return $res;
+  }
+
+  function getRequetesEnCoursClient($idClient) : array {
+    $sql = "SELECT * FROM requetesClient WHERE idClient='$idClient' and etatRequete = 'encours' or etatRequete = 'zero'";
+    $sth = $this->db->query($sql);
+    $res = $sth->fetchAll(PDO::FETCH_CLASS, 'RequeteClient');
+    return $res;
+  }
+
+  function getRequetesTermineesGraphiste($idGraphiste) : array {
+    $sql = "SELECT * FROM requetesClient WHERE idGraphiste='$idGraphiste' and etatRequete = 'terminee'";
+    $sth = $this->db->query($sql);
+    $res = $sth->fetchAll(PDO::FETCH_CLASS, 'RequeteClient');
+    return $res;
+  }
+
+  function getRequetesTermineesClient($idClient) : array {
+    $sql = "SELECT * FROM requetesClient WHERE idClient='$idClient' and etatRequete = 'terminee'";
+    $sth = $this->db->query($sql);
+    $res = $sth->fetchAll(PDO::FETCH_CLASS, 'RequeteClient');
     return $res;
   }
 }

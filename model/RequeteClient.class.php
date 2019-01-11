@@ -36,5 +36,9 @@ class RequeteClient {
   public function getIdGraphiste() {
     return $this->idGraphiste;
   }
+
+  public function getEtatRequete() {
+    return $this->etatRequete;
+  }
 }
 ?>
