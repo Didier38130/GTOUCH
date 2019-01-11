@@ -11,7 +11,7 @@ global $requete;
 //Récupération de l'id et de la date d'une commande grâce à une requête sql
 if ( (!empty($_SESSION["e-mail"]) && !empty($_SESSION["mdp"])) || (!empty($_SESSION["e-mail"])) ) {
   $idReq=$_GET['idReq'];
-  $q="SELECT r.idRequete,r.dateRequete, s.* FROM  requetesClient r, servicesDispo s WHERE r.idRequete='$idReq' and r.idRequete=s.idService " ;
+  $q="SELECT r.idRequete,r.dateRequete FROM  requetesClient r WHERE r.idRequete='$idReq'" ;
   $q=$DAO->db()->query($q);
   $mq = $q->fetchAll();
   $requete= array_unique($mq);
