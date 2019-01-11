@@ -14,7 +14,7 @@ include('../vue/header.view.php');
 $res = $BDD->getIdFromMailGraphiste($_SESSION['e-mail']);
 $id = $res[0]->getIdUtil();
 $portfolio = $BDD->getPortfolioId($id);
-
+// si les champs description, compétence et logiciels ne sont pas vides alors on modifie les données associées dans la base
 if(!empty($_POST["desc"]) || !empty($_POST["comp"]) || !empty($_POST["logi"])) {
   $descriptionPerso = $_POST["desc"];
   $competences = $_POST["comp"];
@@ -23,7 +23,7 @@ if(!empty($_POST["desc"]) || !empty($_POST["comp"]) || !empty($_POST["logi"])) {
   $q2=$BDD->db()->query($requete);
   header('Location: page_accueil.controler.php');
 }
-
+// on charge la vue qui affiche la modification de portfolio
 include('../vue/modifPortfolio.vue.php');
 
 ?>

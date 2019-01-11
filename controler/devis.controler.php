@@ -93,7 +93,7 @@ if (isset($_GET['details_service_10'])) {
   $details_service_10 = $_GET['details_service_10'];
 }
 $DAO = new gtouchDAO();
-if (isset($_SESSION["e-mail"])) {
+if (isset($_SESSION["e-mail"])) { // si l'utilisateur est connecté alors on récupère ses données
   $res = $DAO->getUtilFromMail($_SESSION['e-mail']);
   $idClient = $res->getIdUtil();
   $loginClient = $res->getLoginUtil();
@@ -103,8 +103,8 @@ if (isset($_SESSION["e-mail"])) {
 if (!isset($connecte) && isset($_GET['Valider']) && (isset($nomService_0) || isset($nomService_1) || isset($nomService_3)
 || isset($nomService_4) || isset($nomService_5) || isset($nomService_6)
 || isset($nomService_7) || isset($nomService_8) || isset($nomService_9)
-|| isset($nomService_10))) {
-  $tableauID = array();
+|| isset($nomService_10))) { // si l'utilisateur est connecté, qu'il a coché les cases et validé son formulaire alors on
+  $tableauID = array();      // enregistre ses choix
   if (isset($nomService_0)) {
     array_push($tableauID, $nomService_0);
   }
@@ -142,12 +142,12 @@ if (!isset($connecte) && isset($_GET['Valider']) && (isset($nomService_0) || iss
   $dateRequete = date("j/m/Y");
 
 
-  include("../vue/devis_descrip.vue.php");
-} else if (isset($connecte)) {
+  include("../vue/devis_descrip.vue.php"); // on charge la vue de la description
+} else if (isset($connecte)) { // sinon s'il n'est pas connecté on l'invite à se connecter
   header('Location: connexion.controler.php');
-} else if ($DAO->mailDeGraphiste($_SESSION["e-mail"])) {
-  include("../vue/erreurTypeDeCompte.vue.php");
-} else {
+} else if ($DAO->mailDeGraphiste($_SESSION["e-mail"])) { // sinon si l'utilisateur connecté
+  include("../vue/erreurTypeDeCompte.vue.php");          // est un graphiste on lui signale qu'il ne peut pas soumettre une requête
+} else { // sinon on charge la vue du formulaire de requête
   include("../vue/devis.vue.php");
 }
 
