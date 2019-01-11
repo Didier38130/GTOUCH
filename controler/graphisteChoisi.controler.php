@@ -4,7 +4,7 @@ session_start();
 
 require_once('../model/gtouchDAO.class.php');
 require_once('../model/RequeteClient.class.php');
-
+//accès a la BD
 $DAO = new gtouchDAO();
 
 if (isset($_GET['idGraph']) && isset($_GET['idRequete'])) {

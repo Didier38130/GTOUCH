@@ -15,6 +15,7 @@ if ( (!empty($_SESSION["e-mail"]) && !empty($_SESSION["mdp"])) || (!empty($_SESS
   $q=$DAO->db()->query($q);
   $mq = $q->fetchAll();
   $requete= array_unique($mq);
+  //affichage de la vue commande
   include("../vue/commande.vue.php");
 }
 ?>

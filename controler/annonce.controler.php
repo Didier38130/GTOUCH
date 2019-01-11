@@ -31,6 +31,7 @@ $dateProposition = date("j/m/Y");
 // PARTIE USAGE DE LA VUE
 //////////////////////////////////////////////////////////////////////////////
 //On charge la vue avec les DAOcorrespondantes
+//affichage du header
 include('../vue/header.view.php');
 
 if ((isset($accepte) && $accepte != '')) {

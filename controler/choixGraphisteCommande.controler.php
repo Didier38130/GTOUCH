@@ -8,7 +8,7 @@ require_once('../model/RequeteClient.class.php');
 require_once('../model/PropositionGraphiste.class.php');
 //accès à la BD
 $DAO = new gtouchDAO();
-
+//affichage du header
 include('../vue/header.view.php');
 //récupération de l'id client pour créer une requête qui récupère les informations d'une commande sans graphiste
 $res = $DAO->getIdFromMailClient($_SESSION['e-mail']);

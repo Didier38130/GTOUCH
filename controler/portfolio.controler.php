@@ -7,7 +7,7 @@ require_once('../model/Portfolio.class.php');
 require_once('../model/gtouchDAO.class.php');
 //accès à la BD
 $BDD = new gtouchDAO();
-
+//affichage du header
 include('../vue/header.view.php');
 
 $portfolios = $BDD->getPortfolio();
