@@ -16,7 +16,7 @@ insert into servicesdispo values(1, "Isolation", "Retirer objet", "Retouche pays
 insert into servicesdispo values(2, "Element", "Retirer objet", "Retouche paysage", "Enlever un élément", 15);
 insert into servicesdispo values(3, "Défaut", "Retirer objet", "Retouche paysage", "Enlever les défauts apparents", 25);
 
-insert into servicesdispo values(4, "Lumière", "Ambiance", "Retouche paysage", "Arranger l'éclairages", 10);
+insert into servicesdispo values(4, "Lumière", "Ambiance", "Retouche paysage", "Arranger l'éclairage", 10);
 insert into servicesdispo values(5, "Couleur", "Ambiance", "Retouche paysage", "Faire ressortir les couleurs", 8);
 
 insert into servicesdispo values(6, "Forme", "Corps", "Retouche beauté", "Corriger les formes du corps", 19);
