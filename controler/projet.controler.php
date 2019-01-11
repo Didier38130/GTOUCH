@@ -1,4 +1,5 @@
 <?php
+//début session
 session_start();
 require_once('../model/RequeteClient.class.php');
 require_once('../model/ServicesDispo.class.php');

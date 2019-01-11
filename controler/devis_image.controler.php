@@ -1,5 +1,6 @@
 <?php
 require_once('../model/gtouchDAO.class.php');
+//début session
 session_start();
 $DAO = new gtouchDAO();
 

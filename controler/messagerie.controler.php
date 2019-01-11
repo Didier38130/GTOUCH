@@ -1,4 +1,5 @@
 <?php
+//début session
 session_start();
 
 require_once('../model/Compte.class.php');

@@ -1,6 +1,7 @@
 <?php
 require_once('../model/gtouchDAO.class.php');
 require_once('../model/Compte.class.php');
+//début session
 session_start();
 date_default_timezone_set('UTC');
 //Récupération des services grands parents disponibles cochés

@@ -1,11 +1,12 @@
 <?php
+//Début de la session
 session_start();
 
 require_once('../model/Compte.class.php');
 require_once('../model/gtouchDAO.class.php');
 require_once('../model/RequeteClient.class.php');
 require_once('../model/PropositionGraphiste.class.php');
-
+//accès à la BD
 $DAO = new gtouchDAO();
 
 include('../vue/header.view.php');
