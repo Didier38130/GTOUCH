@@ -1,18 +1,17 @@
 <?php
 require_once('../model/Compte.class.php');
 
+// code de l'objet Conflit
+
 class Conflit {
+  // attributs privés de l'objet
+
   private $idConf;
   private $dateConf;
   private $compteGraphiste;
   private $compteClient;
 
-  public function __construct($idConf, $dateConf, CompteGraphiste $compteGraphiste, CompteClient $compteClient) {
-    $this->idConf = $idConf;
-    $this->dateConf = $dateConf;
-    $this->compteGraphiste = $compteGraphiste;
-    $this->compteClient = $compteClient;
-  }
+  // getters publics sur les attributs privés de l'objet
 
   public function getIdConf() {
     return $this->idConf = $idConf;

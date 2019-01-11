@@ -1,5 +1,9 @@
 <?php
+// code de l'objet Message
+
 class Message {
+  // attributs privés de l'objet
+
   private $idMess;
   private $idExpediteur;
   private $idDestinataire;
@@ -7,6 +11,8 @@ class Message {
   private $objetMessage;
   private $contenuMessage;
   private $typeExp;
+
+  // getters publics sur les attributs privés de l'objet
 
   public function getIdMess() {
     return $this->idMess;

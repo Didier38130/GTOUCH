@@ -1,14 +1,15 @@
 <?php
+// code de l'objet Portfolio
+
 class Portfolio {
+  // attributs privés de l'objet
 
   private $idGraphiste;
   private $competences;
   private $logiMaitrises;
   private $descriptionPerso;
 
-  //public function Add(Oeuvre $oeuvre) {
-  //  array_push($this->oeuvres, $oeuvre);
-  //}
+  // getters publics sur les attributs privés de l'objet
 
   public function getId() {
     return $this->idGraphiste;

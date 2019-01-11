@@ -4,11 +4,12 @@ require_once('../model/Portfolio.class.php');
 require_once('../model/Conflit.class.php');
 require_once('../model/Panier.class.php');
 require_once('../model/ProduitRetouche.class.php');
-//require_once('../model/Commande.class.php');
-//require_once('../model/Facture.class.php');
 
+// code de l'objet CompteUtilisateur
 
 class CompteUtilisateur {
+  // attributs privés de l'objet
+
   private $id;
   private $login;
   private $mdp;
@@ -21,21 +22,7 @@ class CompteUtilisateur {
   private $adresse;
   private $estOuvert;
 
- /*
-  public function __construct($idUtil, $loginUtil, $mdpUtil, Messagerie $messagerieUtil, $prenomUtil, $nomUtil, $mailUtil, $sexeUtil, $telephoneUtil, $adresseUtil, $estOuvert) {
-    $this->idUtil = $idUtil;
-    $this->loginUtil = $loginUtil;
-    $this->mdpUtil = $mdpUtil;
-    $this->messagerieUtil = $messagerieUtil;
-    $this->prenomUtil = $prenomUtil;
-    $this->nomUtil = $nomUtil;
-    $this->mailUtil = $mailUtil;
-    $this->sexeUtil = $sexeUtil;
-    $this->telephoneUtil = $telephoneUtil;
-    $this->adresseUtil = $adresseUtil;
-    $this->estOuvert = $estOuvert;
-  }
-*/
+  // getters publics sur les attributs privés de l'objet
 
   public function getMailUtil() {
     return $this->mail;
@@ -79,12 +66,20 @@ class CompteUtilisateur {
 
 }
 
+  // code de l'objet CompteAdministrateur
+
   class CompteAdministrateur extends CompteUtilisateur {}
 
+    // code de l'objet CompteGraphiste qui hérite de CompteUtilisateur
+
   class CompteGraphiste extends CompteUtilisateur {
+    // attributs privés de l'objet
+
     private $nbComEnCours;
     private $portfolio;
     private $conflitsG;
+
+    // getters publics sur les attributs privés de l'objet
 
     public function getNbComEnCours() {
       return $this->nbComEnCours;
@@ -104,13 +99,19 @@ class CompteUtilisateur {
 
   }
 
+  // code de l'objet CompteClient qui hérite de CompteUtilisateur
+
   class CompteClient extends CompteUtilisateur {
+    // attributs privés de l'objet
+
     private $nbComEnCours;
     private $produitsRetouches;
     private $conflitsC;
     private $panier;
     private $commandes;
     private $factures;
+
+    // getters publics sur les attributs privés de l'objet
 
     public function getNbComEnCours() {
       return $this->nbComEnCours;

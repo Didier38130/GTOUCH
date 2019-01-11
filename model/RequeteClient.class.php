@@ -1,5 +1,9 @@
 <?php
+// code de l'objet RequeteClient
+
 class RequeteClient {
+  // attributs privés de l'objet
+
   private $idRequete;
   private $image;
   private $loginClient;
@@ -9,6 +13,8 @@ class RequeteClient {
   private $descripRequete;
   private $idGraphiste;
   private $etatRequete;
+
+  // getters publics sur les attributs privés de l'objet
 
   public function getIdRequete() {
     return $this->idRequete;

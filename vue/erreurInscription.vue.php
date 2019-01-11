@@ -10,7 +10,7 @@
 
     <div class="cont">
       <div class="header">
-        <h3>Un problème est survenue !</h3>
+        <h3>Un problème est survenu !</h3>
         <a href=<?php echo $_SERVER['HTTP_REFERER']; ?>><img src="../model/data/img/croix.png" alt=""></a>
       </div>
       <div class="body">
