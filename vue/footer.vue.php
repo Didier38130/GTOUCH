@@ -26,7 +26,7 @@
       <div class="cont3">
         <div class="text">
           <h2>A propos de nous</h2>
-          <p>Gtouch est une filliale de photoweb qui permet la retouche de photos poussé à l'aide de graphistes.</p>
+          <p>Gtouch est une filliale de photoweb qui permet la retouche photo poussée en faisant appel à des graphistes.</p>
         </div>
       </div>
     </div>
