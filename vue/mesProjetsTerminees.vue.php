@@ -33,7 +33,7 @@
           </div>
         </div>
         <?php
-      } ?>
+      } ?
 
     </div>
   </body>
